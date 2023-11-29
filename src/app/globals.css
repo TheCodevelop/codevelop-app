@@ -7,3 +7,13 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+
+.gradient {
+  background: linear-gradient(
+      to top right,
+      rgb(0, 191, 255),
+      rgb(0, 37, 225),
+      rgb(119, 0, 255)
+    )
+    rgb(var(--background-start-rgb));
+}
