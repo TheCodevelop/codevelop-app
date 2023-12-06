@@ -8,12 +8,24 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+/* .gradient {
+  background: linear-gradient(
+    to top left,
+    rgba(0, 46, 255, 1) 0%,
+    rgba(25, 89, 255, 1) 25%,
+    rgba(54, 139, 255, 1) 50%,
+    rgba(85, 192, 255, 1) 75%,
+    rgba(107, 231, 255, 1) 100%
+  );
+} */
+
 .gradient {
   background: linear-gradient(
-      to top right,
-      rgb(0, 191, 255),
-      rgb(0, 37, 225),
-      rgb(119, 0, 255)
-    )
-    rgb(var(--background-start-rgb));
+    to bottom right,
+    rgba(79, 132, 255, 1),
+    rgba(78, 123, 255, 1),
+    rgba(78, 103, 255, 1),
+    rgba(86, 78, 255, 1),
+    rgba(83, 75, 242, 1)
+  );
 }
