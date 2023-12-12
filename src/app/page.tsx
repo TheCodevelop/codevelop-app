@@ -1,7 +1,9 @@
+import Navbar from "@/components/navbar";
 export default function Home() {
   return (
-    <main className="gradient">
-      <p>Codevelo</p>
+    <main className="main-content">
+      <Navbar />
+      <p>Codevelop</p>
     </main>
   );
 }
