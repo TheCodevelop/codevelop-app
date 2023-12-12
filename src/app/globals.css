@@ -2,23 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-/* .gradient {
-  background: linear-gradient(
-    to top left,
-    rgba(0, 46, 255, 1) 0%,
-    rgba(25, 89, 255, 1) 25%,
-    rgba(54, 139, 255, 1) 50%,
-    rgba(85, 192, 255, 1) 75%,
-    rgba(107, 231, 255, 1) 100%
-  );
-} */
-
 .gradient {
   background: linear-gradient(
     to bottom right,

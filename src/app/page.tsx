@@ -1,5 +1,3 @@
-import Image from "next/image";
-// This is the home page
 export default function Home() {
   return (
     <main className="gradient" style={{ height: "53vw" }}>
@@ -12,8 +10,7 @@ export default function Home() {
           fontSize: "30px",
         }}
       >
-        {" "}
-        CoDevelop
+        Codevelop
       </p>
     </main>
   );
