@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.gradient {
+  background: linear-gradient(
+    to bottom right,
+    rgba(79, 132, 255, 1),
+    rgba(78, 123, 255, 1),
+    rgba(78, 103, 255, 1),
+    rgba(86, 78, 255, 1),
+    rgba(83, 75, 242, 1)
+  );
 }
