@@ -1,0 +1,18 @@
+.nav_link {
+  position: relative;
+  &::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    display: block;
+    position: absolute;
+    pointer-events: none;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform ease-out 300ms;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}

@@ -4,7 +4,7 @@
 
 .gradient {
   min-height: 100vh;
-  background-image: linear-gradient(
+  background: linear-gradient(
     to bottom right,
     rgba(79, 132, 255, 1),
     rgba(78, 123, 255, 1),
