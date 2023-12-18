@@ -1,12 +1,28 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <nav>
-      <div className=".flex .flex-column">
-        <Link href="/">Hmooe</Link>
-        <Link href="/about">About</Link>
-        <Link href="/contact">Contact</Link>
+    <nav className="py-24 text-2xl flex justify-between">
+      <Link href="/">
+        <Image
+          src="/Logo_Word_alt.svg"
+          alt="Codevelop Logo"
+          width="250"
+          height="80"
+          style={{ filter: "invert(100%)", minHeight: 80, minWidth: 250 }}
+        />
+      </Link>
+      <div className="flex gap-6">
+        <Link className="self-end" href="/">
+          Our Work
+        </Link>
+        <Link className="self-end" href="/about">
+          Our Services
+        </Link>
+        <Link className="self-end" href="/contact">
+          Contact Us
+        </Link>
       </div>
     </nav>
   );

@@ -4,7 +4,7 @@
 
 .gradient {
   min-height: 100vh;
-  background: linear-gradient(
+  background-image: linear-gradient(
     to bottom right,
     rgba(79, 132, 255, 1),
     rgba(78, 123, 255, 1),
@@ -16,8 +16,8 @@
 }
 
 .main-content {
-  max-width: 1080px;
+  max-width: 1280px;
+  padding-left: 64px;
+  padding-right: 64px;
   margin: auto;
-  padding-right: 3.75rem;
-  padding-left: 3.75rem;
 }
