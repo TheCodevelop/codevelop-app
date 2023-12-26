@@ -4,7 +4,7 @@ import styles from "./navbar.module.scss";
 
 const Navbar = () => {
   return (
-    <nav className="py-24 text-2xl flex justify-between">
+    <header className="py-24 text-2xl flex justify-between">
       <Link href="/">
         <Image
           src="/Logo_Word_alt.svg"
@@ -14,18 +14,25 @@ const Navbar = () => {
           style={{ filter: "invert(100%)", minHeight: 80, minWidth: 250 }}
         />
       </Link>
-      <div className="flex gap-8">
-        <Link className={`self-end ${styles.nav_link}`} href="/">
+      <button
+        className={`${styles.mobile_nav_toggle}`}
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span className="sr-only">Menu</span>
+      </button>
+      <nav className={`${styles.primary_navigation} flex gap-8 self-end`}>
+        <Link className={`${styles.nav_link}`} href="/">
           Our Work
         </Link>
-        <Link className={`self-end ${styles.nav_link}`} href="/about">
+        <Link className={`${styles.nav_link}`} href="/about">
           Our Services
         </Link>
-        <Link className={`self-end ${styles.nav_link}`} href="/contact">
+        <Link className={`${styles.nav_link}`} href="/contact">
           Contact Us
         </Link>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 };
 
