@@ -1,10 +1,9 @@
 "use client";
 import Navbar from "@/components/navbar";
 import { useState } from "react";
-import { NextPage } from "next";
 import styles from "./homepage.module.scss";
 
-const Home: NextPage<{ isOpen: boolean; setIsOpen: Function }> = (props) => {
+export default function Page() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -15,6 +14,4 @@ const Home: NextPage<{ isOpen: boolean; setIsOpen: Function }> = (props) => {
       </div>
     </main>
   );
-};
-
-export default Home;
+}
