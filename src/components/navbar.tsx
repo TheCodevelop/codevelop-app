@@ -5,8 +5,12 @@ import styles from "./navbar.module.scss";
 import { useEffect, useState } from "react";
 import throttle from "lodash/throttle";
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface NavbarProps {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
   const [resizing, setResizing] = useState(false);
 
   useEffect(() => {

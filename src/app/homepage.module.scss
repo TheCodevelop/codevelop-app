@@ -1,0 +1,6 @@
+.content {
+  &[data-visible="true"] {
+    visibility: visible;
+    opacity: 0%;
+  }
+}
