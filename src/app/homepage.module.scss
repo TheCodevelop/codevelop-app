@@ -1,4 +1,6 @@
 .content {
+  opacity: 100%;
+  transition: opacity ease-out 300ms;
   &[data-visible="true"] {
     visibility: visible;
     opacity: 0%;

@@ -9,9 +9,21 @@ export default function Page() {
   return (
     <main className="main-content">
       <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
-      <div className={styles.content} data-visible={isOpen}>
+      <p
+        className={`${styles.content} text-5xl font-semibold`}
+        data-visible={isOpen}
+      >
+        We Code.
+        <br></br>
+        <br></br>
+        You Develop your business.
+        <br></br>
+        <br></br>
+        Together, we CoDevelop.
+      </p>
+      {/* <div className={styles.content} data-visible={isOpen}>
         Yo
-      </div>
+      </div> */}
     </main>
   );
 }

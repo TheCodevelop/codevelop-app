@@ -11,6 +11,7 @@
     position: absolute;
     pointer-events: none;
     transform: scaleX(0);
+    opacity: 0%;
     transform-origin: left;
     transition:
       transform ease-out 300ms,
@@ -22,6 +23,7 @@
       opacity: 100%;
       &::after {
         transform: scaleX(1);
+        opacity: 100%;
       }
     }
   }
