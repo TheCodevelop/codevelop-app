@@ -52,12 +52,11 @@
 
 .primary_navigation {
   @media (max-width: 768px) {
-    position: fixed;
+    position: absolute;
     right: 0;
     top: 200px;
     bottom: 0;
     left: 0;
-    flex-direction: column;
     padding-top: 2rem;
     padding-left: 4rem;
     opacity: 0%;
@@ -72,5 +71,13 @@
     &[data-resizing="true"] {
       transition: none;
     }
+  }
+}
+
+.navigation_items {
+  display: flex;
+  flex-direction: row;
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
 }

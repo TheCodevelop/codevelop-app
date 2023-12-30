@@ -47,19 +47,31 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
         <span className="sr-only">Menu</span>
       </button>
       <nav
-        className={`${styles.primary_navigation} flex gap-8 self-end`}
+        className={`${styles.primary_navigation} self-end`}
         data-visible={isOpen}
         data-resizing={resizing}
       >
-        <Link className={`${styles.nav_link}`} href="/">
-          Our Work
-        </Link>
-        <Link className={`${styles.nav_link}`} href="/about">
-          Our Services
-        </Link>
-        <Link className={`${styles.nav_link}`} href="/contact">
-          Contact Us
-        </Link>
+        <ul
+          className={`${styles.navigation_items} gap-8`}
+          data-visible={isOpen}
+          data-resizing={resizing}
+        >
+          <li>
+            <Link className={`${styles.nav_link}`} href="/">
+              Our Work
+            </Link>
+          </li>
+          <li>
+            <Link className={`${styles.nav_link}`} href="/about">
+              Our Services
+            </Link>
+          </li>
+          <li>
+            <Link className={`${styles.nav_link}`} href="/contact">
+              Contact Us
+            </Link>
+          </li>
+        </ul>
       </nav>
     </header>
   );
