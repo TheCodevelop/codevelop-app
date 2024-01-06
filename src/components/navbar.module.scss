@@ -81,3 +81,28 @@
     flex-direction: column;
   }
 }
+
+.dropdown_menu {
+  position: absolute;
+  top: 20%;
+  height: 300px;
+  left: 0;
+  right: 0;
+  background: white;
+  display: none;
+}
+
+nav li {
+  &:hover {
+    .dropdown_menu {
+      display: block;
+    }
+  }
+}
+
+.section {
+  max-width: 1280px;
+  padding-left: 64px;
+  padding-right: 64px;
+  margin: auto;
+}

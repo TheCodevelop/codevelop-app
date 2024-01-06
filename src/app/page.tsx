@@ -7,7 +7,7 @@ export default function Page() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <main className="main-content">
+    <main>
       <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
       <p
         className={`${styles.content} text-5xl font-semibold`}
