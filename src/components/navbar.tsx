@@ -78,20 +78,32 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
               onMouseEnter={() => setisDDHovered(true)}
               onMouseLeave={() => setisDDHovered(false)}
             >
-              <Link
-                className={`${styles.nav_link} ${
-                  isDDHovered ? "text-black" : ""
-                }`}
-                href="/about"
-              >
-                Our Services
-              </Link>
-              <div
-                style={isDDHovered ? { display: "block", opacity: "100%" } : {}}
-                className={styles.dropdown_menu}
-              >
-                yo
+              <div className={styles.nav_link_with_dropdown}>
+                <Link
+                  className={`${styles.nav_link} ${
+                    isDDHovered ? "text-black" : ""
+                  }`}
+                  href="/about"
+                >
+                  Our Services
+                </Link>
+                <Image
+                  src="/down_arrow.svg"
+                  alt="dropdown_arrow"
+                  width="25"
+                  height="25"
+                  style={{
+                    filter: isDDHovered ? "" : "invert(100%)",
+                    minHeight: 25,
+                    minWidth: 25,
+                    maxHeight: 25,
+                    maxWidth: 25,
+                  }}
+                  className={styles.nav_arrow}
+                />
               </div>
+
+              <div className={styles.dropdown_menu}>yo</div>
             </li>
             <li>
               <Link
