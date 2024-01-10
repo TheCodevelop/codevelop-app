@@ -10,7 +10,7 @@ export default function Page() {
     <main>
       <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
       <p
-        className={`${styles.content} text-5xl font-semibold`}
+        className={`${styles.content} py-18 text-5xl font-semibold`}
         data-visible={isOpen}
       >
         We Code.

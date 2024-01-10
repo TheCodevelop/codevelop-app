@@ -27,8 +27,10 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
     return () => window.removeEventListener("resize", resizeState);
   }, []);
   return (
-    <header className={`${isDDHovered ? "bg-white" : ""}`}>
-      <div className={`${styles.section} py-24 text-2xl flex justify-between`}>
+    <header className={`${isDDHovered ? styles.white_bg : ""}`}>
+      <div
+        className={`${styles.section} pt-24 pb-6 text-2xl flex justify-between`}
+      >
         <Link href="/">
           <Image
             src="/Logo_Word_alt.svg"
@@ -84,7 +86,12 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
               >
                 Our Services
               </Link>
-              <div className={styles.dropdown_menu}>yo</div>
+              <div
+                style={isDDHovered ? { display: "block", opacity: "100%" } : {}}
+                className={styles.dropdown_menu}
+              >
+                yo
+              </div>
             </li>
             <li>
               <Link

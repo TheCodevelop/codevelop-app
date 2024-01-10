@@ -84,25 +84,33 @@
 
 .dropdown_menu {
   position: absolute;
-  top: 20%;
+  top: 200px;
   height: 300px;
   left: 0;
   right: 0;
   background: white;
   display: none;
+  opacity: 0%;
+  transition: opacity 900ms ease-out;
 }
 
-nav li {
-  &:hover {
-    .dropdown_menu {
-      display: block;
-    }
-  }
-}
+// nav li {
+//   &:hover {
+//     .dropdown_menu {
+//       display: block;
+//       opacity: 100%;
+//     }
+//   }
+// }
 
 .section {
   max-width: 1280px;
   padding-left: 64px;
   padding-right: 64px;
   margin: auto;
+}
+
+.white_bg {
+  background-color: white;
+  transition: background 300ms ease-out;
 }
