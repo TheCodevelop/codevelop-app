@@ -103,7 +103,7 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
                   className={styles.nav_arrow}
                 />
               </div>
-              <div className={styles.dropdown_menu}>
+              <div className={`${styles.dropdown_menu}`}>
                 <DropdownMenu />
               </div>
             </li>
