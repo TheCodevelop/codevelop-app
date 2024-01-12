@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "./navbar.module.scss";
 import { useEffect, useState } from "react";
 import throttle from "lodash/throttle";
+import DropdownMenu from "./dropdown-menu";
 
 interface NavbarProps {
   isOpen: boolean;
@@ -58,6 +59,7 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
           className={`${styles.primary_navigation} self-end`}
           data-visible={isOpen}
           data-resizing={resizing}
+          style={{ zIndex: "99999" }}
         >
           <ul
             className={`${styles.navigation_items} gap-8`}
@@ -75,16 +77,15 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
               </Link>
             </li>
             <li
-              onMouseEnter={() => setisDDHovered(true)}
-              onMouseLeave={() => setisDDHovered(false)}
+              onMouseEnter={() => (!isOpen ? setisDDHovered(true) : "")}
+              onMouseLeave={() => (!isOpen ? setisDDHovered(false) : "")}
+              className={styles.nav_link_with_dropdown}
             >
-              <div className={styles.nav_link_with_dropdown}>
-                <Link
-                  className={`${styles.nav_link} ${
-                    isDDHovered ? "text-black" : ""
-                  }`}
-                  href="/about"
-                >
+              <div
+                style={{ position: "relative" }}
+                className={`flex ${isDDHovered ? styles.dropdown_open : ""}`}
+              >
+                <Link className={styles.nav_link} href="/about">
                   Our Services
                 </Link>
                 <Image
@@ -102,8 +103,9 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
                   className={styles.nav_arrow}
                 />
               </div>
-
-              <div className={styles.dropdown_menu}>yo</div>
+              <div className={styles.dropdown_menu}>
+                <DropdownMenu />
+              </div>
             </li>
             <li>
               <Link
