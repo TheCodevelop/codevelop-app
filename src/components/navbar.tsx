@@ -77,8 +77,12 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
               </Link>
             </li>
             <li
-              onMouseEnter={() => (!isOpen ? setisDDHovered(true) : "")}
-              onMouseLeave={() => (!isOpen ? setisDDHovered(false) : "")}
+              onMouseEnter={() =>
+                !isOpen || window.innerWidth > 769 ? setisDDHovered(true) : ""
+              }
+              onMouseLeave={() =>
+                !isOpen || window.innerWidth > 769 ? setisDDHovered(false) : ""
+              }
               className={styles.nav_link_with_dropdown}
             >
               <div
