@@ -30,7 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
   return (
     <header className={`${isDDHovered ? styles.white_bg : ""}`}>
       <div
-        className={`${styles.section} pt-24 pb-6 text-2xl flex justify-between`}
+        className={`${styles.section} pt-20 pb-6 text-xl flex justify-between`}
       >
         <Link href="/">
           <Image
@@ -59,7 +59,6 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
           className={`${styles.primary_navigation} self-end`}
           data-visible={isOpen}
           data-resizing={resizing}
-          style={{ zIndex: "99999" }}
         >
           <ul
             className={`${styles.navigation_items} gap-8`}
@@ -110,6 +109,16 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
               <div className={`${styles.dropdown_menu}`}>
                 <DropdownMenu />
               </div>
+            </li>
+            <li>
+              <Link
+                className={`${styles.nav_link} ${
+                  isDDHovered ? "text-black" : ""
+                }`}
+                href="/"
+              >
+                Careers
+              </Link>
             </li>
             <li>
               <Link

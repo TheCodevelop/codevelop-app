@@ -9,21 +9,44 @@ export default function Page() {
   return (
     <main>
       <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
+
       <p
-        className={`${styles.content} py-18 text-5xl font-semibold`}
+        className={`${styles.content} py-48 text-5xl font-semibold`}
         data-visible={isOpen}
       >
         We Code.
         <br></br>
         <br></br>
-        You Develop your business.
+        You Develop.
         <br></br>
         <br></br>
         Together, we CoDevelop.
       </p>
-      {/* <div className={styles.content} data-visible={isOpen}>
-        Yo
-      </div> */}
+      <p
+        className={`${styles.content} py-48 text-5xl font-semibold`}
+        data-visible={isOpen}
+      >
+        We Code.
+        <br></br>
+        <br></br>
+        You Develop.
+        <br></br>
+        <br></br>
+        Together, we CoDevelop.
+      </p>
+      <p
+        className={`${styles.content} py-48 text-5xl font-semibold`}
+        data-visible={isOpen}
+      >
+        We Code.
+        <br></br>
+        <br></br>
+        You Develop.
+        <br></br>
+        <br></br>
+        Together, we CoDevelop.
+      </p>
+      <div className={styles.dim_overlay}></div>
     </main>
   );
 }

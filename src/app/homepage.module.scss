@@ -18,3 +18,14 @@
   padding-right: 64px;
   margin: auto;
 }
+
+.dim_overlay {
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 40;
+  display: none;
+}
