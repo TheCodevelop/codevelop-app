@@ -2,7 +2,7 @@
 import Navbar from "@/components/navbar";
 import { useState } from "react";
 import styles from "./homepage.module.scss";
-import Link from "next/link";
+import Button from "@/components/button";
 import Image from "next/image";
 
 export default function Page() {
@@ -27,15 +27,21 @@ export default function Page() {
       <div
         style={{
           height: "600px",
-          backgroundColor: "grey",
+          backgroundColor: "white",
         }}
       >
-        <div style={{ position: "absolute", top: "750px", right: "10px" }}>
+        <div
+          style={{
+            position: "absolute",
+            top: "750px",
+            right: "10px",
+          }}
+        >
           <Image
             src="/laptop.png"
             alt="Laptop image"
-            width="1200"
-            height="900"
+            width="600"
+            height="450"
           ></Image>
         </div>
       </div>
@@ -57,9 +63,7 @@ export default function Page() {
           ensuring that our clients and their customers benefit from the
           exceptional results we deliver.
         </p>
-        <button className={styles.button}>
-          <Link href="/">View Our Work</Link>
-        </button>
+        <Button href="/" text="View Our Work"></Button>
       </div>
 
       <div className={styles.dim_overlay}></div>

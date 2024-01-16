@@ -5,6 +5,7 @@ import styles from "./navbar.module.scss";
 import { useEffect, useState } from "react";
 import throttle from "lodash/throttle";
 import DropdownMenu from "./dropdown-menu";
+import NavButton from "./nav-button";
 
 interface NavbarProps {
   isOpen: boolean;
@@ -121,14 +122,11 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
               </Link>
             </li>
             <li>
-              <Link
-                className={`${styles.nav_link} ${
-                  isDDHovered ? "text-black" : ""
-                }`}
-                href="/contact"
-              >
-                Contact Us
-              </Link>
+              <NavButton
+                href="/contact-us"
+                text="Contact Us"
+                hovered={`${isDDHovered}`}
+              ></NavButton>
             </li>
           </ul>
         </nav>
