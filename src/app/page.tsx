@@ -12,8 +12,8 @@ export default function Page() {
     <main>
       <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
       <p
-        className={`${styles.content} py-48 text-5xl font-semibold`}
-        data-visible={isOpen}
+        className={`${styles.section} py-48 text-5xl font-semibold`}
+        data-visible={!isOpen}
       >
         We Code.
         <br></br>
@@ -23,7 +23,6 @@ export default function Page() {
         <br></br>
         Together, we CoDevelop.
       </p>
-      <div style={{ height: "30px" }}></div>
       <div
         style={{
           height: "600px",
@@ -35,6 +34,7 @@ export default function Page() {
             position: "absolute",
             top: "750px",
             right: "10px",
+            zIndex: 900,
           }}
         >
           <Image
@@ -45,9 +45,7 @@ export default function Page() {
           ></Image>
         </div>
       </div>
-
-      <div style={{ height: "30px" }}></div>
-      <div className={`${styles.content} pt-24 pb-48`}>
+      <div className={`${styles.section} pt-24 pb-48`}>
         <p data-visible={isOpen} className="pb-8 text-5xl font-semibold">
           Our Mission
         </p>
@@ -65,7 +63,6 @@ export default function Page() {
         </p>
         <Button href="/" text="View Our Work"></Button>
       </div>
-
       <div className={styles.dim_overlay}></div>
     </main>
   );
