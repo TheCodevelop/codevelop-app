@@ -14,7 +14,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 }) => {
   return (
     <Link href={link} className="max-w-xs">
-      <p className="text-xl font-semibold pb-3">{name}</p>
+      <p
+        style={{ borderBottom: "5px", borderColor: "black" }}
+        className="text-xl font-semibold pb-3 "
+      >
+        {name}
+      </p>
       <p style={{ whiteSpace: "break-spaces" }} className={"text-lg"}>
         {description}
       </p>
