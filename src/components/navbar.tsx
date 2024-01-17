@@ -7,14 +7,10 @@ import throttle from "lodash/throttle";
 import DropdownMenu from "./dropdown-menu";
 import NavButton from "./nav-button";
 
-interface NavbarProps {
-  isOpen: boolean;
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
+const Navbar: React.FC = () => {
   const [resizing, setResizing] = useState(false);
   const [isDDHovered, setisDDHovered] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     // This entire block of code serves the purpose  of freezing the css opacity animation of the
@@ -71,7 +67,7 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
                 className={`${styles.nav_link} ${
                   isDDHovered ? "text-black" : ""
                 }`}
-                href="/"
+                href="/our-work"
               >
                 Our Work
               </Link>
@@ -89,7 +85,7 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
                 style={{ position: "relative" }}
                 className={`flex ${isDDHovered ? styles.dropdown_open : ""}`}
               >
-                <Link className={styles.nav_link} href="/about">
+                <Link className={styles.nav_link} href="/our-services">
                   Our Services
                 </Link>
                 <Image
@@ -116,7 +112,7 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
                 className={`${styles.nav_link} ${
                   isDDHovered ? "text-black" : ""
                 }`}
-                href="/"
+                href="/careers"
               >
                 Careers
               </Link>

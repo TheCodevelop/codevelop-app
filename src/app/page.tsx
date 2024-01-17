@@ -1,20 +1,11 @@
-"use client";
-import Navbar from "@/components/navbar";
-import { useState } from "react";
 import styles from "./homepage.module.scss";
 import Button from "@/components/button";
 import Image from "next/image";
 
 export default function Page() {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <main>
-      <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
-      <p
-        className={`${styles.section} py-48 text-5xl font-semibold`}
-        data-visible={!isOpen}
-      >
+      <p className={`${styles.section} py-48 text-5xl font-semibold`}>
         We Code.
         <br></br>
         <br></br>
@@ -46,9 +37,7 @@ export default function Page() {
         </div>
       </div>
       <div className={`${styles.section} pt-24 pb-48`}>
-        <p data-visible={isOpen} className={styles.responsive_title}>
-          Our Mission
-        </p>
+        <p className={styles.responsive_title}>Our Mission</p>
         <p className={styles.responsive_text}>
           Codevelop specializes in custom digital solutions, combining strategy,
           design, and advanced technology to deliver transformative experiences.
