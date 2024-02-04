@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/navbar";
 
 const quicksand = Quicksand({ subsets: ["latin"] });
 
@@ -16,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${quicksand.className} gradient`}>{children}</body>
+      <body className={`${quicksand.className} gradient`}>
+        <Navbar></Navbar>
+        {children}
+      </body>
     </html>
   );
 }

@@ -6,11 +6,15 @@ import { useEffect, useState } from "react";
 import throttle from "lodash/throttle";
 import DropdownMenu from "./dropdown-menu";
 import NavButton from "./nav-button";
+import HeaderLogo from "./header-logo";
 
 const Navbar: React.FC = () => {
   const [resizing, setResizing] = useState(false);
   const [isDDHovered, setisDDHovered] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
     // This entire block of code serves the purpose  of freezing the css opacity animation of the
@@ -21,26 +25,33 @@ const Navbar: React.FC = () => {
         setResizing(false);
       }, 300);
     }, 301);
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY < 0) return;
+      setHidden(currentScrollY > lastScrollY);
+      setLastScrollY(currentScrollY);
+    };
+
     window.addEventListener("resize", resizeState);
-    return () => window.removeEventListener("resize", resizeState);
-  }, []);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("resize", resizeState);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
   return (
-    <header className={`${isDDHovered ? styles.white_bg : ""}`}>
+    <header
+      className={`${styles.navbar} ${hidden ? styles.hidden : ""} ${
+        isDDHovered ? styles.white_bg : ""
+      }`}
+    >
       <div
-        className={`${styles.section} pt-20 pb-6 text-xl flex justify-between`}
+        className={`${styles.navbar_section} pt-12 pb-6 text-xl flex justify-between`}
       >
         <Link href="/">
-          <Image
-            src="/Logo_Word_alt.svg"
-            alt="Codevelop Logo"
-            width="250"
-            height="80"
-            style={{
-              filter: isDDHovered ? "" : "invert(100%)",
-              minHeight: 80,
-              minWidth: 250,
-            }}
-          />
+          <HeaderLogo isDDHovered={isDDHovered}></HeaderLogo>
         </Link>
         <button
           className={`${styles.mobile_nav_toggle}`}
@@ -85,10 +96,9 @@ const Navbar: React.FC = () => {
                 style={{ position: "relative" }}
                 className={`flex ${isDDHovered ? styles.dropdown_open : ""}`}
               >
-                <Link className={styles.nav_link} href="/our-services">
-                  Our Services
-                </Link>
+                <p className={styles.nav_link}>Our Services</p>
                 <Image
+                  priority={true}
                   src="/down_arrow.svg"
                   alt="dropdown_arrow"
                   width="25"
@@ -106,6 +116,9 @@ const Navbar: React.FC = () => {
               <div className={`${styles.dropdown_menu}`}>
                 <DropdownMenu />
               </div>
+              {/* <div className={`${styles.overlay}`}>
+                <div>hi</div>
+              </div> */}
             </li>
             <li>
               <Link
