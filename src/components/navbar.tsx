@@ -41,24 +41,30 @@ const Navbar: React.FC = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollY]);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+
+    // Prevent or allow scrolling based on the menu state
+    document.body.classList.toggle("no-scroll", !isOpen);
+  };
   return (
     <header
-      className={`${styles.navbar} ${hidden ? styles.hidden : ""} ${
-        isDDHovered ? styles.white_bg : ""
-      }`}
+      className={`${styles.navbar} ${hidden ? styles.hidden : ""}
+      ${isDDHovered && !hidden ? styles.white_bg : ""}`}
     >
       <div
         className={`${styles.navbar_section} pt-12 pb-6 text-xl flex justify-between`}
       >
         <Link href="/">
-          <HeaderLogo isDDHovered={isDDHovered}></HeaderLogo>
+          <HeaderLogo isDDHovered={isDDHovered && !hidden}></HeaderLogo>
         </Link>
         <button
           className={`${styles.mobile_nav_toggle}`}
           aria-controls="primary-navigation"
           aria-expanded={isOpen}
           onClick={() => {
-            setIsOpen(!isOpen);
+            toggleMenu();
           }}
         >
           <span className="sr-only">Menu</span>
@@ -76,7 +82,7 @@ const Navbar: React.FC = () => {
             <li>
               <Link
                 className={`${styles.nav_link} ${
-                  isDDHovered ? "text-black" : ""
+                  isDDHovered && !hidden ? "text-black" : ""
                 }`}
                 href="/our-work"
               >
@@ -94,7 +100,9 @@ const Navbar: React.FC = () => {
             >
               <div
                 style={{ position: "relative" }}
-                className={`flex ${isDDHovered ? styles.dropdown_open : ""}`}
+                className={`flex ${
+                  isDDHovered && !hidden ? styles.dropdown_open : ""
+                }`}
               >
                 <p className={styles.nav_link}>Our Services</p>
                 <Image
@@ -104,7 +112,7 @@ const Navbar: React.FC = () => {
                   width="25"
                   height="25"
                   style={{
-                    filter: isDDHovered ? "" : "invert(100%)",
+                    filter: isDDHovered && !hidden ? "" : "invert(100%)",
                     minHeight: 25,
                     minWidth: 25,
                     maxHeight: 25,
@@ -123,7 +131,7 @@ const Navbar: React.FC = () => {
             <li>
               <Link
                 className={`${styles.nav_link} ${
-                  isDDHovered ? "text-black" : ""
+                  isDDHovered && !hidden ? "text-black" : ""
                 }`}
                 href="/careers"
               >
@@ -134,7 +142,7 @@ const Navbar: React.FC = () => {
               <NavButton
                 href="/contact-us"
                 text="Contact Us"
-                hovered={`${isDDHovered}`}
+                hovered={`${isDDHovered && !hidden}`}
               ></NavButton>
             </li>
           </ul>
