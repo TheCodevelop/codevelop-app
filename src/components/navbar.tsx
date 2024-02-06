@@ -49,106 +49,110 @@ const Navbar: React.FC = () => {
     document.body.classList.toggle("no-scroll", !isOpen);
   };
   return (
-    <header
-      className={`${styles.navbar} ${hidden ? styles.hidden : ""}
-      ${isDDHovered && !hidden ? styles.white_bg : ""}`}
-    >
-      <div
-        className={`${styles.navbar_section} pt-12 pb-6 text-xl flex justify-between`}
+    <>
+      <header
+        className={`${styles.navbar} ${hidden ? styles.hidden : ""}
+    ${isDDHovered && !hidden ? styles.white_bg : ""}`}
       >
-        <Link href="/">
-          <HeaderLogo isDDHovered={isDDHovered && !hidden}></HeaderLogo>
-        </Link>
-        <button
-          className={`${styles.mobile_nav_toggle}`}
-          aria-controls="primary-navigation"
-          aria-expanded={isOpen}
-          onClick={() => {
-            toggleMenu();
-          }}
+        <div
+          className={`${styles.navbar_section} pt-12 pb-6 text-xl flex justify-between`}
         >
-          <span className="sr-only">Menu</span>
-        </button>
-        <nav
-          className={`${styles.primary_navigation} self-end`}
-          data-visible={isOpen}
-          data-resizing={resizing}
-        >
-          <ul
-            className={`${styles.navigation_items} gap-8`}
+          <Link href="/">
+            <HeaderLogo isDDHovered={isDDHovered && !hidden}></HeaderLogo>
+          </Link>
+          <button
+            className={`${styles.mobile_nav_toggle}`}
+            aria-controls="primary-navigation"
+            aria-expanded={isOpen}
+            onClick={() => {
+              toggleMenu();
+            }}
+          >
+            <span className="sr-only">Menu</span>
+          </button>
+          <nav
+            className={`${styles.primary_navigation} self-end`}
             data-visible={isOpen}
             data-resizing={resizing}
           >
-            <li>
-              <Link
-                className={`${styles.nav_link} ${
-                  isDDHovered && !hidden ? "text-black" : ""
-                }`}
-                href="/our-work"
-              >
-                Our Work
-              </Link>
-            </li>
-            <li
-              onMouseEnter={() =>
-                !isOpen || window.innerWidth > 769 ? setisDDHovered(true) : ""
-              }
-              onMouseLeave={() =>
-                !isOpen || window.innerWidth > 769 ? setisDDHovered(false) : ""
-              }
-              className={styles.nav_link_with_dropdown}
+            <ul
+              className={`${styles.navigation_items} gap-8`}
+              data-visible={isOpen}
+              data-resizing={resizing}
             >
-              <div
-                style={{ position: "relative" }}
-                className={`flex ${
-                  isDDHovered && !hidden ? styles.dropdown_open : ""
-                }`}
+              <li>
+                <Link
+                  className={`${styles.nav_link} ${
+                    isDDHovered && !hidden ? "text-black" : ""
+                  }`}
+                  href="/our-work"
+                >
+                  Our Work
+                </Link>
+              </li>
+              <li
+                onMouseEnter={() =>
+                  !isOpen || window.innerWidth > 769 ? setisDDHovered(true) : ""
+                }
+                onMouseLeave={() =>
+                  !isOpen || window.innerWidth > 769
+                    ? setisDDHovered(false)
+                    : ""
+                }
+                className={styles.nav_link_with_dropdown}
               >
-                <p className={styles.nav_link}>Our Services</p>
-                <Image
-                  priority={true}
-                  src="/down_arrow.svg"
-                  alt="dropdown_arrow"
-                  width="25"
-                  height="25"
-                  style={{
-                    filter: isDDHovered && !hidden ? "" : "invert(100%)",
-                    minHeight: 25,
-                    minWidth: 25,
-                    maxHeight: 25,
-                    maxWidth: 25,
-                  }}
-                  className={styles.nav_arrow}
-                />
-              </div>
-              <div className={`${styles.dropdown_menu}`}>
-                <DropdownMenu />
-              </div>
-              {/* <div className={`${styles.overlay}`}>
-                <div>hi</div>
-              </div> */}
-            </li>
-            <li>
-              <Link
-                className={`${styles.nav_link} ${
-                  isDDHovered && !hidden ? "text-black" : ""
-                }`}
-                href="/careers"
-              >
-                Careers
-              </Link>
-            </li>
-            <li>
-              <NavButton
-                href="/contact-us"
-                text="Contact Us"
-                hovered={`${isDDHovered && !hidden}`}
-              ></NavButton>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+                <div
+                  style={{ position: "relative" }}
+                  className={`flex ${
+                    isDDHovered && !hidden ? styles.dropdown_open : ""
+                  }`}
+                >
+                  <p className={styles.nav_link}>Our Services</p>
+                  <Image
+                    priority={true}
+                    src="/down_arrow.svg"
+                    alt="dropdown_arrow"
+                    width="25"
+                    height="25"
+                    style={{
+                      filter: isDDHovered && !hidden ? "" : "invert(100%)",
+                      minHeight: 25,
+                      minWidth: 25,
+                      maxHeight: 25,
+                      maxWidth: 25,
+                    }}
+                    className={styles.nav_arrow}
+                  />
+                </div>
+                <div className={`${styles.dropdown_menu}`}>
+                  <DropdownMenu />
+                </div>
+                <div className={`${styles.overlay}`}>
+                  <div>hi</div>
+                </div>
+              </li>
+              <li>
+                <Link
+                  className={`${styles.nav_link} ${
+                    isDDHovered && !hidden ? "text-black" : ""
+                  }`}
+                  href="/careers"
+                >
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <NavButton
+                  href="/contact-us"
+                  text="Contact Us"
+                  hovered={`${isDDHovered && !hidden}`}
+                ></NavButton>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </>
   );
 };
 

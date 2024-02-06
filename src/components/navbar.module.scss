@@ -136,15 +136,14 @@
 }
 
 .overlay {
-  position: absolute;
-  top: 472px;
+  position: fixed;
+  top: 440px;
   left: 0;
   right: 0;
-  height: 300px;
-  // visibility: hidden;
-  opacity: 100%;
-  transition: opacity 300ms ease-out;
+  height: 100%;
+  visibility: hidden;
   background-color: red;
+  z-index: -1;
 }
 
 .dropdown_content {
@@ -168,7 +167,6 @@ nav li {
     }
     .overlay {
       visibility: visible;
-      opacity: 100%;
     }
     .nav_link {
       opacity: 100%;
