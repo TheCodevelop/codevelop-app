@@ -99,7 +99,7 @@ const Navbar: React.FC = () => {
                     ? setisDDHovered(false)
                     : ""
                 }
-                className={styles.nav_link_with_dropdown}
+                style={{ gap: "5px", whiteSpace: "nowrap" }}
               >
                 <div
                   style={{ position: "relative" }}
@@ -127,9 +127,6 @@ const Navbar: React.FC = () => {
                 <div className={`${styles.dropdown_menu}`}>
                   <DropdownMenu />
                 </div>
-                <div className={`${styles.overlay}`}>
-                  <div>hi</div>
-                </div>
               </li>
               <li>
                 <Link
@@ -152,6 +149,10 @@ const Navbar: React.FC = () => {
           </nav>
         </div>
       </header>
+      <div
+        data-visible={!hidden && isDDHovered}
+        className={`${styles.overlay}`}
+      ></div>
     </>
   );
 };
