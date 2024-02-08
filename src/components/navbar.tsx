@@ -33,23 +33,33 @@ const Navbar: React.FC = () => {
       },
     );
 
-    const updateScrolls = () => {
-      const currentScrollY = window.scrollY;
+    const updateScrolls = throttle(
+      () => {
+        const currentScrollY = window.scrollY;
 
-      if (isHidden.current !== lastScrollY.current < currentScrollY)
-        updateHidden(lastScrollY.current < currentScrollY);
+        if (
+          isHidden.current !== lastScrollY.current < currentScrollY &&
+          lastScrollY.current > 0
+        )
+          updateHidden(lastScrollY.current < currentScrollY);
 
-      lastScrollY.current = currentScrollY;
-      if (currentScrollY <= 0) {
-        setHidden(false);
-        isHidden.current = false;
-      }
-    };
+        lastScrollY.current = currentScrollY;
+        if (currentScrollY <= 0) {
+          setHidden(false);
+          isHidden.current = false;
+        }
+      },
+      200,
+      { trailing: true },
+    );
 
     const updateHidden = throttle(
       (status: boolean) => {
         setHidden(status);
         isHidden.current = status;
+        if (isHidden.current === true) {
+          setisDDHovered(false);
+        }
       },
       500,
       {
@@ -147,8 +157,14 @@ const Navbar: React.FC = () => {
                     className={styles.nav_arrow}
                   />
                 </div>
-                <div className={`${styles.dropdown_menu}`}>
-                  <DropdownMenu />
+                <div
+                  style={{
+                    visibility: isDDHovered && !hidden ? "visible" : "hidden",
+                    opacity: isDDHovered && !hidden ? "100%" : "0%",
+                  }}
+                  className={`${styles.dropdown_menu}`}
+                >
+                  <DropdownMenu hidden={hidden} />
                 </div>
               </li>
               <li>

@@ -9,7 +9,6 @@
 
 .hidden {
   transform: translateY(-200px); /* Adjust based on your navbar's height */
-  // top: -200px;
 }
 
 .nav_link {
@@ -136,7 +135,6 @@
   left: 0;
   right: 0;
   height: 100vh;
-  // background-color: red;
   background: rgba(0, 0, 0, 0.4);
   z-index: 9999;
   visibility: hidden;
@@ -148,12 +146,6 @@
 .dropdown_content {
   padding-right: 1.5rem;
   padding-left: 1.5rem;
-}
-
-.hidden {
-  .dropdown_menu {
-    display: none;
-  }
 }
 
 nav li {

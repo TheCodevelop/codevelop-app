@@ -3,11 +3,15 @@ import Link from "next/link";
 import styles from "./navbar.module.scss";
 import ServiceCard from "./service-card";
 
-const DropdownMenu = () => {
+interface DropdownMenuProps {
+  hidden: boolean;
+}
+
+const DropdownMenu: React.FC<DropdownMenuProps> = ({ hidden }) => {
   return (
     <div
       className={`${styles.dropdown_content} ${styles.section}`}
-      style={{ color: "black" }}
+      style={{ color: "black", display: hidden ? "none" : "block" }}
     >
       <p className="text-3xl font-semibold pt-4 pb-8">Our Services</p>
       <div className="flex gap-12">
