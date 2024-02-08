@@ -52,6 +52,7 @@
 }
 
 .nav_button {
+  display: block;
   white-space: nowrap;
   border-color: white;
   border-width: 0.2rem;
@@ -63,6 +64,7 @@
   z-index: 20;
   color: black;
   &::after {
+    pointer-events: none;
     content: "";
     z-index: -1;
     position: absolute;

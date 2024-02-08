@@ -10,8 +10,14 @@ interface NavButtonProps {
 
 const NavButton: React.FC<NavButtonProps> = ({ text, href, hovered }) => {
   return (
-    <button data-nav-hovered={hovered} className={styles.nav_button}>
-      <Link href={href}>{text}</Link>
+    <button>
+      <Link
+        data-nav-hovered={hovered}
+        className={styles.nav_button}
+        href={href}
+      >
+        {text}
+      </Link>
     </button>
   );
 };
