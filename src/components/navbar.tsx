@@ -133,7 +133,6 @@ const Navbar: React.FC = () => {
                 >
                   <p className={styles.nav_link}>Our Services</p>
                   <Image
-                    priority={true}
                     src="/down_arrow.svg"
                     alt="dropdown_arrow"
                     width="25"

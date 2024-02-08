@@ -23,6 +23,7 @@ export default function Page() {
         <div
           style={{
             position: "absolute",
+            height: "300px",
             top: "750px",
             right: "10px",
             zIndex: 900,
@@ -31,8 +32,8 @@ export default function Page() {
           <Image
             src="/laptop.png"
             alt="Laptop image"
-            width="600"
-            height="450"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           ></Image>
         </div>
       </div>
