@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./navbar.module.scss";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import throttle from "lodash/throttle";
 import DropdownMenu from "./dropdown-menu";
 import NavButton from "./nav-button";
@@ -12,35 +12,59 @@ const Navbar: React.FC = () => {
   const [resizing, setResizing] = useState(false);
   const [isDDHovered, setisDDHovered] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-
-  const [lastScrollY, setLastScrollY] = useState(0);
   const [hidden, setHidden] = useState(false);
+
+  const lastScrollY = useRef(0);
+  const isHidden = useRef(false);
 
   useEffect(() => {
     // This entire block of code serves the purpose  of freezing the css opacity animation of the
     // navbar when the window is resizing by manipulating the value of the "data-resizing" attribute
-    const resizeState = throttle(() => {
-      setResizing(true);
-      setTimeout(() => {
-        setResizing(false);
-      }, 300);
-    }, 301);
+    const resizeState = throttle(
+      () => {
+        setResizing(true);
+        setTimeout(() => {
+          setResizing(false);
+        }, 1000);
+      },
+      1001,
+      {
+        trailing: false,
+      },
+    );
 
-    const handleScroll = () => {
+    const updateScrolls = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY < 0) return;
-      setHidden(currentScrollY > lastScrollY);
-      setLastScrollY(currentScrollY);
+
+      if (isHidden.current !== lastScrollY.current < currentScrollY)
+        updateHidden(lastScrollY.current < currentScrollY);
+
+      lastScrollY.current = currentScrollY;
+      if (currentScrollY <= 0) {
+        setHidden(false);
+        isHidden.current = false;
+      }
     };
 
+    const updateHidden = throttle(
+      (status: boolean) => {
+        setHidden(status);
+        isHidden.current = status;
+      },
+      500,
+      {
+        trailing: false,
+      },
+    );
+
     window.addEventListener("resize", resizeState);
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", updateScrolls);
 
     return () => {
       window.removeEventListener("resize", resizeState);
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", updateScrolls);
     };
-  }, [lastScrollY]);
+  }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
