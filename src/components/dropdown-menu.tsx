@@ -11,7 +11,11 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ hidden }) => {
   return (
     <div
       className={`${styles.dropdown_content} ${styles.section}`}
-      style={{ color: "black", display: hidden ? "none" : "block" }}
+      style={{
+        color: "black",
+        transform: hidden ? "translateY(10%)" : "translateY(0px)",
+        opacity: hidden ? "0%" : "100%",
+      }}
     >
       <p className="text-3xl font-semibold pt-4 pb-8">Our Services</p>
       <div className="flex gap-12">

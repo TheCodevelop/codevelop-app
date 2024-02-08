@@ -146,6 +146,11 @@
 .dropdown_content {
   padding-right: 1.5rem;
   padding-left: 1.5rem;
+  opacity: 0%;
+  transition:
+    transform ease-out 300ms,
+    opacity ease-out 300ms;
+  transform: translateY(0%);
 }
 
 nav li {

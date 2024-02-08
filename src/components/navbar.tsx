@@ -164,7 +164,7 @@ const Navbar: React.FC = () => {
                   }}
                   className={`${styles.dropdown_menu}`}
                 >
-                  <DropdownMenu hidden={hidden} />
+                  <DropdownMenu hidden={!isDDHovered} />
                 </div>
               </li>
               <li>
