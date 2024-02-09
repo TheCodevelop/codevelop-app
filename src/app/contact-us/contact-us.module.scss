@@ -7,8 +7,6 @@
 
 .input_container {
   position: relative;
-  display: flex;
-  flex-direction: column;
 
   &::after {
     content: ""; /* Required for the pseudo-element to show */
@@ -55,6 +53,7 @@
   }
 
   textarea {
+    height: 100%;
     padding: 24px 16px 4px 16px;
     font-size: 16px;
     line-height: 1.5rem;
@@ -65,4 +64,8 @@
       // logic for onFocus of input goes here
     }
   }
+}
+
+.input {
+  width: 100%;
 }

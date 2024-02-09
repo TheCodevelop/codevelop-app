@@ -7,6 +7,7 @@ interface InputFieldProps {
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
   type?: string;
   label?: string;
+  style?: React.CSSProperties; // This allows passing inline styles
 }
 
 export const InputField: React.FC<InputFieldProps> = ({
@@ -14,10 +15,20 @@ export const InputField: React.FC<InputFieldProps> = ({
   onChange = () => {},
   type = "text",
   label = "Default",
+  style = {},
 }) => {
   return (
-    <div className={styles.input_container}>
-      <input id={`id-${label}`} type={type} value={value} onChange={onChange} />
+    <div
+      style={{ ...style, height: "64px" }}
+      className={styles.input_container}
+    >
+      <input
+        className={styles.input}
+        id={`id-${label}`}
+        type={type}
+        value={value}
+        onChange={onChange}
+      />
       <label className={value && styles.filled} htmlFor={`id-${label}`}>
         {label}
       </label>
