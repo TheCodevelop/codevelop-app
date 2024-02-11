@@ -14,6 +14,8 @@ const Navbar: React.FC = () => {
   const [isDDHovered, setisDDHovered] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
+  const [closed, setClosed] = useState(true);
+  const [status, setStatus] = useState("closed");
 
   const lastScrollY = useRef(0);
   const isHidden = useRef(false);
@@ -75,7 +77,7 @@ const Navbar: React.FC = () => {
       window.removeEventListener("resize", resizeState);
       window.removeEventListener("scroll", updateScrolls);
     };
-  }, []);
+  }, [isDDHovered]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -126,14 +128,18 @@ const Navbar: React.FC = () => {
                 </Link>
               </li>
               <li
-                onMouseEnter={() =>
-                  !isOpen || window.innerWidth > 769 ? setisDDHovered(true) : ""
-                }
-                onMouseLeave={() =>
-                  !isOpen || window.innerWidth > 769
-                    ? setisDDHovered(false)
-                    : ""
-                }
+                onMouseEnter={() => {
+                  if (!isOpen || window.innerWidth > 769) {
+                    setClosed(false);
+                    setisDDHovered(true);
+                  }
+                }}
+                onMouseLeave={() => {
+                  if (!isOpen || window.innerWidth > 769) {
+                    setClosed(true);
+                    setisDDHovered(false);
+                  }
+                }}
                 style={{ gap: "5px", whiteSpace: "nowrap" }}
               >
                 <div
@@ -159,13 +165,13 @@ const Navbar: React.FC = () => {
                   />
                 </div>
                 <div
+                  data-hovered={isDDHovered}
                   style={{
-                    visibility: isDDHovered && !hidden ? "visible" : "hidden",
-                    opacity: isDDHovered && !hidden ? "100%" : "0%",
+                    display: closed ? "none" : "block",
                   }}
                   className={`${styles.dropdown_menu}`}
                 >
-                  <DropdownMenu hidden={!isDDHovered} />
+                  <DropdownMenu isHovered={isDDHovered} closed={closed} />
                 </div>
               </li>
               <li>

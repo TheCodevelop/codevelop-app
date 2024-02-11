@@ -115,18 +115,24 @@
 }
 
 .dropdown_menu {
+  display: none;
   position: absolute;
   top: 152px;
   height: 320px;
   left: 0;
   right: 0;
   background: white;
-  visibility: hidden;
-  opacity: 0%;
-  transition: opacity 300ms ease-out;
   padding-top: 16px;
   padding-bottom: 24px;
   border-radius: 0px 0px 20px 20px;
+  &[data-hovered="true"] {
+    .dropdown_content {
+      animation:
+        fade_in 300ms ease-in 100ms forwards,
+        slide_up 300ms ease-in forwards;
+    }
+    animation: fade_in ease-in 300ms forwards;
+  }
 }
 
 .overlay {
@@ -147,12 +153,10 @@
 }
 
 .dropdown_content {
+  opacity: 0;
+  transform: translateY(20%);
   padding-right: 1.5rem;
   padding-left: 1.5rem;
-  transition:
-    transform ease-out 300ms,
-    opacity ease-out 300ms;
-  opacity: 0%;
 }
 
 nav li {
@@ -196,4 +200,31 @@ nav li {
   padding-right: 64px;
   margin: auto;
   // height: 20vh;
+}
+
+@keyframes fade_in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade_out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slide_up {
+  0% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
