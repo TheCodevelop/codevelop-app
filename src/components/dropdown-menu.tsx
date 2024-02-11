@@ -13,8 +13,9 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ hidden }) => {
       className={`${styles.dropdown_content} ${styles.section}`}
       style={{
         color: "black",
-        transform: hidden ? "translateY(10%)" : "translateY(0px)",
+        transform: hidden ? "translateY(20%)" : "translateY(0px)",
         opacity: hidden ? "0%" : "100%",
+        visibility: hidden ? "hidden" : "visible",
       }}
     >
       <p className="text-3xl font-semibold pt-4 pb-8">Our Services</p>

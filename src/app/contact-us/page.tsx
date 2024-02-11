@@ -4,7 +4,12 @@ import ContactForm from "./contact-form";
 export default function Page() {
   return (
     <div
-      className={`${styles.section} grid grid-cols-2 grid-rows-1 pt-24 pb-48`}
+      style={{
+        display: "grid",
+        gap: "30px 30px",
+        gridTemplateColumns: "repeat(auto-fit, minmax(500px, 1fr))",
+      }}
+      className={`${styles.section}  pt-24 pb-48`}
     >
       <div style={{ fontWeight: "400", fontSize: "64px" }}>
         Lets

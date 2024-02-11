@@ -22,7 +22,7 @@
   line-height: 2rem;
   border-radius: 1rem;
   border-color: $text-color;
-  border-width: 0.2rem;
+  border-width: 0.1rem;
   position: relative;
   z-index: 20;
   color: $bg-color;
@@ -50,7 +50,7 @@
     &::after {
       opacity: 0%;
     }
-    border-width: 0.2rem;
+    border-width: 0.1rem;
   }
 }
 

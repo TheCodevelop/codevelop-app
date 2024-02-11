@@ -13,14 +13,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   link,
 }) => {
   return (
-    <Link href={link} className="max-w-xs">
+    <Link href={link}>
       <p
         style={{ borderBottom: "5px", borderColor: "black" }}
         className="text-xl font-semibold pb-3 "
       >
         {name}
       </p>
-      <p style={{ whiteSpace: "break-spaces" }} className={"text-lg"}>
+      <p style={{ whiteSpace: "break-spaces", fontSize: "0.875rem" }}>
         {description}
       </p>
     </Link>

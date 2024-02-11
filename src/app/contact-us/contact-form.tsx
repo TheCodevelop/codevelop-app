@@ -21,39 +21,56 @@ export default function ContactForm() {
         padding: "36px",
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
-        gridTemplateRows: "1fr 1fr 1fr 1fr 2fr 1.5fr",
+        gridTemplateRows: "1fr 3fr 1fr 2fr 1.5fr",
         rowGap: "20px",
+        maxWidth: "500px",
       }}
     >
-      <h2 style={{ fontSize: "36px", fontWeight: "300" }}>Contact Us</h2>
-      <InputField
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        type="text"
-        label="Name"
-        style={{ gridColumnStart: "1", gridColumnEnd: "2" }}
-      ></InputField>
-      <InputField
-        value={company}
-        onChange={(e) => setCompany(e.target.value)}
-        type="text"
-        label="Company"
-        style={{ gridColumnStart: "2", gridColumnEnd: "3" }}
-      ></InputField>
-      <InputField
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        type="email"
-        label="Email"
-        style={{ gridColumnStart: "1", gridColumnEnd: "2" }}
-      ></InputField>
-      <InputField
-        value={phone}
-        onChange={(e) => setPhone(e.target.value)}
-        type="tel"
-        label="Phone"
-        style={{ gridColumnStart: "2", gridColumnEnd: "3" }}
-      ></InputField>
+      <h2
+        style={{
+          fontSize: "36px",
+          fontWeight: "300",
+          gridColumnStart: "1",
+          gridColumnEnd: "3",
+        }}
+      >
+        Contact Us
+      </h2>
+      <div
+        style={{
+          display: "grid",
+          alignItems: "center",
+          gridColumnStart: "1",
+          gridColumnEnd: "3",
+          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+        }}
+      >
+        <InputField
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          type="text"
+          label="Name"
+        ></InputField>
+        <InputField
+          value={company}
+          onChange={(e) => setCompany(e.target.value)}
+          type="text"
+          label="Company"
+        ></InputField>
+        <InputField
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          type="email"
+          label="Email"
+        ></InputField>
+        <InputField
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+          type="tel"
+          label="Phone"
+        ></InputField>
+      </div>
+
       <div style={{ gridColumnStart: "1", gridColumnEnd: "3" }}>
         <fieldset>
           <legend>Preferred Communication</legend>

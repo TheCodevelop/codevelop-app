@@ -7,6 +7,7 @@ import throttle from "lodash/throttle";
 import DropdownMenu from "./dropdown-menu";
 import NavButton from "./nav-button";
 import HeaderLogo from "./header-logo";
+import Button from "./button";
 
 const Navbar: React.FC = () => {
   const [resizing, setResizing] = useState(false);
@@ -178,11 +179,11 @@ const Navbar: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <NavButton
-                  href="/contact-us"
+                <Button
+                  variant={isDDHovered && !hidden ? "primary" : "secondary"}
                   text="Contact Us"
-                  hovered={`${isDDHovered && !hidden}`}
-                ></NavButton>
+                  href="/contact-us"
+                ></Button>
               </li>
             </ul>
           </nav>

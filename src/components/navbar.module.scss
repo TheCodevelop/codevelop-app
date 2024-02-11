@@ -138,27 +138,29 @@
   background: rgba(0, 0, 0, 0.4);
   z-index: 9999;
   visibility: hidden;
+  opacity: 0%;
+  transition: opacity 300ms ease-out;
   &[data-visible="true"] {
     visibility: visible;
+    opacity: 100%;
   }
 }
 
 .dropdown_content {
   padding-right: 1.5rem;
   padding-left: 1.5rem;
-  opacity: 0%;
   transition:
     transform ease-out 300ms,
     opacity ease-out 300ms;
-  transform: translateY(0%);
+  opacity: 0%;
 }
 
 nav li {
   &:hover {
     @media (min-width: 769px) {
       .dropdown_menu {
-        visibility: visible;
         opacity: 100%;
+        visibility: visible;
       }
     }
     .nav_link {
