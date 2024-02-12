@@ -94,9 +94,8 @@ const Navbar: React.FC = () => {
         <div
           className={`${styles.navbar_section} pt-12 pb-6 text-xl flex justify-between`}
         >
-          <Link href="/">
-            <HeaderLogo isDDHovered={isDDHovered && !hidden}></HeaderLogo>
-          </Link>
+          <HeaderLogo isDDHovered={isDDHovered && !hidden}></HeaderLogo>
+
           <button
             className={`${styles.mobile_nav_toggle}`}
             aria-controls="primary-navigation"
@@ -189,6 +188,7 @@ const Navbar: React.FC = () => {
                   variant={isDDHovered && !hidden ? "primary" : "secondary"}
                   text="Contact Us"
                   href="/contact-us"
+                  style={{ padding: "12px", fontSize: "22px" }}
                 ></Button>
               </li>
             </ul>

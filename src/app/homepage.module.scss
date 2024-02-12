@@ -16,7 +16,7 @@
   display: none;
 }
 
-@mixin button-style($bg-color: white, $text-color: black) {
+@mixin button-style($bg-color, $text-color) {
   padding: 1rem;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -26,6 +26,7 @@
   position: relative;
   z-index: 20;
   color: $bg-color;
+  white-space: nowrap;
 
   &::after {
     content: "";

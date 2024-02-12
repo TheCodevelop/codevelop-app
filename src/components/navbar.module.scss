@@ -1,6 +1,6 @@
 .navbar {
   position: sticky;
-  top: 0px;
+  top: 0;
   background-color: black;
   z-index: 99999;
   transition: transform ease-out 500ms;
@@ -117,7 +117,7 @@
 .dropdown_menu {
   display: none;
   position: absolute;
-  top: 152px;
+  top: 150px;
   height: 320px;
   left: 0;
   right: 0;
@@ -199,7 +199,7 @@ nav li {
   padding-left: 64px;
   padding-right: 64px;
   margin: auto;
-  // height: 20vh;
+  height: 150px;
 }
 
 @keyframes fade_in {

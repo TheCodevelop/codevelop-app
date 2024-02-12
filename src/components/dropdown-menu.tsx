@@ -26,16 +26,19 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ isHovered, closed }) => {
           name="Website Development"
           description="Give us a design that we can bring to life, or let us take care of crafting a beautiful design tailored to your speciifc needs"
           link="/services/web-dev"
+          style={{ flex: 1 }}
         />
         <ServiceCard
           name="Mobile App Development"
           description="Specializing in iOS and Android, we transform your vision into user-friendly, high-performance apps tailored to your needs. Ideal for startups or established businesses."
           link="/services/mobile-app"
+          style={{ flex: 1 }}
         />
         <ServiceCard
           name="Expert Advisor"
           description="Have a Forex strategy you want to automate? We can create an expert advisor (EA) that runs your strategy automatically"
           link="/services/ea"
+          style={{ flex: 1 }}
         />
       </div>
     </div>

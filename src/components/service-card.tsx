@@ -6,14 +6,16 @@ interface ServiceCardProps {
   name: string;
   description: string;
   link: string;
+  style?: React.CSSProperties;
 }
 const ServiceCard: React.FC<ServiceCardProps> = ({
   name,
   description,
   link,
+  style,
 }) => {
   return (
-    <Link href={link}>
+    <Link href={link} style={style}>
       <p
         style={{ borderBottom: "5px", borderColor: "black" }}
         className="text-xl font-semibold pb-3 "

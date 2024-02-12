@@ -31,7 +31,7 @@ export default function HeaderLogo({ isDDHovered }: HeaderLogoProps) {
         style={{
           filter: isDDHovered ? "" : "invert(100%)",
           height: "100%",
-          width: "100%",
+          width: "auto",
           minHeight: 80,
           minWidth: "auto",
         }}
