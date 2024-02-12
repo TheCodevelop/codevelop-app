@@ -105,12 +105,22 @@ const Navbar: React.FC = () => {
               toggleMenu();
             }}
           >
-            <Image
-              src="/menu_hamburger.svg"
-              alt="Menu Icon"
-              width="54"
-              height="36"
-            ></Image>
+            {isOpen ? (
+              <Image
+                src="/close_icon.svg"
+                alt="Close Menu Icon"
+                width="40"
+                height="40"
+              ></Image>
+            ) : (
+              <Image
+                src="/menu_hamburger.svg"
+                alt="Menu Icon"
+                width="54"
+                height="36"
+              ></Image>
+            )}
+
             <span className="sr-only">Menu</span>
           </button>
           <nav
