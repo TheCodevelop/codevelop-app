@@ -33,7 +33,7 @@
   &:hover {
     cursor: pointer;
   }
-  @media (min-width: 769px) {
+  @media (min-width: 850px) {
     opacity: 70%;
   }
 }
@@ -52,34 +52,21 @@
 
 .nav_arrow {
   align-self: flex-end;
-  @media (min-width: 769px) {
+  @media (min-width: 850px) {
     opacity: 70%;
   }
 }
 
 .mobile_nav_toggle {
   display: none;
-  @media (max-width: 768px) {
+  @media (max-width: 849px) {
     display: block;
-    position: absolute;
-    right: 10%;
-    top: 100px;
-    background-image: url("/menu_hamburger.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 3rem;
-    aspect-ratio: 3/2;
     filter: invert(100%);
-  }
-  &[aria-expanded="true"] {
-    background-image: url("/close_icon.svg");
-    aspect-ratio: 1;
-    width: 2rem;
   }
 }
 
 .primary_navigation {
-  @media (max-width: 768px) {
+  @media (max-width: 849px) {
     z-index: 999;
     position: absolute;
     background-color: black;
@@ -107,7 +94,7 @@
 .navigation_items {
   display: flex;
   flex-direction: row;
-  @media (max-width: 768px) {
+  @media (max-width: 849px) {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -161,7 +148,7 @@
 
 nav li {
   &:hover {
-    @media (min-width: 769px) {
+    @media (min-width: 850px) {
       .dropdown_menu {
         opacity: 100%;
         visibility: visible;
@@ -169,7 +156,7 @@ nav li {
     }
     .nav_link {
       opacity: 100%;
-      @media (min-width: 769px) {
+      @media (min-width: 850px) {
         &::after {
           transform: scaleX(1);
           opacity: 100%;

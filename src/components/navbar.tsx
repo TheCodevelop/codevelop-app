@@ -94,16 +94,23 @@ const Navbar: React.FC = () => {
         <div
           className={`${styles.navbar_section} pt-12 pb-6 text-xl flex justify-between`}
         >
-          <HeaderLogo isDDHovered={isDDHovered && !hidden}></HeaderLogo>
+          <Link href="/">
+            <HeaderLogo isDDHovered={isDDHovered && !hidden}></HeaderLogo>
+          </Link>
 
           <button
             className={`${styles.mobile_nav_toggle}`}
             aria-controls="primary-navigation"
-            aria-expanded={isOpen}
             onClick={() => {
               toggleMenu();
             }}
           >
+            <Image
+              src="/menu_hamburger.svg"
+              alt="Menu Icon"
+              width="54"
+              height="36"
+            ></Image>
             <span className="sr-only">Menu</span>
           </button>
           <nav
