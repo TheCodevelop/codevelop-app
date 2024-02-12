@@ -14,6 +14,8 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [closed, setClosed] = useState(true);
+  const [isMobileDDOpen, setIsMobileDDOpen] = useState(false);
+  const [isMobileDDDisplay, setIsMobileDDDisplay] = useState(false);
 
   const lastScrollY = useRef(0);
   const isHidden = useRef(false);
@@ -23,12 +25,14 @@ const Navbar: React.FC = () => {
     // navbar when the window is resizing by manipulating the value of the "data-resizing" attribute
     const resizeState = throttle(
       () => {
+        setIsMobileDDOpen(false);
+        setIsMobileDDDisplay(false);
         setResizing(true);
         setTimeout(() => {
           setResizing(false);
-        }, 1000);
+        }, 300);
       },
-      1001,
+      301,
       {
         trailing: false,
       },
@@ -59,6 +63,7 @@ const Navbar: React.FC = () => {
         setHidden(status);
         isHidden.current = status;
         if (isHidden.current === true) {
+          setClosed(true);
           setisDDHovered(false);
         }
       },
@@ -108,21 +113,23 @@ const Navbar: React.FC = () => {
               toggleMenu();
             }}
           >
-            {isOpen ? (
-              <Image
-                src="/close_icon.svg"
-                alt="Close Menu Icon"
-                width="40"
-                height="40"
-              ></Image>
-            ) : (
-              <Image
-                src="/menu_hamburger.svg"
-                alt="Menu Icon"
-                width="54"
-                height="36"
-              ></Image>
-            )}
+            <div style={{ width: "54px", height: "54px" }}>
+              {isOpen ? (
+                <Image
+                  src="/close_icon.svg"
+                  alt="Close Menu Icon"
+                  width="40"
+                  height="40"
+                ></Image>
+              ) : (
+                <Image
+                  src="/menu_hamburger.svg"
+                  alt="Menu Icon"
+                  width="54"
+                  height="36"
+                ></Image>
+              )}
+            </div>
 
             <span className="sr-only">Menu</span>
           </button>
@@ -131,11 +138,7 @@ const Navbar: React.FC = () => {
             data-visible={isOpen}
             data-resizing={resizing}
           >
-            <ul
-              className={`${styles.navigation_items} gap-8`}
-              data-visible={isOpen}
-              data-resizing={resizing}
-            >
+            <ul className={styles.navigation_items}>
               <li>
                 <Link
                   className={`${styles.nav_link} ${
@@ -169,6 +172,25 @@ const Navbar: React.FC = () => {
                   className={`flex ${
                     isDDHovered && !hidden ? styles.dropdown_open : ""
                   }`}
+                  onClick={() => {
+                    if (
+                      isOpen &&
+                      window.innerWidth <= 849 &&
+                      isMobileDDDisplay
+                    ) {
+                      setIsMobileDDOpen(false);
+                      setTimeout(() => {
+                        setIsMobileDDDisplay(false);
+                      }, 300);
+                    } else if (
+                      isOpen &&
+                      window.innerWidth <= 849 &&
+                      !isMobileDDDisplay
+                    ) {
+                      setIsMobileDDOpen(true);
+                      setIsMobileDDDisplay(true);
+                    }
+                  }}
                 >
                   <p className={styles.nav_link}>Our Services</p>
                   <Image
@@ -183,13 +205,57 @@ const Navbar: React.FC = () => {
                   />
                 </div>
                 <div
+                  style={{
+                    display: isMobileDDDisplay ? "flex" : "none",
+                  }}
+                  data-clicked={isMobileDDOpen}
+                  className={styles.mobile_menu}
+                >
+                  <Link
+                    href="/"
+                    className={styles.mobile_menu_item}
+                    onClick={() => {
+                      // setResizing(true);
+                      setIsOpen(false);
+                      setIsMobileDDDisplay(false);
+                      setIsMobileDDOpen(false);
+                    }}
+                  >
+                    Website Development
+                  </Link>
+                  <Link
+                    href="/"
+                    className={styles.mobile_menu_item}
+                    onClick={() => {
+                      // setResizing(true);
+                      setIsOpen(false);
+                      setIsMobileDDDisplay(false);
+                      setIsMobileDDOpen(false);
+                    }}
+                  >
+                    Mobile App Development
+                  </Link>
+                  <Link
+                    href="/"
+                    className={styles.mobile_menu_item}
+                    onClick={() => {
+                      // setResizing(true);
+                      setIsOpen(false);
+                      setIsMobileDDDisplay(false);
+                      setIsMobileDDOpen(false);
+                    }}
+                  >
+                    Expert Advisor
+                  </Link>
+                </div>
+                <div
                   data-hovered={isDDHovered}
                   style={{
                     display: closed ? "none" : "block",
                   }}
                   className={`${styles.dropdown_menu}`}
                 >
-                  <DropdownMenu isHovered={isDDHovered} closed={closed} />
+                  <DropdownMenu />
                 </div>
               </li>
               <li>

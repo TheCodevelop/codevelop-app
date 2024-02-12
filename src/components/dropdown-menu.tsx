@@ -1,23 +1,13 @@
 "use client";
-import Link from "next/link";
 import styles from "./navbar.module.scss";
 import ServiceCard from "./service-card";
-import { useState } from "react";
 
-interface DropdownMenuProps {
-  isHovered: boolean;
-  closed: boolean;
-}
-
-const DropdownMenu: React.FC<DropdownMenuProps> = ({ isHovered, closed }) => {
+const DropdownMenu = () => {
   return (
     <div
       className={`${styles.dropdown_content} ${styles.section}`}
       style={{
         color: "black",
-        // transform: isHovered ? "translateY(0px)" : "translateY(20%)",
-        // opacity: isHovered ? "100%" : "0%",
-        // display: closed ? "none" : "block",
       }}
     >
       <p className="text-3xl font-semibold pt-4 pb-8">Our Services</p>
