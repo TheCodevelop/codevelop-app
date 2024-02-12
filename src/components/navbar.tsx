@@ -5,7 +5,6 @@ import styles from "./navbar.module.scss";
 import { useEffect, useState, useRef } from "react";
 import throttle from "lodash/throttle";
 import DropdownMenu from "./dropdown-menu";
-import NavButton from "./nav-button";
 import HeaderLogo from "./header-logo";
 import Button from "./button";
 
@@ -15,7 +14,6 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [closed, setClosed] = useState(true);
-  const [status, setStatus] = useState("closed");
 
   const lastScrollY = useRef(0);
   const isHidden = useRef(false);
@@ -94,7 +92,12 @@ const Navbar: React.FC = () => {
         <div
           className={`${styles.navbar_section} pt-12 pb-6 text-xl flex justify-between`}
         >
-          <Link href="/">
+          <Link
+            href="/"
+            onClick={() => {
+              if (isOpen) toggleMenu();
+            }}
+          >
             <HeaderLogo isDDHovered={isDDHovered && !hidden}></HeaderLogo>
           </Link>
 
@@ -139,6 +142,9 @@ const Navbar: React.FC = () => {
                     isDDHovered && !hidden ? "text-black" : ""
                   }`}
                   href="/our-work"
+                  onClick={() => {
+                    if (isOpen) toggleMenu();
+                  }}
                 >
                   Our Work
                 </Link>
@@ -196,11 +202,18 @@ const Navbar: React.FC = () => {
                     isDDHovered && !hidden ? "text-black" : ""
                   }`}
                   href="/careers"
+                  onClick={() => {
+                    if (isOpen) toggleMenu();
+                  }}
                 >
                   Careers
                 </Link>
               </li>
-              <li>
+              <li
+                onClick={() => {
+                  if (isOpen) toggleMenu();
+                }}
+              >
                 <Button
                   variant={isDDHovered && !hidden ? "primary" : "secondary"}
                   text="Contact Us"

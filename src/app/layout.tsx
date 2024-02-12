@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
 import "./globals.scss";
 import Navbar from "@/components/navbar";
@@ -10,13 +10,6 @@ export const metadata: Metadata = {
   title: "Codevelop",
   description: "Main website for Codevelop, a Software Development Company",
 };
-
-// export const viewport: Viewport = {
-//   width: "device-width",
-//   initialScale: 1,
-//   maximumScale: 1,
-//   userScalable: false,
-// };
 
 export default function RootLayout({
   children,
