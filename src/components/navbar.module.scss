@@ -30,9 +30,7 @@
       transform ease-out 300ms,
       opacity ease-out 300ms;
   }
-  &:hover {
-    cursor: pointer;
-  }
+
   @media (min-width: 850px) {
     opacity: 70%;
   }
@@ -148,12 +146,6 @@
 
 nav li {
   &:hover {
-    @media (min-width: 850px) {
-      .dropdown_menu {
-        opacity: 100%;
-        visibility: visible;
-      }
-    }
     .nav_link {
       opacity: 100%;
       @media (min-width: 850px) {
@@ -213,5 +205,10 @@ nav li {
   }
   100% {
     transform: translateY(0%);
+  }
+}
+.pointer_hover {
+  &:hover {
+    cursor: pointer;
   }
 }

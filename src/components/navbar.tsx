@@ -151,18 +151,18 @@ const Navbar: React.FC = () => {
               </li>
               <li
                 onMouseEnter={() => {
-                  if (!isOpen || window.innerWidth > 769) {
+                  if (!isOpen || window.innerWidth > 849) {
                     setClosed(false);
                     setisDDHovered(true);
                   }
                 }}
                 onMouseLeave={() => {
-                  if (!isOpen || window.innerWidth > 769) {
+                  if (!isOpen || window.innerWidth > 849) {
                     setClosed(true);
                     setisDDHovered(false);
                   }
                 }}
-                style={{ gap: "5px", whiteSpace: "nowrap" }}
+                className={styles.pointer_hover}
               >
                 <div
                   style={{ position: "relative" }}
@@ -178,10 +178,6 @@ const Navbar: React.FC = () => {
                     height="25"
                     style={{
                       filter: isDDHovered && !hidden ? "" : "invert(100%)",
-                      minHeight: 25,
-                      minWidth: 25,
-                      maxHeight: 25,
-                      maxWidth: 25,
                     }}
                     className={styles.nav_arrow}
                   />
