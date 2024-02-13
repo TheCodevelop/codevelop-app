@@ -1,14 +1,19 @@
+$breakpoint: 850px;
+$nav-height: 120px;
+
 .navbar {
   position: sticky;
   top: 0;
-  background-color: black;
+  background-color: blue;
   z-index: 99999;
   transition: transform ease-out 500ms;
   transform: translateY(0px);
 }
 
 .hidden {
-  transform: translateY(-200px); /* Adjust based on your navbar's height */
+  transform: translateY(
+    -$nav-height - 50px
+  ); /* Adjust based on your navbar's height */
 }
 
 .nav_link {
@@ -31,7 +36,7 @@
       opacity ease-out 300ms;
   }
 
-  @media (min-width: 850px) {
+  @media (min-width: $breakpoint) {
     opacity: 70%;
   }
 }
@@ -50,26 +55,28 @@
 
 .nav_arrow {
   align-self: flex-end;
-  @media (min-width: 850px) {
+  @media (min-width: ($breakpoint - 1px)) {
     opacity: 70%;
   }
 }
 
 .mobile_nav_toggle {
   display: none;
-  @media (max-width: 849px) {
+  @media (max-width: ($breakpoint - 1px)) {
     display: block;
     filter: invert(100%);
   }
 }
 
 .primary_navigation {
-  @media (max-width: 849px) {
+  padding-top: 20px;
+
+  @media (max-width: ($breakpoint - 1px)) {
     z-index: 999;
     position: absolute;
     background-color: black;
     right: 0;
-    top: 150px;
+    top: $nav-height;
     height: 90vh;
     left: 0;
     padding-top: 2rem;
@@ -93,7 +100,7 @@
   gap: 32px;
   display: flex;
   flex-direction: row;
-  @media (max-width: 849px) {
+  @media (max-width: ($breakpoint - 1px)) {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -103,7 +110,7 @@
 .dropdown_menu {
   display: none;
   position: absolute;
-  top: 150px;
+  top: $nav-height;
   height: 320px;
   left: 0;
   right: 0;
@@ -149,7 +156,7 @@ nav li {
   &:hover {
     .nav_link {
       opacity: 100%;
-      @media (min-width: 850px) {
+      @media (min-width: $breakpoint) {
         &::after {
           transform: scaleX(1);
           opacity: 100%;
@@ -179,7 +186,10 @@ nav li {
   padding-left: 64px;
   padding-right: 64px;
   margin: auto;
-  height: 150px;
+  height: $nav-height;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
 }
 
 @keyframes fade_in {

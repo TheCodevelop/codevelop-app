@@ -94,9 +94,7 @@ const Navbar: React.FC = () => {
         className={`${styles.navbar} ${hidden ? styles.hidden : ""}
     ${isDDHovered && !hidden ? styles.white_bg : ""}`}
       >
-        <div
-          className={`${styles.navbar_section} pt-12 pb-6 text-xl flex justify-between`}
-        >
+        <div className={`${styles.navbar_section}  text-xl`}>
           <Link
             href="/"
             onClick={() => {
@@ -134,7 +132,7 @@ const Navbar: React.FC = () => {
             <span className="sr-only">Menu</span>
           </button>
           <nav
-            className={`${styles.primary_navigation} self-end`}
+            className={`${styles.primary_navigation}`}
             data-visible={isOpen}
             data-resizing={resizing}
           >
