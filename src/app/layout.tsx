@@ -1,5 +1,5 @@
-import type { Metadata, Viewport } from "next";
 import { Quicksand } from "next/font/google";
+import type { Metadata, Viewport } from "next";
 import "./globals.scss";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
