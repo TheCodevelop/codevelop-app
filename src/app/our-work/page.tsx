@@ -1,3 +1,9 @@
+import styles from "../homepage.module.scss";
+
 export default function Page() {
-  return <div>This is the Work Page</div>;
+  return (
+    <div className={styles.section} style={{ height: "1000px" }}>
+      This is the Work Page
+    </div>
+  );
 }

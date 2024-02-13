@@ -1,5 +1,6 @@
 $breakpoint: 850px;
 $nav-height: 120px;
+$page-padding: 64px;
 
 .navbar {
   position: sticky;
@@ -171,8 +172,8 @@ nav li {
 
 .section {
   max-width: 1280px;
-  padding-left: 64px;
-  padding-right: 64px;
+  padding-left: $page-padding;
+  padding-right: $page-padding;
   margin: auto;
 }
 
@@ -183,8 +184,8 @@ nav li {
 
 .navbar_section {
   max-width: 1280px;
-  padding-left: 64px;
-  padding-right: 64px;
+  padding-left: $page-padding;
+  padding-right: $page-padding;
   margin: auto;
   height: $nav-height;
   justify-content: space-between;

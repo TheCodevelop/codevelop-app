@@ -84,7 +84,8 @@ const Navbar: React.FC = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-
+    setIsMobileDDDisplay(false);
+    setIsMobileDDOpen(false);
     // Prevent or allow scrolling based on the menu state
     document.body.classList.toggle("no-scroll", !isOpen);
   };
@@ -111,7 +112,7 @@ const Navbar: React.FC = () => {
               toggleMenu();
             }}
           >
-            <div style={{ width: "54px", height: "54px" }}>
+            <div style={{ width: "54px", height: "auto" }}>
               {isOpen ? (
                 <Image
                   src="/close_icon.svg"
@@ -213,10 +214,7 @@ const Navbar: React.FC = () => {
                     href="/"
                     className={styles.mobile_menu_item}
                     onClick={() => {
-                      // setResizing(true);
-                      setIsOpen(false);
-                      setIsMobileDDDisplay(false);
-                      setIsMobileDDOpen(false);
+                      if (isOpen) toggleMenu();
                     }}
                   >
                     Website Development
@@ -225,10 +223,7 @@ const Navbar: React.FC = () => {
                     href="/"
                     className={styles.mobile_menu_item}
                     onClick={() => {
-                      // setResizing(true);
-                      setIsOpen(false);
-                      setIsMobileDDDisplay(false);
-                      setIsMobileDDOpen(false);
+                      if (isOpen) toggleMenu();
                     }}
                   >
                     Mobile App Development
@@ -237,10 +232,7 @@ const Navbar: React.FC = () => {
                     href="/"
                     className={styles.mobile_menu_item}
                     onClick={() => {
-                      // setResizing(true);
-                      setIsOpen(false);
-                      setIsMobileDDDisplay(false);
-                      setIsMobileDDOpen(false);
+                      if (isOpen) toggleMenu();
                     }}
                   >
                     Expert Advisor
@@ -279,6 +271,9 @@ const Navbar: React.FC = () => {
                   text="Contact Us"
                   href="/contact-us"
                   style={{ padding: "12px", fontSize: "22px" }}
+                  onClick={() => {
+                    if (isOpen) toggleMenu();
+                  }}
                 ></Button>
               </li>
             </ul>
