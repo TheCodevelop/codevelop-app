@@ -15,6 +15,7 @@ export default function HeaderLogo({ isDDHovered }: HeaderLogoProps) {
     width: 230,
     height: 100,
     src: "/Logo_Word_alt.svg",
+    priority: true,
   });
   const {
     props: {
@@ -28,6 +29,7 @@ export default function HeaderLogo({ isDDHovered }: HeaderLogoProps) {
     width: 80,
     height: 80,
     src: "/Logo_alt.svg",
+    priority: true,
   });
 
   return (
