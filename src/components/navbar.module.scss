@@ -292,7 +292,7 @@ nav li {
 
 .logo_wrapper {
   display: flex;
-  align-content: start;
+  align-content: flex-start;
   height: 80px;
   width: 230px;
   @media (max-width: $mobile-breakpoint) {
