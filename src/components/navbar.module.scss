@@ -106,6 +106,7 @@
     @media (max-width: $mobile-breakpoint) {
       top: $nav-height - 40px;
       padding-left: $mobile-padding;
+      height: 92vh;
     }
   }
 }
