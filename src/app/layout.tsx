@@ -4,7 +4,7 @@ import "./globals.scss";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
-const quicksand = Quicksand({ subsets: ["latin"] });
+const quicksand = Quicksand({ subsets: ["latin"], preload: true });
 
 export const metadata: Metadata = {
   title: "Codevelop",
