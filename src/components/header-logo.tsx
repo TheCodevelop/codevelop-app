@@ -1,4 +1,3 @@
-"use client";
 import { getImageProps } from "next/image";
 type HeaderLogoProps = {
   isDDHovered: boolean;
