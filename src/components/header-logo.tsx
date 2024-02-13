@@ -1,3 +1,4 @@
+"use client";
 import { getImageProps } from "next/image";
 type HeaderLogoProps = {
   isDDHovered: boolean;
@@ -35,8 +36,8 @@ export default function HeaderLogo({ isDDHovered }: HeaderLogoProps) {
   return (
     <div className={styles.logo_wrapper}>
       <picture>
-        <source media="(min-width: 800px)" srcSet={desktop} />
-        <source media="(max-width: 799px)" srcSet={mobile} />
+        <source media="(min-width: 800px)" srcSet={desktop} sizes="50vw" />
+        <source media="(max-width: 799px)" srcSet={mobile} sizes="50vw" />
         <img
           {...rest}
           srcSet={mobile}
