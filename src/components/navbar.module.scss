@@ -1,14 +1,19 @@
-$breakpoint: 850px;
+$breakpoint: 900px;
 $nav-height: 120px;
 $page-padding: 64px;
-
+$mobile-padding: 24px;
+$mobile-breakpoint: 640px;
 .navbar {
   position: sticky;
   top: 0;
-  background-color: blue;
+  background-color: black;
   z-index: 99999;
   transition: transform ease-out 500ms;
   transform: translateY(0px);
+  height: $nav-height;
+  @media (max-width: $mobile-breakpoint) {
+    height: $nav-height - 40px;
+  }
 }
 
 .hidden {
@@ -62,10 +67,17 @@ $page-padding: 64px;
 }
 
 .mobile_nav_toggle {
+  width: 54px;
+  height: auto;
   display: none;
   @media (max-width: ($breakpoint - 1px)) {
     display: block;
     filter: invert(100%);
+  }
+  @media (max-width: $mobile-breakpoint) {
+    display: block;
+    width: 36px;
+    height: auto;
   }
 }
 
@@ -175,6 +187,10 @@ nav li {
   padding-left: $page-padding;
   padding-right: $page-padding;
   margin: auto;
+  @media (max-width: $mobile-breakpoint) {
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+  }
 }
 
 .white_bg {
@@ -187,10 +203,16 @@ nav li {
   padding-left: $page-padding;
   padding-right: $page-padding;
   margin: auto;
-  height: $nav-height;
   justify-content: space-between;
   display: flex;
   align-items: center;
+  height: 100%;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  @media (max-width: $mobile-breakpoint) {
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+  }
 }
 
 @keyframes fade_in {
@@ -260,5 +282,16 @@ nav li {
   }
   &[data-clicked="false"] {
     animation: box_shrink 300ms forwards;
+  }
+}
+
+.logo_wrapper {
+  display: flex;
+  align-content: start;
+  height: 80px;
+  width: 230px;
+  @media (max-width: $mobile-breakpoint) {
+    height: 50px;
+    width: 80px;
   }
 }

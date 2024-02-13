@@ -95,7 +95,7 @@ const Navbar: React.FC = () => {
         className={`${styles.navbar} ${hidden ? styles.hidden : ""}
     ${isDDHovered && !hidden ? styles.white_bg : ""}`}
       >
-        <div className={`${styles.navbar_section}  text-xl`}>
+        <div className={styles.navbar_section}>
           <Link
             href="/"
             onClick={() => {
@@ -112,23 +112,21 @@ const Navbar: React.FC = () => {
               toggleMenu();
             }}
           >
-            <div style={{ width: "54px", height: "auto" }}>
-              {isOpen ? (
-                <Image
-                  src="/close_icon.svg"
-                  alt="Close Menu Icon"
-                  width="40"
-                  height="40"
-                ></Image>
-              ) : (
-                <Image
-                  src="/menu_hamburger.svg"
-                  alt="Menu Icon"
-                  width="54"
-                  height="36"
-                ></Image>
-              )}
-            </div>
+            {isOpen ? (
+              <Image
+                src="/close_icon.svg"
+                alt="Close Menu Icon"
+                width="40"
+                height="40"
+              ></Image>
+            ) : (
+              <Image
+                src="/menu_hamburger.svg"
+                alt="Menu Icon"
+                width="54"
+                height="36"
+              ></Image>
+            )}
 
             <span className="sr-only">Menu</span>
           </button>
