@@ -46,7 +46,7 @@ export default function Page() {
           driven by a commitment to innovation and excellence. We aim to exceed
           expectations and ensure client success.
         </p>
-        <Button href="/" text="View Our Work" variant="secondary"></Button>
+        <Button href="/" text="View Our Work" color="white"></Button>
       </div>
       <div className={styles.dim_overlay}></div>
     </main>

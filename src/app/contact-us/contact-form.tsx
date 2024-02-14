@@ -120,7 +120,7 @@ export default function ContactForm() {
       <Button
         style={{ gridColumnStart: "1", gridColumnEnd: "3", marginTop: "auto" }}
         text="Submit"
-        variant="primary"
+        color="grey"
         href=""
       ></Button>
     </div>

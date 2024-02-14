@@ -265,7 +265,7 @@ const Navbar: React.FC = () => {
                 }}
               >
                 <Button
-                  variant={isDDHovered && !hidden ? "primary" : "secondary"}
+                  color={isDDHovered && !hidden ? "black" : "white"}
                   text="Contact Us"
                   href="/contact-us"
                   style={{ padding: "12px", fontSize: "22px" }}

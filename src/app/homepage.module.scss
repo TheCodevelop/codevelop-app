@@ -27,11 +27,11 @@
   font-size: 1.5rem;
   line-height: 2rem;
   border-radius: 1rem;
-  border-color: $text-color;
+  border-color: $bg-color;
   border-width: 0.1rem;
   position: relative;
   z-index: 20;
-  color: $bg-color;
+  color: $text-color;
   white-space: nowrap;
 
   &::after {
@@ -44,15 +44,15 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: $text-color;
+    background-color: $bg-color;
     opacity: 100%;
     border-radius: 0.6rem;
     transition: opacity 300ms ease-out;
   }
 
   &:hover {
-    border-color: $text-color;
-    color: $text-color;
+    border-color: $bg-color;
+    color: $bg-color;
 
     &::after {
       opacity: 0%;
@@ -67,6 +67,10 @@
 
 .button_black {
   @include button-style(black, white);
+}
+
+.button_grey {
+  @include button-style(rgb(78, 78, 78), white);
 }
 
 .responsive_text {
