@@ -19,14 +19,14 @@ const DropdownMenu = () => {
           style={{ flex: 1 }}
         />
         <ServiceCard
-          name="Mobile App Development"
-          description="Specializing in iOS and Android, we transform your vision into user-friendly, high-performance apps tailored to your needs. Ideal for startups or established businesses."
+          name="App Development"
+          description="We transform your vision into user-friendly, high-performance apps that run on any device. Ideal for startups or established businesses."
           link="/services/mobile-app"
           style={{ flex: 1 }}
         />
         <ServiceCard
-          name="Expert Advisor"
-          description="Have a Forex strategy you want to automate? We can create an expert advisor (EA) that runs your strategy automatically"
+          name="Custom Software"
+          description="Let us transform your ideas into reality. Tailored to meet your business needs, we deliver innovative, efficient applications designed for growth. "
           link="/services/ea"
           style={{ flex: 1 }}
         />

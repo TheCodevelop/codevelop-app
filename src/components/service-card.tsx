@@ -22,7 +22,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       >
         {name}
       </p>
-      <p style={{ whiteSpace: "break-spaces", fontSize: "0.875rem" }}>
+      <p style={{ whiteSpace: "break-spaces", fontSize: "1rem" }}>
         {description}
       </p>
     </Link>
