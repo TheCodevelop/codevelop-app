@@ -1,16 +1,5 @@
 @use "../variables" as *;
 
-.section {
-  max-width: 1280px;
-  padding-left: $page-padding;
-  padding-right: $page-padding;
-  margin: auto;
-  @media (max-width: $mobile-breakpoint) {
-    padding-left: $mobile-padding;
-    padding-right: $mobile-padding;
-  }
-}
-
 .input_container {
   position: relative;
 
@@ -74,4 +63,9 @@
 
 .input {
   width: 100%;
+}
+
+.page_layout {
+  padding-top: 6rem;
+  padding-bottom: 12rem;
 }

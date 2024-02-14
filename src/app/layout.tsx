@@ -1,5 +1,5 @@
 import { Quicksand } from "next/font/google";
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import "./globals.scss";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
@@ -19,9 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${quicksand.className} gradient`}>
-        <Navbar></Navbar>
-        {children}
-        <Footer></Footer>
+        <main>
+          <Navbar></Navbar>
+          {children}
+          <Footer></Footer>
+        </main>
       </body>
     </html>
   );

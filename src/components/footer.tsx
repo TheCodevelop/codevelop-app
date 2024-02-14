@@ -6,7 +6,7 @@ import styles from "../app/homepage.module.scss";
 const Footer: React.FC = () => {
   return (
     <div style={{ backgroundColor: "white", height: "400px" }}>
-      <div className={styles.section} style={{ color: "black" }}>
+      <div className="section" style={{ color: "black" }}>
         <div>Footer</div>
         <div>© 2024 Codevelop LLC. All Rights Reserved</div>
       </div>

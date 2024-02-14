@@ -188,24 +188,13 @@ nav li {
   }
 }
 
-.section {
-  max-width: 1280px;
-  padding-left: $page-padding;
-  padding-right: $page-padding;
-  margin: auto;
-  @media (max-width: $mobile-breakpoint) {
-    padding-left: $mobile-padding;
-    padding-right: $mobile-padding;
-  }
-}
-
 .white_bg {
   background-color: white;
   transition: background 300ms ease-out;
 }
 
 .navbar_section {
-  max-width: 1280px;
+  max-width: $page-max-width;
   padding-left: $page-padding;
   padding-right: $page-padding;
   margin: auto;

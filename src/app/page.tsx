@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <main>
-      <p className={`${styles.section} py-48 text-5xl font-semibold`}>
+    <>
+      <p className={`section py-48 text-5xl font-semibold`}>
         We Code.
         <br></br>
         <br></br>
@@ -37,7 +37,7 @@ export default function Page() {
           ></Image>
         </div>
       </div>
-      <div className={`${styles.section} pt-24 pb-48`}>
+      <div className={`section pt-24 pb-48`}>
         <p className={styles.responsive_title}>Our Mission</p>
         <p className={styles.responsive_text}>
           Codevelop specializes in custom digital solutions, combining strategy,
@@ -49,6 +49,6 @@ export default function Page() {
         <Button href="/" text="View Our Work" color="white"></Button>
       </div>
       <div className={styles.dim_overlay}></div>
-    </main>
+    </>
   );
 }
