@@ -35,7 +35,7 @@
     left: 0;
     background-color: $bg-color;
     opacity: 100%;
-    border-radius: 0.6rem;
+    border-radius: 0.7rem;
     transition: opacity 300ms ease-out;
   }
 
@@ -46,7 +46,6 @@
     &::after {
       opacity: 0%;
     }
-    border-width: 0.1rem;
   }
 }
 
