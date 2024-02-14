@@ -4,7 +4,11 @@ import { InputField } from "./input-field";
 import { InputBlock } from "./input-block";
 import Button from "@/components/button";
 
-export default function ContactForm() {
+interface ContactFormProps {
+  style?: React.CSSProperties;
+}
+
+export const ContactForm: React.FC<ContactFormProps> = ({ style }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
@@ -22,6 +26,7 @@ export default function ContactForm() {
         display: "flex",
         flexDirection: "column",
         gap: "20px",
+        ...style,
       }}
     >
       <h2
@@ -109,4 +114,4 @@ export default function ContactForm() {
       <Button text="Submit" color="grey" href=""></Button>
     </div>
   );
-}
+};

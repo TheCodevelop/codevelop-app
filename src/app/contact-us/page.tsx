@@ -1,16 +1,16 @@
 import styles from "./contact-us.module.scss";
-import ContactForm from "./contact-form";
+import { ContactForm } from "./contact-form";
 
 export default function Page() {
   return (
     <div className="section">
       <div className={styles.page_layout}>
-        <div style={{ fontWeight: "400", fontSize: "64px" }}>
+        <div style={{ fontWeight: "400", fontSize: "64px", flex: "1" }}>
           Lets
           <br></br>
           Codevelop
         </div>
-        <ContactForm></ContactForm>
+        <ContactForm style={{ flex: "1" }}></ContactForm>
       </div>
     </div>
   );

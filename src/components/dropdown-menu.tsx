@@ -5,7 +5,7 @@ import ServiceCard from "./service-card";
 const DropdownMenu = () => {
   return (
     <div
-      className={`${styles.dropdown_content} ${styles.section}`}
+      className={`${styles.dropdown_content} section`}
       style={{
         color: "black",
       }}

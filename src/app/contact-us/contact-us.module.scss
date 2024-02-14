@@ -67,5 +67,12 @@
 
 .page_layout {
   padding-top: 6rem;
-  padding-bottom: 12rem;
+  padding-bottom: 13rem;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media (min-width: $breakpoint) {
+    flex-direction: row;
+  }
 }
