@@ -1,0 +1,66 @@
+@use "/src/app/variables" as *;
+
+.input_container {
+  position: relative;
+
+  &::after {
+    content: ""; /* Required for the pseudo-element to show */
+    position: absolute;
+    bottom: 0; /* Aligns it at the bottom */
+    left: 50%; /* Adjusts the starting point */
+    width: 94%; /* Adjust the width as needed */
+    height: 1px; /* Thickness of the border */
+    background: black; /* Color of the border */
+    transform: translateX(-50%); /* Centers the pseudo-element */
+  }
+
+  &:focus-within label {
+    transform: translate(0, 8px) scale(0.8);
+    color: black;
+  }
+
+  .filled {
+    transform: translate(0, 8px) scale(0.8);
+  }
+
+  label {
+    position: absolute;
+    pointer-events: none;
+    transform: translate(0, 36px) scale(1);
+    transform-origin: top left;
+    transition: 400ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    color: #6f81a5;
+    font-size: 16px;
+    line-height: 1;
+    left: 16px;
+  }
+
+  input {
+    height: 64px;
+    padding: 24px 16px 4px 16px;
+    font-size: 16px;
+    line-height: 1;
+    outline: none;
+
+    &:focus {
+      // logic for onFocus of input goes here
+    }
+  }
+
+  textarea {
+    height: 100%;
+    padding: 24px 16px 4px 16px;
+    font-size: 16px;
+    line-height: 1.5rem;
+    outline: none;
+    resize: none;
+
+    &:focus {
+      // logic for onFocus of input goes here
+    }
+  }
+}
+
+.input {
+  width: 100%;
+}

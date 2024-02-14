@@ -1,7 +1,9 @@
+import { ApplicationForm } from "./application-form";
+
 export default function Page() {
   return (
-    <div className="section" style={{ height: "1000px" }}>
-      This is the Careers Page
+    <div className="section" style={{ height: "1000px", paddingTop: "6rem" }}>
+      <ApplicationForm></ApplicationForm>
     </div>
   );
 }

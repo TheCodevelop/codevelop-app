@@ -1,5 +1,5 @@
 "use client";
-import styles from "./contact-us.module.scss";
+import styles from "./input.module.scss";
 import React, { ChangeEvent } from "react";
 
 interface InputBlockProps {

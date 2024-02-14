@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import { InputField } from "./input-field";
-import { InputBlock } from "./input-block";
+import { InputField } from "../../components/input/input-field";
+import { InputBlock } from "../../components/input/input-block";
 import Button from "@/components/button";
 
 interface ContactFormProps {

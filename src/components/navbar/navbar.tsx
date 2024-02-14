@@ -6,7 +6,7 @@ import { useEffect, useState, useRef } from "react";
 import throttle from "lodash/throttle";
 import DropdownMenu from "./dropdown-menu";
 import HeaderLogo from "./header-logo";
-import Button from "./button";
+import Button from "../button";
 
 const Navbar: React.FC = () => {
   const [resizing, setResizing] = useState(false);
