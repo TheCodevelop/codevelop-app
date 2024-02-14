@@ -19,19 +19,15 @@ export default function ContactForm() {
         color: "black",
         borderRadius: "36px",
         padding: "36px",
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr",
-        gridTemplateRows: "1fr 3fr 1fr 2fr 1.5fr",
-        rowGap: "20px",
-        maxWidth: "500px",
+        display: "flex",
+        flexDirection: "column",
+        gap: "20px",
       }}
     >
       <h2
         style={{
           fontSize: "36px",
           fontWeight: "300",
-          gridColumnStart: "1",
-          gridColumnEnd: "3",
         }}
       >
         Contact Us
@@ -39,9 +35,6 @@ export default function ContactForm() {
       <div
         style={{
           display: "grid",
-          alignItems: "center",
-          gridColumnStart: "1",
-          gridColumnEnd: "3",
           gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
         }}
       >
@@ -71,7 +64,7 @@ export default function ContactForm() {
         ></InputField>
       </div>
 
-      <div style={{ gridColumnStart: "1", gridColumnEnd: "3" }}>
+      <div>
         <fieldset>
           <legend>Preferred Communication</legend>
           <input
@@ -112,17 +105,8 @@ export default function ContactForm() {
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         label="Message"
-        style={{
-          gridColumnStart: "1",
-          gridColumnEnd: "3",
-        }}
       ></InputBlock>
-      <Button
-        style={{ gridColumnStart: "1", gridColumnEnd: "3", marginTop: "auto" }}
-        text="Submit"
-        color="grey"
-        href=""
-      ></Button>
+      <Button text="Submit" color="grey" href=""></Button>
     </div>
   );
 }

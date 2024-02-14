@@ -5,6 +5,10 @@
   padding-left: $page-padding;
   padding-right: $page-padding;
   margin: auto;
+  @media (max-width: $mobile-breakpoint) {
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+  }
 }
 
 .input_container {
