@@ -1,5 +1,6 @@
 "use client";
 
+import { Climate_Crisis } from "next/font/google";
 import styles from "./navbar.module.scss";
 import Image from "next/image";
 
@@ -10,24 +11,26 @@ type HeaderLogoProps = {
 export default function HeaderLogo({ isDDHovered }: HeaderLogoProps) {
   return (
     <div>
-      <Image
-        src="/Logo_alt.svg"
-        alt="Header Logo 1"
-        width={80}
-        height={70}
-        className={styles.mobile_image}
-        style={{ filter: isDDHovered ? "" : "invert(100%)" }}
-        priority={true}
-      />
-      <Image
-        src="/Logo_Word_alt.svg"
-        alt="Header Logo 1"
-        width={230}
-        height={70}
-        className={styles.desktop_image}
-        style={{ filter: isDDHovered ? "" : "invert(100%)" }}
-        priority={true}
-      />
+      <div className={styles.mobile_image}>
+        <Image
+          src="/Logo_alt.svg"
+          alt="Header Logo 1"
+          width={80}
+          height={70}
+          style={{ filter: isDDHovered ? "" : "invert(100%)" }}
+          priority={true}
+        />
+      </div>
+      <div className={styles.desktop_image}>
+        <Image
+          src="/Logo_Word_alt.svg"
+          alt="Header Logo 2"
+          width={230}
+          height={70}
+          style={{ filter: isDDHovered ? "" : "invert(100%)" }}
+          priority={true}
+        />
+      </div>
     </div>
   );
 }

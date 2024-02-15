@@ -1,17 +1,14 @@
 @use "/src/app/variables" as *;
 
 .mobile_image {
-  background-color: green;
   display: none;
   @media (max-width: $mobile-breakpoint) {
     width: 50px;
-    height: 70px;
     display: block;
     background-color: red;
   }
   @media (min-width: ($mobile-breakpoint + 1px)) and ((max-width: 799px)) {
     width: 80px;
-    height: 70px;
     display: block;
     background-color: blue;
   }
@@ -22,7 +19,6 @@
   @media (min-width: 800px) {
     display: block;
     width: 230px;
-    height: 70px;
     background-color: magenta;
   }
 }
