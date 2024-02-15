@@ -1,53 +1,31 @@
 "use client";
-import { getImageProps } from "next/image";
+
+import styles from "./navbar.module.scss";
+import Image from "next/image";
+
 type HeaderLogoProps = {
   isDDHovered: boolean;
 };
-import styles from "./navbar.module.scss";
 
 export default function HeaderLogo({ isDDHovered }: HeaderLogoProps) {
-  const common = { sizes: "50vw" };
-
-  const {
-    props: { srcSet: desktop },
-  } = getImageProps({
-    ...common,
-    alt: "desktop",
-    width: 230,
-    height: 100,
-    src: "/Logo_Word_alt.svg",
-    priority: true,
-  });
-  const {
-    props: {
-      srcSet: mobile,
-
-      ...rest
-    },
-  } = getImageProps({
-    ...common,
-    alt: "mobile",
-    width: 80,
-    height: 80,
-    src: "/Logo_alt.svg",
-    priority: true,
-  });
-
   return (
-    <div className={styles.logo_wrapper}>
-      <picture>
-        <source media="(min-width: 800px)" srcSet={desktop} sizes="50vw" />
-        <source media="(max-width: 799px)" srcSet={mobile} sizes="50vw" />
-        <img
-          {...rest}
-          srcSet={mobile}
-          style={{
-            filter: isDDHovered ? "" : "invert(100%)",
-            height: "100%",
-            width: "auto",
-          }}
-        />
-      </picture>
+    <div className={styles.image_container}>
+      <Image
+        src="/Logo_alt.svg"
+        alt="Header Logo"
+        width={80}
+        height={10}
+        className={styles.mobile_image}
+        style={{ filter: isDDHovered ? "" : "invert(100%)" }}
+      />
+      <Image
+        src="/Logo_Word_alt.svg"
+        alt="Header Logo"
+        width={230}
+        height={10}
+        className={styles.desktop_image}
+        style={{ filter: isDDHovered ? "" : "invert(100%)" }}
+      />
     </div>
   );
 }
