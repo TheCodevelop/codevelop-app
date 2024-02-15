@@ -1,28 +1,29 @@
 @use "/src/app/variables" as *;
 
 .mobile_image {
-  background-color: green;
-  // display: none;
-  @media (max-width: $mobile-breakpoint) {
-    width: 50px;
-    height: 70px;
-    display: block;
-    background-color: red;
-  }
-  @media (min-width: ($mobile-breakpoint + 1px)) and ((max-width: 799px)) {
-    width: 80px;
-    height: 70px;
-    display: block;
-    background-color: blue;
-  }
+  // background-color: green;
+  display: none;
+  // @media (max-width: $mobile-breakpoint) {
+  //   width: 50px;
+  //   height: 70px;
+  //   display: block;
+  //   background-color: red;
+  // }
+  // @media (min-width: ($mobile-breakpoint + 1px)) and ((max-width: 799px)) {
+  //   width: 80px;
+  //   height: 70px;
+  //   display: block;
+  //   background-color: blue;
+  // }
 }
 
 .desktop_image {
   display: none;
   @media (min-width: 800px) {
-    width: 230px;
-    height: auto;
     display: block;
+    width: 230px;
+    height: 70px;
+    background-color: magenta;
   }
 }
 

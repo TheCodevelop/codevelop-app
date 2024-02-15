@@ -10,7 +10,7 @@ type HeaderLogoProps = {
 export default function HeaderLogo({ isDDHovered }: HeaderLogoProps) {
   return (
     <div>
-      <Image
+      {/* <Image
         src="/Logo_alt.svg"
         alt="Header Logo 1"
         width={80}
@@ -18,15 +18,15 @@ export default function HeaderLogo({ isDDHovered }: HeaderLogoProps) {
         className={styles.mobile_image}
         sizes="100vw"
         style={{ filter: isDDHovered ? "" : "invert(100%)" }}
-      />
-      {/* <Image
+      /> */}
+      <Image
         src="/Logo_Word_alt.svg"
         alt="Header Logo 1"
         width={230}
         height={70}
         className={styles.desktop_image}
         style={{ filter: isDDHovered ? "" : "invert(100%)" }}
-      /> */}
+      />
     </div>
   );
 }
