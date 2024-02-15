@@ -14,7 +14,7 @@ export default function HeaderLogo({ isDDHovered }: HeaderLogoProps) {
         src="/Logo_alt.svg"
         alt="Header Logo 1"
         width={80}
-        height={50}
+        height={70}
         className={styles.mobile_image}
         style={{ filter: isDDHovered ? "" : "invert(100%)" }}
       />
