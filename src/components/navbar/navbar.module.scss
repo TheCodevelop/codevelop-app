@@ -17,13 +17,19 @@
 }
 
 .desktop_image {
-  // display: none;
-  // @media (min-width: 800px) {
-  display: block;
-  width: 230px;
-  height: auto;
-  background-color: magenta;
-  // }
+  display: none;
+  @media (min-width: 800px) {
+    display: block;
+    width: 230px;
+    height: auto;
+    background-color: magenta;
+  }
+  @media (orientation: landscape) {
+    display: block;
+    width: 230px;
+    height: auto;
+    background-color: magenta;
+  }
 }
 
 .navbar {
