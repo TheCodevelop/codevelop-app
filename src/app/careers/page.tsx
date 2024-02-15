@@ -1,40 +1,77 @@
+import Button from "@/components/button";
 import { ApplicationForm } from "./application-form";
 import Image from "next/image";
+import PositionCard from "./position-card";
 
 export default function Page() {
   return (
-    <div className="section" style={{ height: "2000px", paddingTop: "3rem" }}>
-      <div style={{ position: "relative", height: "90%", overflowX: "hidden" }}>
+    <div
+      className="section"
+      style={{
+        height: "2000px",
+        display: "flex",
+        flexDirection: "column",
+        gap: "50px",
+      }}
+    >
+      <div
+        style={{
+          position: "relative",
+          height: "90vh",
+          minHeight: "600px",
+          overflowX: "hidden",
+          overflowY: "hidden",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <Image
           src="/world_map.svg"
           alt="world map"
-          height={300}
-          width={300}
+          fill
           style={{
             opacity: "50%",
             position: "absolute",
             zIndex: -1,
             right: 0,
-            top: 0,
+            top: 15,
             left: 0,
             minWidth: "1000px",
-            height: "auto",
+            minHeight: "600px",
           }}
         ></Image>
         <div
           style={{
             fontSize: "4rem",
-            // borderBottom: "0.5px solid white",
-            // maxWidth: "300px",
+            paddingBottom: "6rem",
+            textAlign: "center",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "20px",
           }}
         >
-          From Anywhere <br></br>to<br></br> Everywhere<br></br> the World is
-          our Office
+          <span>
+            From Anywhere <br></br>To Everywhere<br></br> The World is our
+            Office
+          </span>
+          <Button text="See Open Positions" color="white"></Button>
         </div>
       </div>
+      <div>Benefits</div>
 
-      <div style={{ height: "100px" }}></div>
-      {/* <ApplicationForm></ApplicationForm> */}
+      <div style={{ width: "75%" }}>
+        <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>
+          Open Positions
+        </div>
+        <PositionCard name="Associate UI/UX Designer" id=""></PositionCard>
+        <PositionCard name="Software Engineer" id=""></PositionCard>
+        <PositionCard name="Android Developer" id=""></PositionCard>
+        <PositionCard name="iOS Developer" id=""></PositionCard>
+      </div>
+
+      <ApplicationForm></ApplicationForm>
     </div>
   );
 }
