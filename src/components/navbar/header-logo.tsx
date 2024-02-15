@@ -1,6 +1,3 @@
-"use client";
-
-import { Climate_Crisis } from "next/font/google";
 import styles from "./navbar.module.scss";
 import Image from "next/image";
 
@@ -11,7 +8,7 @@ type HeaderLogoProps = {
 export default function HeaderLogo({ isDDHovered }: HeaderLogoProps) {
   return (
     <div>
-      <div className={styles.desktop_image}>
+      <div className={styles.mobile_image}>
         <Image
           src="/Logo_alt.svg"
           alt="Header Logo 1"
@@ -21,7 +18,7 @@ export default function HeaderLogo({ isDDHovered }: HeaderLogoProps) {
           priority={true}
         />
       </div>
-      <div className={styles.mobile_image}>
+      <div className={styles.desktop_image}>
         <Image
           src="/Logo_Word_alt.svg"
           alt="Header Logo 2"
