@@ -8,8 +8,8 @@ export default function Page() {
         <Image
           src="/world_map.svg"
           alt="world map"
-          width="1000"
-          height="1000"
+          height={300}
+          width={300}
           style={{
             opacity: "50%",
             position: "absolute",
@@ -18,6 +18,7 @@ export default function Page() {
             top: 0,
             left: 0,
             minWidth: "1000px",
+            height: "auto",
           }}
         ></Image>
         <div
@@ -27,8 +28,8 @@ export default function Page() {
             // maxWidth: "300px",
           }}
         >
-          Design, <br></br>Develop,<br></br> Deploy,<br></br> the World is your
-          Office
+          From Anywhere <br></br>to<br></br> Everywhere<br></br> the World is
+          our Office
         </div>
       </div>
 
