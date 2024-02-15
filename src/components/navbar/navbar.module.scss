@@ -15,6 +15,7 @@
 .desktop_image {
   display: none;
   @media (min-width: 800px) {
+    width: 230px;
     display: block;
   }
 }
