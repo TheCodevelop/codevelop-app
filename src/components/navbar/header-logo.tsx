@@ -16,16 +16,17 @@ export default function HeaderLogo({ isDDHovered }: HeaderLogoProps) {
         width={80}
         height={70}
         className={styles.mobile_image}
+        sizes="100vw"
         style={{ filter: isDDHovered ? "" : "invert(100%)" }}
       />
-      <Image
+      {/* <Image
         src="/Logo_Word_alt.svg"
         alt="Header Logo 1"
         width={230}
         height={70}
         className={styles.desktop_image}
         style={{ filter: isDDHovered ? "" : "invert(100%)" }}
-      />
+      /> */}
     </div>
   );
 }
