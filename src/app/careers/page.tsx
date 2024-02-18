@@ -134,7 +134,11 @@ export default function Page() {
         </div>
       </div>
 
-      <div id="open-positions" style={{ width: "75%" }} className="section">
+      <div
+        id="open-positions"
+        style={{ width: "75%", scrollMarginTop: "100px" }}
+        className="section"
+      >
         <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>
           Open Positions
         </div>

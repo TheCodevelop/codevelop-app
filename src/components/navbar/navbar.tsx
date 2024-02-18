@@ -7,6 +7,7 @@ import throttle from "lodash/throttle";
 import DropdownMenu from "./dropdown-menu";
 import HeaderLogo from "./header-logo";
 import Button from "../button";
+import { variables } from "@/app/variables";
 
 const Navbar: React.FC = () => {
   const [resizing, setResizing] = useState(false);
@@ -151,13 +152,13 @@ const Navbar: React.FC = () => {
               </li>
               <li
                 onMouseEnter={() => {
-                  if (!isOpen || window.innerWidth > 849) {
+                  if (!isOpen || window.innerWidth > variables.breakpoint) {
                     setClosed(false);
                     setisDDHovered(true);
                   }
                 }}
                 onMouseLeave={() => {
-                  if (!isOpen || window.innerWidth > 849) {
+                  if (!isOpen || window.innerWidth > variables.breakpoint) {
                     setClosed(true);
                     setisDDHovered(false);
                   }
@@ -172,7 +173,7 @@ const Navbar: React.FC = () => {
                   onClick={() => {
                     if (
                       isOpen &&
-                      window.innerWidth <= 849 &&
+                      window.innerWidth <= variables.breakpoint &&
                       isMobileDDDisplay
                     ) {
                       setIsMobileDDOpen(false);
@@ -181,7 +182,7 @@ const Navbar: React.FC = () => {
                       }, 300);
                     } else if (
                       isOpen &&
-                      window.innerWidth <= 849 &&
+                      window.innerWidth <= variables.breakpoint &&
                       !isMobileDDDisplay
                     ) {
                       setIsMobileDDOpen(true);
