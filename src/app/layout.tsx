@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="smooth">
       <body className={`${quicksand.className} gradient`}>
         <main>
           <Navbar></Navbar>

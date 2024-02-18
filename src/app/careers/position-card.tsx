@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Button from "@/components/button";
 
 interface PositionCardProps {
@@ -26,5 +25,3 @@ const PositionCard: React.FC<PositionCardProps> = ({ name, id }) => {
 };
 
 export default PositionCard;
-
-// Info on card

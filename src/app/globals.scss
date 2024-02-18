@@ -5,9 +5,13 @@
 @tailwind utilities;
 
 .gradient {
-  min-height: 100vh;
   background: black;
   color: white;
+}
+
+.smooth {
+  --scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .no-scroll {

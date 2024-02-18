@@ -1,18 +1,25 @@
+"use client";
+
+import React from "react";
+
 import Button from "@/components/button";
 import { ApplicationForm } from "./application-form";
 import Image from "next/image";
 import PositionCard from "./position-card";
+import BenefitCard from "./benefit-card";
+import styles from "./careers.module.scss";
 
 export default function Page() {
+  // Step 3: Implement the scroll function
+
   return (
     <div
-      className="section"
       style={{
-        height: "2000px",
         display: "flex",
         flexDirection: "column",
         gap: "50px",
       }}
+      className={styles.smooth}
     >
       <div
         style={{
@@ -56,12 +63,74 @@ export default function Page() {
             From Anywhere <br></br>To Everywhere<br></br> The World is our
             Office
           </span>
-          <Button text="See Open Positions" color="white"></Button>
+          <Button href="#yer" text="See Open Positions" color="white"></Button>
         </div>
       </div>
-      <div>Benefits</div>
 
-      <div style={{ width: "75%" }}>
+      <div style={{ backgroundColor: "white" }}>
+        <div
+          className="section"
+          style={{ paddingTop: "5rem", paddingBottom: "5rem" }}
+        >
+          <div
+            style={{ fontSize: "4rem", marginBottom: "2rem", color: "black" }}
+          >
+            Benefits
+          </div>
+          <div className={styles.benefit_grid}>
+            <BenefitCard
+              image={
+                <Image
+                  src="/hand_money.svg"
+                  alt="handing money"
+                  width={100}
+                  height={100}
+                ></Image>
+              }
+              title="Remote Work Stipend"
+              description="Maximize your savings and productivity with our remote work benefits. We save a lot of money by working remotely, and that money goes back to you. Receive an upfront bonus to craft your ideal home office, followed by a monthly stipend for ongoing needs. It's not just a benefit—it's our investment in your comfort and success, wherever you are."
+            ></BenefitCard>
+            <BenefitCard
+              image={
+                <Image
+                  src="/life_balance.svg"
+                  alt="handing money"
+                  width={100}
+                  height={100}
+                ></Image>
+              }
+              title="Live Life"
+              description="At Codevelop, we believe in the importance of having Work-Life Balance. By empowering our employees with the freedom to set their schedule, we cultivate a culture of trust, respect, and mutual support. Our goal is to ensure that our team not only excels in their roles but also leads fulfilling lives outside of work."
+            ></BenefitCard>
+            <BenefitCard
+              image={
+                <Image
+                  src="/no_meetings.svg"
+                  alt="handing money"
+                  width={100}
+                  height={100}
+                ></Image>
+              }
+              title="Flexible Time Off"
+              description="Time off on you. Do whatever you want as long as youre here! No limitations at all whatsoever"
+            ></BenefitCard>
+            <BenefitCard
+              image={
+                <Image
+                  src="/hand_money.svg"
+                  alt="handing money"
+                  width={100}
+                  height={100}
+                ></Image>
+              }
+              title="Flexible Time Off"
+              description="Time off on you. Do whatever you want as long as youre here! No limitations at all whatsoever"
+            ></BenefitCard>
+          </div>
+        </div>
+      </div>
+
+      <div id="yer" style={{ width: "75%" }} className="section">
         <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>
           Open Positions
         </div>
@@ -71,7 +140,9 @@ export default function Page() {
         <PositionCard name="iOS Developer" id=""></PositionCard>
       </div>
 
-      <ApplicationForm></ApplicationForm>
+      <div className="section" style={{ width: "70%" }}>
+        <ApplicationForm style={{ width: "100%" }}></ApplicationForm>
+      </div>
     </div>
   );
 }
