@@ -63,7 +63,11 @@ export default function Page() {
             From Anywhere <br></br>To Everywhere<br></br> The World is our
             Office
           </span>
-          <Button href="#yer" text="See Open Positions" color="white"></Button>
+          <Button
+            href="#open-positions"
+            text="See Open Positions"
+            color="white"
+          ></Button>
         </div>
       </div>
 
@@ -117,7 +121,7 @@ export default function Page() {
             <BenefitCard
               image={
                 <Image
-                  src="/hand_money.svg"
+                  src="/async.svg"
                   alt="handing money"
                   width={100}
                   height={100}
@@ -130,17 +134,26 @@ export default function Page() {
         </div>
       </div>
 
-      <div id="yer" style={{ width: "75%" }} className="section">
+      <div id="open-positions" style={{ width: "75%" }} className="section">
         <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>
           Open Positions
         </div>
-        <PositionCard name="Associate UI/UX Designer" id=""></PositionCard>
-        <PositionCard name="Software Engineer" id=""></PositionCard>
-        <PositionCard name="Android Developer" id=""></PositionCard>
-        <PositionCard name="iOS Developer" id=""></PositionCard>
+        <PositionCard
+          name="Associate UI/UX Designer"
+          id="associate-ui-ux-designer"
+        ></PositionCard>
+        <PositionCard
+          name="Software Engineer"
+          id="software-developer"
+        ></PositionCard>
+        <PositionCard
+          name="Android Developer"
+          id="android-developer"
+        ></PositionCard>
+        <PositionCard name="iOS Developer" id="ios-developer"></PositionCard>
       </div>
 
-      <div className="section" style={{ width: "70%" }}>
+      <div className="section" style={{ width: "70%", paddingBottom: "200px" }}>
         <ApplicationForm style={{ width: "100%" }}></ApplicationForm>
       </div>
     </div>

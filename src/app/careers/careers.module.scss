@@ -1,12 +1,5 @@
 @use "../variables" as *;
 
-// .benefit_card_container {
-//   contain: layout inline-size;
-
-//   @benefit_card_container (max-width: 300px) {
-//   }
-// }
-
 .container {
   display: flex;
   // border: 1px solid black;
@@ -28,4 +21,27 @@
   @media (max-width: 800px) {
     grid-template-columns: 1fr;
   }
+}
+
+.job_layout {
+  grid-template-columns: 1fr;
+  align-items: start;
+  @media (min-width: $breakpoint) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+}
+
+.bullet_list {
+  list-style-type: disc;
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+  padding-inline-start: 40px;
+}
+
+.qualifications_section {
+  background-color: rgb(244, 244, 244);
+  padding: 30px;
+  border-radius: 1rem;
 }
