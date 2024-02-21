@@ -2,16 +2,7 @@ import styles from "@/app/careers/careers.module.scss";
 import Image from "next/image";
 
 function getService(serviceName: string): ServicePage {
-  switch (serviceName) {
-    case "website-development":
-      return websiteDevelopment;
-    case "associate-ui-ux-designer":
-      return websiteDevelopment;
-    case "android-developer":
-      return websiteDevelopment;
-    default:
-      return websiteDevelopment;
-  }
+  return Services.find((service) => service.id === serviceName) as ServicePage;
 }
 
 export default function Page({ params }: { params: { jobName: string } }) {
@@ -25,10 +16,29 @@ export default function Page({ params }: { params: { jobName: string } }) {
 
 interface ServicePage {
   title: string;
+  id: string;
   subtitle: string;
 }
 
-const websiteDevelopment: ServicePage = {
-  title: "Website Development",
-  subtitle: "We build websites that are fast, secure, and easy to manage.",
-};
+export const Services: ServicePage[] = [
+  {
+    title: "Website Development",
+    id: "website-development",
+    subtitle: "We build websites that are fast, secure, and easy to manage.",
+  },
+  {
+    title: "App Development",
+    id: "app-development",
+    subtitle: "We build websites that are fast, secure, and easy to manage.",
+  },
+  {
+    title: "Security",
+    id: "security",
+    subtitle: "We build websites that are fast, secure, and easy to manage.",
+  },
+  {
+    title: "AI Consulting",
+    id: "ai-consulting",
+    subtitle: "We build websites that are fast, secure, and easy to manage.",
+  },
+];

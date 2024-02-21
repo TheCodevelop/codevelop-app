@@ -8,6 +8,7 @@ import DropdownMenu from "./dropdown-menu";
 import HeaderLogo from "./header-logo";
 import ButtonLink from "../button-link";
 import { variables } from "@/app/variables";
+import { Services } from "@/app/services/[service]/page";
 
 const Navbar: React.FC = () => {
   const [resizing, setResizing] = useState(false);
@@ -209,33 +210,17 @@ const Navbar: React.FC = () => {
                   data-clicked={isMobileDDOpen}
                   className={styles.mobile_menu}
                 >
-                  <Link
-                    href="/"
-                    className={styles.mobile_menu_item}
-                    onClick={() => {
-                      if (isOpen) toggleMenu();
-                    }}
-                  >
-                    Website Development
-                  </Link>
-                  <Link
-                    href="/"
-                    className={styles.mobile_menu_item}
-                    onClick={() => {
-                      if (isOpen) toggleMenu();
-                    }}
-                  >
-                    Mobile App Development
-                  </Link>
-                  <Link
-                    href="/"
-                    className={styles.mobile_menu_item}
-                    onClick={() => {
-                      if (isOpen) toggleMenu();
-                    }}
-                  >
-                    Expert Advisor
-                  </Link>
+                  {Services.map((service) => (
+                    <Link
+                      href={`/services/${service.id}`}
+                      className={styles.mobile_menu_item}
+                      onClick={() => {
+                        if (isOpen) toggleMenu();
+                      }}
+                    >
+                      {service.title}
+                    </Link>
+                  ))}
                 </div>
                 <div
                   data-hovered={isDDHovered}

@@ -3,14 +3,14 @@ import Link from "next/link";
 import styles from "./navbar.module.scss";
 
 interface ServiceCardProps {
-  name: string;
-  description: string;
+  title: string;
+  subtitle: string;
   link: string;
   style?: React.CSSProperties;
 }
 const ServiceCard: React.FC<ServiceCardProps> = ({
-  name,
-  description,
+  title,
+  subtitle,
   link,
   style,
 }) => {
@@ -20,11 +20,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         style={{ borderBottom: "5px", borderColor: "black" }}
         className="text-xl font-semibold pb-3 "
       >
-        {name}
+        {title}
       </p>
-      <p style={{ whiteSpace: "break-spaces", fontSize: "1rem" }}>
-        {description}
-      </p>
+      <p style={{ whiteSpace: "break-spaces", fontSize: "1rem" }}>{subtitle}</p>
     </Link>
   );
 };

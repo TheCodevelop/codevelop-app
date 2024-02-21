@@ -271,12 +271,14 @@ nav li {
     height: 0px;
   }
   100% {
-    height: 124px;
+    // This amount should be 38px * amount of items + 20px
+    height: 162px;
   }
 }
 @keyframes box_shrink {
   0% {
-    height: 124px;
+    // This amount should be 38px * amount of items + 20px
+    height: 162px;
   }
   100% {
     height: 0px;

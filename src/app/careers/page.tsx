@@ -7,6 +7,7 @@ import Image from "next/image";
 import PositionCard from "./position-card";
 import BenefitCard from "./benefit-card";
 import styles from "./careers.module.scss";
+import { Jobs } from "./job/[jobId]/page";
 
 export default function Page() {
   // Step 3: Implement the scroll function
@@ -141,19 +142,9 @@ export default function Page() {
         <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>
           Open Positions
         </div>
-        <PositionCard
-          name="Associate UI/UX Designer"
-          id="associate-ui-ux-designer"
-        ></PositionCard>
-        <PositionCard
-          name="Software Engineer"
-          id="software-developer"
-        ></PositionCard>
-        <PositionCard
-          name="Android Developer"
-          id="android-developer"
-        ></PositionCard>
-        <PositionCard name="iOS Developer" id="ios-developer"></PositionCard>
+        {Jobs.map((job) => (
+          <PositionCard name={job.name} id={job.id}></PositionCard>
+        ))}
       </div>
     </div>
   );
