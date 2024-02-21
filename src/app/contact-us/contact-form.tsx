@@ -111,7 +111,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ style }) => {
         onChange={(e) => setMessage(e.target.value)}
         label="Message"
       ></InputBlock>
-      <Button text="Submit" color="grey" href=""></Button>
+      <Button text="Submit" color="grey"></Button>
     </div>
   );
 };

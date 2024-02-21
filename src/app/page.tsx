@@ -1,5 +1,5 @@
 import styles from "./homepage.module.scss";
-import Button from "@/components/button";
+import ButtonLink from "@/components/button-link";
 import Image from "next/image";
 
 export default function Page() {
@@ -46,7 +46,7 @@ export default function Page() {
           driven by a commitment to innovation and excellence. We aim to exceed
           expectations and ensure client success.
         </p>
-        <Button href="/" text="View Our Work" color="white"></Button>
+        <ButtonLink href="/" text="View Our Work" color="white"></ButtonLink>
       </div>
       <div className={styles.dim_overlay}></div>
     </>

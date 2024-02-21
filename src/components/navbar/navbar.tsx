@@ -6,7 +6,7 @@ import { useEffect, useState, useRef } from "react";
 import throttle from "lodash/throttle";
 import DropdownMenu from "./dropdown-menu";
 import HeaderLogo from "./header-logo";
-import Button from "../button";
+import ButtonLink from "../button-link";
 import { variables } from "@/app/variables";
 
 const Navbar: React.FC = () => {
@@ -265,7 +265,7 @@ const Navbar: React.FC = () => {
                   if (isOpen) toggleMenu();
                 }}
               >
-                <Button
+                <ButtonLink
                   color={isDDHovered && !hidden ? "black" : "white"}
                   text="Contact Us"
                   href="/contact-us"
@@ -273,7 +273,7 @@ const Navbar: React.FC = () => {
                   onClick={() => {
                     if (isOpen) toggleMenu();
                   }}
-                ></Button>
+                ></ButtonLink>
               </li>
             </ul>
           </nav>

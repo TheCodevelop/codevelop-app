@@ -2,8 +2,7 @@
 
 import React from "react";
 
-import Button from "@/components/button";
-import { ApplicationForm } from "./application-form";
+import ButtonLink from "@/components/button-link";
 import Image from "next/image";
 import PositionCard from "./position-card";
 import BenefitCard from "./benefit-card";
@@ -63,11 +62,11 @@ export default function Page() {
             From Anywhere <br></br>To Everywhere<br></br> The World is our
             Office
           </span>
-          <Button
+          <ButtonLink
             href="#open-positions"
             text="See Open Positions"
             color="white"
-          ></Button>
+          ></ButtonLink>
         </div>
       </div>
 
@@ -155,10 +154,6 @@ export default function Page() {
           id="android-developer"
         ></PositionCard>
         <PositionCard name="iOS Developer" id="ios-developer"></PositionCard>
-      </div>
-
-      <div className="section" style={{ width: "70%", paddingBottom: "200px" }}>
-        <ApplicationForm style={{ width: "100%" }}></ApplicationForm>
       </div>
     </div>
   );

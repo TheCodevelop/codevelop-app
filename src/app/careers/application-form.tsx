@@ -6,9 +6,13 @@ import { FileInput } from "@/components/input/file-input";
 
 interface ApplicationFormProps {
   style?: React.CSSProperties;
+  id?: string;
 }
 
-export const ApplicationForm: React.FC<ApplicationFormProps> = ({ style }) => {
+export const ApplicationForm: React.FC<ApplicationFormProps> = ({
+  style,
+  id,
+}) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
@@ -26,6 +30,7 @@ export const ApplicationForm: React.FC<ApplicationFormProps> = ({ style }) => {
         gap: "20px",
         ...style,
       }}
+      id={id}
     >
       <h2
         style={{
@@ -33,7 +38,7 @@ export const ApplicationForm: React.FC<ApplicationFormProps> = ({ style }) => {
           fontWeight: "300",
         }}
       >
-        Join Us
+        Apply for this Role
       </h2>
       <div
         style={{
@@ -82,7 +87,7 @@ export const ApplicationForm: React.FC<ApplicationFormProps> = ({ style }) => {
         allowedFormats={[".pdf", ".doc", ".docx"]}
       ></FileInput>
 
-      <Button text="Submit Application" color="grey" href=""></Button>
+      <Button text="Submit Application" color="grey"></Button>
     </div>
   );
 };

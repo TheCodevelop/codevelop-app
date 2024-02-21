@@ -1,5 +1,7 @@
 import styles from "@/app/careers/careers.module.scss";
 import Image from "next/image";
+import { ApplicationForm } from "../../application-form";
+import ButtonLink from "@/components/button-link";
 
 function getJob(jobName: string): JobPosting {
   switch (jobName) {
@@ -21,37 +23,53 @@ export default function Page({ params }: { params: { jobName: string } }) {
   return (
     <div style={{ backgroundColor: "white", color: "black" }}>
       <div className="section">
-        <div style={{ paddingTop: "4rem", paddingBottom: "2rem" }}>
-          <div
-            style={{
-              fontSize: "3rem",
-              fontWeight: "600",
-              marginBottom: "0.5rem",
-            }}
-          >
-            {jobData.name}
-          </div>
-          <div style={{ display: "flex", gap: "20px", marginBottom: "1rem" }}>
-            <div style={{ display: "flex", gap: "10px" }}>
-              <Image
-                src="/suitcase.svg"
-                alt="Suitcase Icon"
-                width={20}
-                height={20}
-              ></Image>
-              <div>{jobData.fullTime ? "Full-Time" : "Part-Time"}</div>
+        <div
+          style={{
+            paddingTop: "4rem",
+            paddingBottom: "2rem",
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <div>
+            <div
+              style={{
+                fontSize: "3rem",
+                fontWeight: "600",
+                marginBottom: "0.5rem",
+              }}
+            >
+              {jobData.name}
             </div>
-            <div>|</div>
-            <div style={{ display: "flex", gap: "10px" }}>
-              <Image
-                src="/location.svg"
-                alt="Location Icon"
-                width={20}
-                height={20}
-              ></Image>
-              <div>{jobData.location}</div>
+            <div style={{ display: "flex", gap: "20px", marginBottom: "1rem" }}>
+              <div style={{ display: "flex", gap: "10px" }}>
+                <Image
+                  src="/suitcase.svg"
+                  alt="Suitcase Icon"
+                  width={20}
+                  height={20}
+                ></Image>
+                <div>{jobData.fullTime ? "Full-Time" : "Part-Time"}</div>
+              </div>
+              <div>|</div>
+              <div style={{ display: "flex", gap: "10px" }}>
+                <Image
+                  src="/location.svg"
+                  alt="Location Icon"
+                  width={20}
+                  height={20}
+                ></Image>
+                <div>{jobData.location}</div>
+              </div>
             </div>
           </div>
+          <ButtonLink
+            text="Apply Now"
+            href="#application-form"
+            style={{ padding: "0.75rem 2rem" }}
+          ></ButtonLink>
         </div>
 
         <div className={styles.job_layout}>
@@ -122,6 +140,20 @@ export default function Page({ params }: { params: { jobName: string } }) {
             </div>
           </div>
         </div>
+      </div>
+      <div
+        className="section"
+        style={{ paddingTop: "100px", paddingBottom: "200px" }}
+      >
+        <ApplicationForm
+          style={{
+            width: "100%",
+            border: "1px solid black",
+            scrollMarginTop: "4rem",
+            maxWidth: "600px",
+          }}
+          id="application-form"
+        ></ApplicationForm>
       </div>
     </div>
   );

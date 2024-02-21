@@ -1,4 +1,4 @@
-import Button from "@/components/button";
+import ButtonLink from "@/components/button-link";
 
 interface PositionCardProps {
   name: string;
@@ -16,12 +16,12 @@ const PositionCard: React.FC<PositionCardProps> = ({ name, id }) => {
       }}
     >
       <p style={{ fontSize: "1.5rem" }}>{name}</p>
-      <Button
+      <ButtonLink
         text="View Role"
         color="white"
         style={{ paddingTop: "0px", paddingBottom: "0px", fontSize: "1rem" }}
         href={`/careers/job/${id}`}
-      ></Button>
+      ></ButtonLink>
     </div>
   );
 };
