@@ -7,22 +7,37 @@ interface ServiceCardProps {
   subtitle: string;
   link: string;
   style?: React.CSSProperties;
+  onClick: () => void;
 }
 const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
   subtitle,
   link,
   style,
+  onClick,
 }) => {
   return (
-    <Link href={link} style={style}>
+    <Link href={link} style={style} onClick={onClick}>
       <p
-        style={{ borderBottom: "5px", borderColor: "black" }}
-        className="text-xl font-semibold pb-3 "
+        style={{
+          borderBottom: "0.25rem",
+          borderColor: "black",
+          paddingBottom: "1rem",
+          fontSize: "1.25rem",
+          fontWeight: "500",
+        }}
       >
         {title}
       </p>
-      <p style={{ whiteSpace: "break-spaces", fontSize: "1rem" }}>{subtitle}</p>
+      <p
+        style={{
+          whiteSpace: "break-spaces",
+          fontSize: "1rem",
+          fontWeight: "300",
+        }}
+      >
+        {subtitle}
+      </p>
     </Link>
   );
 };

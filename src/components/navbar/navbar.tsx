@@ -138,7 +138,7 @@ const Navbar: React.FC = () => {
             data-resizing={resizing}
           >
             <ul className={styles.navigation_items}>
-              <li>
+              <li key={"our-work"}>
                 <Link
                   className={`${styles.nav_link} ${
                     isDDHovered && !hidden ? "text-black" : ""
@@ -152,6 +152,7 @@ const Navbar: React.FC = () => {
                 </Link>
               </li>
               <li
+                key={"our-services"}
                 onMouseEnter={() => {
                   if (!isOpen || window.innerWidth > variables.breakpoint) {
                     setClosed(false);
@@ -210,8 +211,9 @@ const Navbar: React.FC = () => {
                   data-clicked={isMobileDDOpen}
                   className={styles.mobile_menu}
                 >
-                  {Services.map((service) => (
+                  {Services.map((service, key) => (
                     <Link
+                      key={key}
                       href={`/services/${service.id}`}
                       className={styles.mobile_menu_item}
                       onClick={() => {
@@ -229,10 +231,15 @@ const Navbar: React.FC = () => {
                   }}
                   className={`${styles.dropdown_menu}`}
                 >
-                  <DropdownMenu />
+                  <DropdownMenu
+                    closeMenu={() => {
+                      setisDDHovered(false);
+                      setClosed(true);
+                    }}
+                  />
                 </div>
               </li>
-              <li>
+              <li key={"careers"}>
                 <Link
                   className={`${styles.nav_link} ${
                     isDDHovered && !hidden ? "text-black" : ""
@@ -246,6 +253,7 @@ const Navbar: React.FC = () => {
                 </Link>
               </li>
               <li
+                key={"contact-us"}
                 onClick={() => {
                   if (isOpen) toggleMenu();
                 }}
