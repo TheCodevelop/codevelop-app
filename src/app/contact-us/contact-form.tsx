@@ -3,6 +3,7 @@ import { useState } from "react";
 import { InputField } from "../../components/input/input-field";
 import { InputBlock } from "../../components/input/input-block";
 import Button from "@/components/button";
+import { variables } from "../variables";
 
 interface ContactFormProps {
   style?: React.CSSProperties;
@@ -19,8 +20,8 @@ export const ContactForm: React.FC<ContactFormProps> = ({ style }) => {
   return (
     <div
       style={{
-        backgroundColor: "white",
-        color: "black",
+        backgroundColor: variables.secondaryColor,
+        color: variables.primaryColor,
         borderRadius: "36px",
         padding: "36px",
         display: "flex",
@@ -83,7 +84,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ style }) => {
               marginTop: "20px",
               marginRight: "10px",
               transform: "scale(1.25)",
-              accentColor: "black",
+              accentColor: variables.primaryColor,
             }}
           />
           <label htmlFor="email" style={{ marginRight: "20px" }}>
@@ -99,7 +100,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ style }) => {
             style={{
               marginRight: "10px",
               transform: "scale(1.25)",
-              accentColor: "black",
+              accentColor: variables.primaryColor,
             }}
           />
           <label htmlFor="by-phone">By Phone</label>

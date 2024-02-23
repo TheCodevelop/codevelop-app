@@ -1,4 +1,5 @@
 "use client";
+import { variables } from "@/app/variables";
 import styles from "./navbar.module.scss";
 import ServiceCard from "./service-card";
 import { Services } from "@/app/our-services/[service]/page";
@@ -12,7 +13,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ closeMenu }) => {
     <div
       className={`${styles.dropdown_content} section`}
       style={{
-        color: "black",
+        color: variables.primaryColor,
       }}
     >
       <p

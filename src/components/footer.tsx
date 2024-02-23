@@ -2,11 +2,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../app/homepage.module.scss";
+import { variables } from "@/app/variables";
 
 const Footer: React.FC = () => {
   return (
-    <div style={{ backgroundColor: "white", height: "400px" }}>
-      <div className="section" style={{ color: "black" }}>
+    <div style={{ backgroundColor: variables.secondaryColor, height: "400px" }}>
+      <div className="section" style={{ color: variables.primaryColor }}>
         <div>Footer</div>
         <div>© 2024 Codevelop LLC. All Rights Reserved</div>
       </div>

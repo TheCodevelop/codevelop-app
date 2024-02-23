@@ -5,8 +5,8 @@
 @tailwind utilities;
 
 .gradient {
-  background: black;
-  color: white;
+  background: $primary-color;
+  color: $secondary-color;
 }
 
 .smooth {

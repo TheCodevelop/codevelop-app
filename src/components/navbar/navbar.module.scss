@@ -33,8 +33,10 @@
 }
 
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   background-color: black;
   z-index: 99999;
   transition: transform ease-out 500ms;
@@ -44,16 +46,20 @@
     height: $nav-height - 40px;
   }
 
-  box-shadow: 0px 8px 8px -7px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 8px 8px -9px rgba(255, 255, 255, 0.5);
 
   &.see_thru {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: transparent;
     box-shadow: none;
   }
   &.hidden {
     transform: translateY(
       -$nav-height - 50px
     ); /* Adjust based on your navbar's height */
+  }
+  &.white_bg {
+    background-color: $secondary-color;
+    transition: background 300ms ease-out;
   }
 }
 
@@ -122,7 +128,7 @@
   @media (max-width: ( $breakpoint - 1px)) {
     z-index: 999;
     position: absolute;
-    background-color: black;
+    background-color: $primary-color;
     right: 0;
     top: $nav-height;
     height: 90vh;
@@ -166,7 +172,7 @@
   top: $nav-height;
   left: 0;
   right: 0;
-  background: white;
+  background: $secondary-color;
   padding-top: 16px;
   padding-bottom: 48px;
   border-radius: 0px 0px 20px 20px;
@@ -220,11 +226,6 @@ nav li {
       opacity: 100%;
     }
   }
-}
-
-.white_bg {
-  background-color: white;
-  transition: background 300ms ease-out;
 }
 
 .navbar_section {

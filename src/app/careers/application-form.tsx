@@ -3,6 +3,7 @@ import { useState } from "react";
 import { InputField } from "@/components/input/input-field";
 import Button from "@/components/button";
 import { FileInput } from "@/components/input/file-input";
+import { variables } from "../variables";
 
 interface ApplicationFormProps {
   style?: React.CSSProperties;
@@ -21,8 +22,8 @@ export const ApplicationForm: React.FC<ApplicationFormProps> = ({
   return (
     <div
       style={{
-        backgroundColor: "white",
-        color: "black",
+        backgroundColor: variables.secondaryColor,
+        color: variables.primaryColor,
         borderRadius: "36px",
         padding: "36px",
         display: "flex",

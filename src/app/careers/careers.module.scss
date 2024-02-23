@@ -2,10 +2,8 @@
 
 .container {
   display: flex;
-  // border: 1px solid black;
-  // border-radius: 1rem;
   padding: 20px;
-  color: black;
+  color: $primary-color;
   gap: 2rem;
 
   @media (max-width: 1200px) {

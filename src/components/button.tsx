@@ -1,5 +1,6 @@
 "use client";
 import styles from "../app/homepage.module.scss";
+import { variables } from "@/app/variables";
 
 export interface ButtonProps {
   id?: string;

@@ -1,5 +1,6 @@
 import styles from "@/app/careers/careers.module.scss";
 import Image from "next/image";
+import { variables } from "@/app/variables";
 
 function getService(serviceName: string): ServicePage {
   return Services.find((service) => service.id === serviceName) as ServicePage;
@@ -25,7 +26,7 @@ export default function Page({ params }: { params: { service: string } }) {
           </div>
         </div>
       </div>
-      <div style={{ backgroundColor: "white", color: "black" }}>
+      <div style={{ backgroundColor: "white", color: variables.primaryColor }}>
         <div className="section">
           <div style={{ paddingTop: "4rem", paddingBottom: "4rem" }}>
             <div

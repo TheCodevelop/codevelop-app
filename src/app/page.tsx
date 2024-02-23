@@ -1,37 +1,48 @@
 import styles from "./homepage.module.scss";
 import ButtonLink from "@/components/button-link";
 import Image from "next/image";
+import { variables } from "./variables";
 
 export default function Page() {
   return (
     <>
       <div
-        className={`section`}
-        style={{ height: "500px", position: "relative" }}
+        style={{
+          position: "relative",
+          height: "80vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          textAlign: "center",
+        }}
       >
         <Image
-          src="/mobile-banner.jpg"
+          src="/creative-process.jpg"
           alt="Mobile App Development Process Picture"
-          width={1920}
-          height={1080}
+          fill
           style={{
             position: "absolute",
             top: "0",
             left: "0",
-
-            zIndex: -1,
+            right: "0",
+            bottom: "0",
             opacity: 0.2,
+            zIndex: -1,
           }}
+          objectFit="cover"
         ></Image>
-        <div style={{ fontSize: "4rem", fontWeight: "500", maxWidth: "500px" }}>
-          Developing <br></br>Your <br></br> Digital Future
+        <div className={`section`}>
+          <div style={{ fontSize: "4rem", fontWeight: "500" }}>
+            Developing Your Digital Future, <br></br> Together
+          </div>
         </div>
       </div>
+
       <div
         style={{
           height: "600px",
-          backgroundColor: "white",
-          color: "black",
+          backgroundColor: variables.secondaryColor,
+          color: variables.primaryColor,
         }}
       >
         <div className="section" style={{ paddingTop: "2rem" }}>

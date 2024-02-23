@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
           isHidden.current = false;
         }
 
-        if (currentScrollY < 100) {
+        if (currentScrollY < 50) {
           setIsNearTop(true);
         } else {
           setIsNearTop(false);
@@ -149,12 +149,13 @@ const Navbar: React.FC = () => {
             <ul className={styles.navigation_items}>
               <li key={"our-work"}>
                 <Link
-                  className={`${styles.nav_link} ${
-                    isDDHovered && !hidden ? "text-black" : ""
-                  }`}
+                  className={`${styles.nav_link}`}
                   href="/our-work"
                   onClick={() => {
                     if (isOpen) toggleMenu();
+                  }}
+                  style={{
+                    color: isDDHovered && !hidden ? "black" : "",
                   }}
                 >
                   Our Work
@@ -250,12 +251,13 @@ const Navbar: React.FC = () => {
               </li>
               <li key={"careers"}>
                 <Link
-                  className={`${styles.nav_link} ${
-                    isDDHovered && !hidden ? "text-black" : ""
-                  }`}
+                  className={`${styles.nav_link}`}
                   href="/careers"
                   onClick={() => {
                     if (isOpen) toggleMenu();
+                  }}
+                  style={{
+                    color: isDDHovered && !hidden ? "black" : "",
                   }}
                 >
                   Careers

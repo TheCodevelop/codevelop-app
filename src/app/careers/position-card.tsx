@@ -1,4 +1,5 @@
 import ButtonLink from "@/components/button-link";
+import { variables } from "../variables";
 
 interface PositionCardProps {
   name: string;
@@ -10,7 +11,7 @@ const PositionCard: React.FC<PositionCardProps> = ({ name, id }) => {
       style={{
         display: "flex",
         justifyContent: "space-between",
-        borderTop: "1px solid white",
+        borderTop: `1px solid ${variables.secondaryColor}`,
         padding: "20px",
         alignItems: "center",
       }}

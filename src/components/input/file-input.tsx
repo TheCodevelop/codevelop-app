@@ -3,6 +3,7 @@ import styles from "./input.module.scss";
 import React, { ChangeEvent, useState } from "react";
 import Button from "../button";
 import Image from "next/image";
+import { variables } from "@/app/variables";
 
 interface FileInputProps {
   value?: string;
@@ -112,7 +113,7 @@ export const FileInput: React.FC<FileInputProps> = ({
               width: "100%",
               borderWidth: "1px",
               padding: "15px",
-              borderColor: "black",
+              borderColor: variables.primaryColor,
               display: "flex",
               justifyContent: "space-between",
             }}

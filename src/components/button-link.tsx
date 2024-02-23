@@ -2,6 +2,7 @@
 import Link from "next/link";
 import styles from "../app/homepage.module.scss";
 import { ButtonProps } from "./button";
+import { variables } from "@/app/variables";
 
 interface ButtonLinkProps extends ButtonProps {
   href: string;
@@ -11,7 +12,7 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({
   id,
   text,
   href,
-  color = "black",
+  color = variables.primaryColor,
   style,
   onClick,
 }) => {

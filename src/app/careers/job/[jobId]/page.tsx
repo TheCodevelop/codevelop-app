@@ -2,6 +2,7 @@ import styles from "@/app/careers/careers.module.scss";
 import Image from "next/image";
 import { ApplicationForm } from "../../application-form";
 import ButtonLink from "@/components/button-link";
+import { variables } from "@/app/variables";
 
 function getJob(jobId: string): JobPosting {
   return Jobs.find((job) => job.id === jobId) as JobPosting;
@@ -10,7 +11,12 @@ function getJob(jobId: string): JobPosting {
 export default function Page({ params }: { params: { jobId: string } }) {
   const jobData = getJob(params.jobId);
   return (
-    <div style={{ backgroundColor: "white", color: "black" }}>
+    <div
+      style={{
+        backgroundColor: variables.secondaryColor,
+        color: variables.primaryColor,
+      }}
+    >
       <div className="section">
         <div
           style={{
@@ -139,7 +145,7 @@ export default function Page({ params }: { params: { jobId: string } }) {
         <ApplicationForm
           style={{
             width: "100%",
-            border: "1px solid black",
+            border: `1px solid ${variables.primaryColor}`,
             scrollMarginTop: "4rem",
             maxWidth: "600px",
           }}

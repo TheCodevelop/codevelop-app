@@ -8,6 +8,7 @@ import PositionCard from "./position-card";
 import BenefitCard from "./benefit-card";
 import styles from "./careers.module.scss";
 import { Jobs } from "./job/[jobId]/page";
+import { variables } from "../variables";
 
 export default function Page() {
   // Step 3: Implement the scroll function
@@ -71,13 +72,17 @@ export default function Page() {
         </div>
       </div>
 
-      <div style={{ backgroundColor: "white" }}>
+      <div style={{ backgroundColor: variables.secondaryColor }}>
         <div
           className="section"
           style={{ paddingTop: "5rem", paddingBottom: "5rem" }}
         >
           <div
-            style={{ fontSize: "4rem", marginBottom: "2rem", color: "black" }}
+            style={{
+              fontSize: "4rem",
+              marginBottom: "2rem",
+              color: variables.primaryColor,
+            }}
           >
             Benefits
           </div>

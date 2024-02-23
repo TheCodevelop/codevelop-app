@@ -51,15 +51,15 @@
 }
 
 .button_white {
-  @include button-style(white, black);
+  @include button-style($secondary-color, $primary-color);
 }
 
 .button_black {
-  @include button-style(black, white);
+  @include button-style($primary-color, $secondary-color);
 }
 
 .button_grey {
-  @include button-style(rgb(78, 78, 78), white);
+  @include button-style(rgb(78, 78, 78), $secondary-color);
 }
 
 .responsive_text {

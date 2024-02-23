@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import styles from "./navbar.module.scss";
+import { variables } from "@/app/variables";
 
 interface ServiceCardProps {
   title: string;
@@ -21,7 +22,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <p
         style={{
           borderBottom: "0.25rem",
-          borderColor: "black",
+          borderColor: variables.primaryColor,
           paddingBottom: "0.5rem",
           fontSize: "1.25rem",
           fontWeight: "500",
