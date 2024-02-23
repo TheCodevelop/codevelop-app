@@ -5,36 +5,39 @@ import Image from "next/image";
 export default function Page() {
   return (
     <>
-      <p className={`section py-48 text-5xl font-semibold`}>
-        We Code.
-        <br></br>
-        <br></br>
-        You Develop.
-        <br></br>
-        <br></br>
-        Together, we CoDevelop.
-      </p>
+      <div
+        className={`section`}
+        style={{ height: "500px", position: "relative" }}
+      >
+        <Image
+          src="/mobile-banner.jpg"
+          alt="Mobile App Development Process Picture"
+          width={1920}
+          height={1080}
+          style={{
+            position: "absolute",
+            top: "0",
+            left: "0",
+
+            zIndex: -1,
+            opacity: 0.2,
+          }}
+        ></Image>
+        <div style={{ fontSize: "4rem", fontWeight: "500", maxWidth: "500px" }}>
+          Developing <br></br>Your <br></br> Digital Future
+        </div>
+      </div>
       <div
         style={{
           height: "600px",
           backgroundColor: "white",
+          color: "black",
         }}
       >
-        <div
-          style={{
-            position: "absolute",
-            height: "300px",
-            top: "750px",
-            right: "10px",
-            zIndex: 900,
-          }}
-        >
-          <Image
-            src="/laptop.png"
-            alt="Laptop image"
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          ></Image>
+        <div className="section" style={{ paddingTop: "2rem" }}>
+          <div style={{ fontSize: "3rem", fontWeight: "400" }}>
+            What it means to Codevelop
+          </div>
         </div>
       </div>
       <div className={`section pt-24 pb-48`}>
@@ -46,7 +49,11 @@ export default function Page() {
           driven by a commitment to innovation and excellence. We aim to exceed
           expectations and ensure client success.
         </p>
-        <ButtonLink href="/" text="View Our Work" color="white"></ButtonLink>
+        <ButtonLink
+          href="/our-work"
+          text="View Our Work"
+          color="white"
+        ></ButtonLink>
       </div>
       <div className={styles.dim_overlay}></div>
     </>

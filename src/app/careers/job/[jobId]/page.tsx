@@ -20,6 +20,8 @@ export default function Page({ params }: { params: { jobId: string } }) {
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "space-between",
+            flexWrap: "wrap",
+            gap: "1rem",
           }}
         >
           <div>

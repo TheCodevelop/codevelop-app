@@ -1,7 +1,7 @@
 "use client";
 import styles from "./navbar.module.scss";
 import ServiceCard from "./service-card";
-import { Services } from "@/app/services/[service]/page";
+import { Services } from "@/app/our-services/[service]/page";
 
 interface DropdownMenuProps {
   closeMenu: () => void;
@@ -31,7 +31,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ closeMenu }) => {
             <ServiceCard
               title={service.title}
               subtitle={service.description}
-              link={`/services/${service.id}`}
+              link={`/our-services/${service.id}`}
               style={{ flex: 1 }}
               onClick={closeMenu}
             />

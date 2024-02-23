@@ -22,7 +22,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         style={{
           borderBottom: "0.25rem",
           borderColor: "black",
-          paddingBottom: "1rem",
+          paddingBottom: "0.5rem",
           fontSize: "1.25rem",
           fontWeight: "500",
         }}

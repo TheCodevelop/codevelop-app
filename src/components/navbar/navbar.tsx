@@ -8,7 +8,7 @@ import DropdownMenu from "./dropdown-menu";
 import HeaderLogo from "./header-logo";
 import ButtonLink from "../button-link";
 import { variables } from "@/app/variables";
-import { Services } from "@/app/services/[service]/page";
+import { Services } from "@/app/our-services/[service]/page";
 
 const Navbar: React.FC = () => {
   const [resizing, setResizing] = useState(false);
@@ -18,6 +18,7 @@ const Navbar: React.FC = () => {
   const [closed, setClosed] = useState(true);
   const [isMobileDDOpen, setIsMobileDDOpen] = useState(false);
   const [isMobileDDDisplay, setIsMobileDDDisplay] = useState(false);
+  const [isNearTop, setIsNearTop] = useState(true);
 
   const lastScrollY = useRef(0);
   const isHidden = useRef(false);
@@ -54,6 +55,12 @@ const Navbar: React.FC = () => {
         if (currentScrollY <= 0) {
           setHidden(false);
           isHidden.current = false;
+        }
+
+        if (currentScrollY < 100) {
+          setIsNearTop(true);
+        } else {
+          setIsNearTop(false);
         }
       },
       200,
@@ -95,7 +102,9 @@ const Navbar: React.FC = () => {
     <>
       <header
         className={`${styles.navbar} ${hidden ? styles.hidden : ""}
-    ${isDDHovered && !hidden ? styles.white_bg : ""}`}
+    ${isDDHovered && !hidden ? styles.white_bg : ""} ${
+      isNearTop ? styles.see_thru : ""
+    }`}
       >
         <div className={styles.navbar_section}>
           <Link
@@ -214,7 +223,7 @@ const Navbar: React.FC = () => {
                   {Services.map((service, key) => (
                     <Link
                       key={key}
-                      href={`/services/${service.id}`}
+                      href={`/our-services/${service.id}`}
                       className={styles.mobile_menu_item}
                       onClick={() => {
                         if (isOpen) toggleMenu();
