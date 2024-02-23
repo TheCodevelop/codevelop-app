@@ -1,5 +1,5 @@
 export const variables = {
   breakpoint: 900,
-  primaryColor: "#2B2B2B",
-  secondaryColor: "#f5f5f5",
+  primaryColor: "#1A1A1A",
+  secondaryColor: "#FAFAFA",
 };
