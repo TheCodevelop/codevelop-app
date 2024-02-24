@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./footer.module.scss";
 import { variables } from "@/app/variables";
-import { Services } from "@/app/our-services/[service]/page";
+import { Services } from "@/app/our-services/[service]/services";
 
 const Footer: React.FC = () => {
   return (

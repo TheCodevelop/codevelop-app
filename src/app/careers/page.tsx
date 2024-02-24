@@ -7,7 +7,7 @@ import Image from "next/image";
 import PositionCard from "./position-card";
 import BenefitCard from "./benefit-card";
 import styles from "./careers.module.scss";
-import { Jobs } from "./job/[jobId]/page";
+import { Jobs } from "./job/[jobId]/jobs";
 import { variables } from "../variables";
 
 export default function Page() {

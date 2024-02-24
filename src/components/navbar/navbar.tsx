@@ -8,7 +8,7 @@ import DropdownMenu from "./dropdown-menu";
 import HeaderLogo from "./header-logo";
 import ButtonLink from "../button-link";
 import { variables } from "@/app/variables";
-import { Services } from "@/app/our-services/[service]/page";
+import { Services } from "@/app/our-services/[service]/services";
 
 const Navbar: React.FC = () => {
   const [resizing, setResizing] = useState(false);

@@ -2,7 +2,7 @@
 import { variables } from "@/app/variables";
 import styles from "./navbar.module.scss";
 import ServiceCard from "./service-card";
-import { Services } from "@/app/our-services/[service]/page";
+import { Services } from "@/app/our-services/[service]/services";
 
 interface DropdownMenuProps {
   closeMenu: () => void;
