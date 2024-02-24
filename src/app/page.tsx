@@ -43,7 +43,7 @@ export default function Page() {
             <span style={{ color: variables.tertiaryColor }}>Together</span>
           </div>
           <div style={{ fontSize: "2rem", fontWeight: "300" }}>
-            Comprehensive Web Solutions Tailored to Elevate Your Business Online
+            Comprehensive Web Services Tailored to Elevate Your Business Online
           </div>
         </div>
       </div>

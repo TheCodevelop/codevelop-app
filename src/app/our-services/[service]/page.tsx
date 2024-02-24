@@ -31,8 +31,8 @@ export default function Page({ params }: { params: { service: string } }) {
             bottom: "0",
             opacity: 0.1,
             zIndex: -1,
+            objectFit: "cover",
           }}
-          objectFit="cover"
         ></Image>
         <div className={`section`}>
           <div
@@ -127,12 +127,12 @@ export default function Page({ params }: { params: { service: string } }) {
                   business needs.
                 </div>
               </div>
-              <Image
+              {/* <Image
                 src="/website-development.svg"
                 alt="Website Development"
                 width={500}
                 height={500}
-              />
+              /> */}
             </div>
           </div>
         </div>
