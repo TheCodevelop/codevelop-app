@@ -147,8 +147,8 @@ export default function Page() {
         <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>
           Open Positions
         </div>
-        {Jobs.map((job) => (
-          <PositionCard name={job.name} id={job.id}></PositionCard>
+        {Jobs.map((job, key) => (
+          <PositionCard key={key} name={job.name} id={job.id}></PositionCard>
         ))}
       </div>
     </div>

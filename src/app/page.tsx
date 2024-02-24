@@ -28,8 +28,8 @@ export default function Page() {
             bottom: "0",
             opacity: 0.2,
             zIndex: -1,
+            objectFit: "cover",
           }}
-          objectFit="cover"
         ></Image>
         <div className="section">
           <div

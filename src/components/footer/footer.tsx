@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
             ></Image>
             <div style={{ fontSize: "1rem", paddingRight: "2rem" }}>
               At Codevelop, we believe in bringing our customers vision to life
-              through collaboration. We don't just develop{" "}
+              through collaboration. We don&apos;t just develop{" "}
               <span style={{ color: variables.tertiaryColor }}>for</span> you,
               we develop{" "}
               <span style={{ color: variables.tertiaryColor }}>with</span> you.

@@ -34,7 +34,7 @@ export default function Page({ params }: { params: { service: string } }) {
             objectFit: "cover",
           }}
         ></Image>
-        <div className={`section`}>
+        <div className="section">
           <div
             style={{
               fontSize: "4rem",
@@ -76,8 +76,8 @@ export default function Page({ params }: { params: { service: string } }) {
                     marginBottom: "1.25rem",
                   }}
                 >
-                  In today's digital age, your website is the cornerstone of
-                  your online identity, serving as the virtual face of your
+                  In today&rsquo;s digital age, your website is the cornerstone
+                  of your online identity, serving as the virtual face of your
                   business. At Codevelop, we understand the significance of a
                   well-crafted website. Our website development services are
                   designed to deliver not just a site, but a comprehensive
@@ -118,8 +118,8 @@ export default function Page({ params }: { params: { service: string } }) {
                     marginBottom: "1.25rem",
                   }}
                 >
-                  In today's digital age, your website is the cornerstone of
-                  your online identity, serving as the virtual face of your
+                  In today&rsquo;s digital age, your website is the cornerstone
+                  of your online identity, serving as the virtual face of your
                   business. At Codevelop, we understand the significance of a
                   well-crafted website. Our website development services are
                   designed to deliver not just a site, but a comprehensive
