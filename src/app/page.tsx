@@ -26,14 +26,24 @@ export default function Page() {
             left: "0",
             right: "0",
             bottom: "0",
-            opacity: 0.1,
+            opacity: 0.2,
             zIndex: -1,
           }}
           objectFit="cover"
         ></Image>
-        <div className={`section`}>
-          <div style={{ fontSize: "4rem", fontWeight: "500" }}>
-            Developing Your Digital Future, <br></br> Together
+        <div className="section">
+          <div
+            style={{
+              fontSize: "4rem",
+              fontWeight: "500",
+              marginBottom: "2rem",
+            }}
+          >
+            Developing Your Digital Future, <br></br>{" "}
+            <span style={{ color: variables.tertiaryColor }}>Together</span>
+          </div>
+          <div style={{ fontSize: "2rem", fontWeight: "300" }}>
+            Comprehensive Web Solutions Tailored to Elevate Your Business Online
           </div>
         </div>
       </div>

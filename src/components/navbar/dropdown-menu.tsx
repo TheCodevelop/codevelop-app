@@ -13,12 +13,13 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ closeMenu }) => {
     <div
       style={{
         color: variables.primaryColor,
+        cursor: "default",
       }}
     >
       <p
         style={{
           paddingTop: "1rem",
-          paddingBottom: "2rem",
+          paddingBottom: "1rem",
           fontSize: "2rem",
           fontWeight: "500",
         }}
@@ -26,14 +27,20 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ closeMenu }) => {
       >
         Our Services
       </p>
-      <div style={{ display: "flex" }} className={`${styles.dropdown_content}`}>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: `repeat(${Services.length}, 1fr)`,
+        }}
+        className={`${styles.dropdown_content}`}
+      >
         {Services.map((service, key) => (
           <div key={key}>
             <ServiceCard
               title={service.title}
               subtitle={service.description}
               link={`/our-services/${service.id}`}
-              style={{ flex: 1 }}
+              // style={{ flex: 1 }}
               onClick={closeMenu}
             />
           </div>

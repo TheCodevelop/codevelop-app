@@ -1,6 +1,7 @@
 "use client";
 import styles from "./input.module.scss";
 import React, { ChangeEvent } from "react";
+import { variables } from "@/app/variables";
 
 interface InputFieldProps {
   value?: string;
@@ -28,6 +29,7 @@ export const InputField: React.FC<InputFieldProps> = ({
         type={type}
         value={value}
         onChange={onChange}
+        color={variables.secondaryColor}
       />
       <label className={value && styles.filled} htmlFor={`id-${label}`}>
         {label}

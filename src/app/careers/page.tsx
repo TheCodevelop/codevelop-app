@@ -25,7 +25,7 @@ export default function Page() {
       <div
         style={{
           position: "relative",
-          height: "90vh",
+          height: "50vh",
           minHeight: "600px",
           overflowX: "hidden",
           overflowY: "hidden",
@@ -39,7 +39,7 @@ export default function Page() {
           alt="world map"
           fill
           style={{
-            opacity: "50%",
+            opacity: "30%",
             position: "absolute",
             zIndex: -1,
             right: 0,
@@ -52,8 +52,8 @@ export default function Page() {
         <div
           style={{
             fontSize: "4rem",
-            paddingBottom: "6rem",
             textAlign: "center",
+            paddingTop: "2rem",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",

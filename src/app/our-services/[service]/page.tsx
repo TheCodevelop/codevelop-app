@@ -1,4 +1,3 @@
-import styles from "@/app/careers/careers.module.scss";
 import Image from "next/image";
 import { variables } from "@/app/variables";
 
@@ -10,8 +9,32 @@ export default function Page({ params }: { params: { service: string } }) {
   const serviceData = getService(params.service);
   return (
     <div>
-      <div className="section">
-        <div style={{ paddingTop: "4rem", paddingBottom: "4rem" }}>
+      <div
+        style={{
+          position: "relative",
+          height: "30rem",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          textAlign: "center",
+        }}
+      >
+        <Image
+          src="/creative-process.jpg"
+          alt="Mobile App Development Process Picture"
+          fill
+          style={{
+            position: "absolute",
+            top: "0",
+            left: "0",
+            right: "0",
+            bottom: "0",
+            opacity: 0.1,
+            zIndex: -1,
+          }}
+          objectFit="cover"
+        ></Image>
+        <div className={`section`}>
           <div
             style={{
               fontSize: "4rem",

@@ -1,6 +1,7 @@
 @use "/src/app/variables" as *;
 
 .service_card {
+  height: 100%;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: none;
@@ -184,9 +185,9 @@
   left: 0;
   right: 0;
   background: $secondary-color;
-  padding-top: 16px;
-  padding-bottom: 48px;
-  border-radius: 0px 0px 20px 20px;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  border-radius: 0px 0px 1.5rem 1.5rem;
   &[data-hovered="true"] {
     .dropdown_content {
       animation:
