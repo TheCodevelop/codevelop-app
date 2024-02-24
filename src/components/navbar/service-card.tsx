@@ -19,26 +19,28 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 }) => {
   return (
     <Link href={link} style={style} onClick={onClick}>
-      <p
-        style={{
-          borderBottom: "0.25rem",
-          borderColor: variables.primaryColor,
-          paddingBottom: "0.5rem",
-          fontSize: "1.25rem",
-          fontWeight: "500",
-        }}
-      >
-        {title}
-      </p>
-      <p
-        style={{
-          whiteSpace: "break-spaces",
-          fontSize: "1rem",
-          fontWeight: "300",
-        }}
-      >
-        {subtitle}
-      </p>
+      <div className={styles.service_card}>
+        <p
+          style={{
+            borderBottom: "0.25rem",
+            borderColor: variables.primaryColor,
+            paddingBottom: "0.5rem",
+            fontSize: "1.25rem",
+            fontWeight: "500",
+          }}
+        >
+          {title}
+        </p>
+        <p
+          style={{
+            whiteSpace: "break-spaces",
+            fontSize: "1rem",
+            fontWeight: "300",
+          }}
+        >
+          {subtitle}
+        </p>
+      </div>
     </Link>
   );
 };

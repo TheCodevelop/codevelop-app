@@ -1,5 +1,15 @@
 @use "/src/app/variables" as *;
 
+.service_card {
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: none;
+  transition: box-shadow 300ms ease-out;
+  &:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
 .mobile_image {
   display: none;
   @media (max-width: $mobile-breakpoint) {
@@ -49,11 +59,11 @@
   box-shadow: 0px 8px 8px -9px rgba(255, 255, 255, 0.5);
 
   &.see_thru {
-    background: transparent;
+    background-color: transparent;
     box-shadow: none;
-    transition: background-color 300ms ease-out;
   }
   &.hidden {
+    box-shadow: none;
     transform: translateY(
       -$nav-height - 50px
     ); /* Adjust based on your navbar's height */
@@ -208,6 +218,10 @@
 }
 
 .dropdown_content {
+  padding-left: $page-padding - 2rem;
+  padding-right: $page-padding - 2rem;
+  max-width: $page-max-width;
+  margin: auto;
   opacity: 0;
   transform: translateY(20%);
 }

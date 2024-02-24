@@ -11,7 +11,6 @@ interface DropdownMenuProps {
 const DropdownMenu: React.FC<DropdownMenuProps> = ({ closeMenu }) => {
   return (
     <div
-      className={`${styles.dropdown_content} section`}
       style={{
         color: variables.primaryColor,
       }}
@@ -23,10 +22,11 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ closeMenu }) => {
           fontSize: "2rem",
           fontWeight: "500",
         }}
+        className="section"
       >
         Our Services
       </p>
-      <div style={{ display: "flex", gap: "3rem" }}>
+      <div style={{ display: "flex" }} className={`${styles.dropdown_content}`}>
         {Services.map((service, key) => (
           <div key={key}>
             <ServiceCard
