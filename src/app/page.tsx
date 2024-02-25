@@ -1,7 +1,7 @@
 import styles from "./homepage.module.scss";
-import ButtonLink from "@/components/button-link";
 import Image from "next/image";
 import { variables } from "./variables";
+import Stepper from "@/components/stepper/stepper";
 
 export default function Page() {
   return (
@@ -49,32 +49,71 @@ export default function Page() {
       </div>
 
       <div
+        style={
+          {
+            // backgroundColor: variables.secondaryColor,
+            // color: variables.primaryColor,
+          }
+        }
+      >
+        <div
+          className="section"
+          style={{
+            paddingTop: "2rem",
+            display: "flex",
+            flexDirection: "column",
+            gap: "1rem",
+          }}
+        >
+          <div
+            style={{ fontSize: "3rem", fontWeight: "400", alignSelf: "center" }}
+          >
+            How it Works
+          </div>
+          <div style={{ fontSize: "1.25rem" }}>
+            At Codevelop, we believe in developing{" "}
+            <span style={{ color: variables.tertiaryColor }}>with</span> you,
+            not just for you. Our collaborative process ensures that your vision
+            is at the heart of everything we do, from initial concept to final
+            execution.
+          </div>
+          <Stepper></Stepper>
+        </div>
+      </div>
+      <div
         style={{
           height: "600px",
-          backgroundColor: variables.secondaryColor,
-          color: variables.primaryColor,
+          // backgroundColor: variables.secondaryColor,
+          // color: variables.primaryColor,
+        }}
+      >
+        <div className="section" style={{ paddingTop: "2rem" }}>
+          <div style={{ fontSize: "3rem", fontWeight: "400" }}>Services</div>
+        </div>
+      </div>
+      <div
+        style={{
+          height: "600px",
+          // backgroundColor: variables.secondaryColor,
+          // color: variables.primaryColor,
         }}
       >
         <div className="section" style={{ paddingTop: "2rem" }}>
           <div style={{ fontSize: "3rem", fontWeight: "400" }}>
-            What it means to Codevelop
+            Previous Work
           </div>
         </div>
       </div>
-      <div className={`section pt-24 pb-48`}>
-        <p className={styles.responsive_title}>Our Mission</p>
-        <p className={styles.responsive_text}>
-          Codevelop specializes in custom digital solutions, combining strategy,
-          design, and advanced technology to deliver transformative experiences.
-          Our mission is on empowering businesses with cutting-edge software,
-          driven by a commitment to innovation and excellence. We aim to exceed
-          expectations and ensure client success.
-        </p>
-        <ButtonLink
-          href="/our-work"
-          text="View Our Work"
-          color="white"
-        ></ButtonLink>
+      <div
+        style={{
+          height: "600px",
+          // backgroundColor: variables.secondaryColor,
+          // color: variables.primaryColor,
+        }}
+      >
+        <div className="section" style={{ paddingTop: "2rem" }}>
+          <div style={{ fontSize: "3rem", fontWeight: "400" }}>Contact Us</div>
+        </div>
       </div>
       <div className={styles.dim_overlay}></div>
     </>

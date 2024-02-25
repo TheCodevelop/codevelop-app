@@ -50,7 +50,12 @@ export default function Page({ params }: { params: { service: string } }) {
           </div>
         </div>
       </div>
-      <div style={{ backgroundColor: "white", color: variables.primaryColor }}>
+      <div
+        style={{
+          backgroundColor: variables.secondaryColor,
+          color: variables.primaryColor,
+        }}
+      >
         <div className="section">
           <div style={{ paddingTop: "4rem", paddingBottom: "4rem" }}>
             <div

@@ -1,0 +1,48 @@
+@import "/src/app/variables";
+
+.stepper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.text_block {
+  opacity: 0.2;
+  transition: opacity 0.1s ease-in;
+}
+
+.active {
+  opacity: 1;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  :nth-child(1) {
+    :first-child {
+      align-self: flex-end;
+    }
+    :nth-child(2) {
+      text-align: right;
+    }
+  }
+  :nth-child(2) {
+    align-self: center;
+  }
+}
+
+.alternate_container {
+  :nth-child(1) {
+    :first-child {
+      align-self: flex-start;
+    }
+    :nth-child(2) {
+      text-align: left;
+    }
+  }
+  :nth-child(2) {
+    grid-row-start: 1;
+    justify-self: end;
+  }
+}

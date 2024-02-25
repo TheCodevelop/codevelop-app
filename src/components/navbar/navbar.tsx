@@ -48,8 +48,9 @@ const Navbar: React.FC = () => {
         if (
           isHidden.current !== lastScrollY.current < currentScrollY &&
           lastScrollY.current > 0
-        )
+        ) {
           updateHidden(lastScrollY.current < currentScrollY);
+        }
 
         lastScrollY.current = currentScrollY;
         if (currentScrollY <= 0) {

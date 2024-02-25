@@ -40,7 +40,12 @@ const Footer: React.FC = () => {
               height={200}
               style={{ filter: "invert(100%)" }}
             ></Image>
-            <div style={{ fontSize: "1rem", paddingRight: "2rem" }}>
+            <div
+              style={{
+                fontSize: "1rem",
+                paddingRight: "2rem",
+              }}
+            >
               At Codevelop, we believe in bringing our customers vision to life
               through collaboration. We don&apos;t just develop{" "}
               <span style={{ color: variables.tertiaryColor }}>for</span> you,
