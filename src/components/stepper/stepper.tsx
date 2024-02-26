@@ -85,7 +85,7 @@ export const Steps: Step[] = [
     image: "/programmer.svg",
   },
   {
-    title: "Perfecting Your Experience",
+    title: "Perfecting Your Product",
     description:
       "Quality is our top priority. We conduct rigorous testing and gather your feedback to refine and optimize every aspect of your project. This iterative process ensures that your digital solution is not only functional but flawless.",
     image: "/code_refinement.svg",

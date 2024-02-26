@@ -82,13 +82,157 @@ export default function Page() {
       </div>
       <div
         style={{
-          height: "600px",
-          // backgroundColor: variables.secondaryColor,
-          // color: variables.primaryColor,
+          backgroundColor: variables.secondaryColor,
+          color: variables.primaryColor,
         }}
       >
-        <div className="section" style={{ paddingTop: "2rem" }}>
-          <div style={{ fontSize: "3rem", fontWeight: "400" }}>Services</div>
+        <div
+          className="section"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "3rem",
+            paddingBottom: "2rem",
+            paddingTop: "2rem",
+          }}
+        >
+          <div
+            style={{
+              fontSize: "3rem",
+              fontWeight: "400",
+              textAlign: "center",
+            }}
+          >
+            Services
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+            }}
+          >
+            <div style={{ maxWidth: "400px" }}>
+              <div style={{ fontSize: "2rem" }}>Website Development</div>
+              <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+              </div>
+            </div>
+            <div style={{ display: "flex", flexDirection: "row" }}>
+              <div>
+                <Image
+                  src="/laptop.png"
+                  alt="laptop with website"
+                  width={300}
+                  height={300}
+                ></Image>
+              </div>
+              <div>
+                <Image
+                  src="/mobile_phone.png"
+                  alt="smart phone with website"
+                  width={100}
+                  height={100}
+                ></Image>
+              </div>
+            </div>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+            }}
+          >
+            <div style={{ maxWidth: "400px" }}>
+              <div style={{ fontSize: "2rem" }}>App Development</div>
+              <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+              </div>
+            </div>
+            <div>
+              <Image
+                src="/smart_phones.png"
+                alt="laptop with website"
+                width={300}
+                height={300}
+              ></Image>
+            </div>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+            }}
+          >
+            <div style={{ maxWidth: "400px" }}>
+              <div style={{ fontSize: "2rem" }}>Security Consulting</div>
+              <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+              </div>
+            </div>
+            <div style={{ display: "flex", flexDirection: "row" }}>
+              <div>
+                <Image
+                  src="/laptop.png"
+                  alt="laptop with website"
+                  width={300}
+                  height={300}
+                ></Image>
+              </div>
+              <div>
+                <Image
+                  src="/mobile_phone.png"
+                  alt="smart phone with website"
+                  width={100}
+                  height={100}
+                ></Image>
+              </div>
+            </div>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+            }}
+          >
+            <div style={{ maxWidth: "400px" }}>
+              <div style={{ fontSize: "2rem" }}>AI Consulting</div>
+              <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+              </div>
+            </div>
+            <div style={{ display: "flex", flexDirection: "row" }}>
+              <div>
+                <Image
+                  src="/laptop.png"
+                  alt="laptop with website"
+                  width={300}
+                  height={300}
+                ></Image>
+              </div>
+              <div>
+                <Image
+                  src="/mobile_phone.png"
+                  alt="smart phone with website"
+                  width={100}
+                  height={100}
+                ></Image>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div
