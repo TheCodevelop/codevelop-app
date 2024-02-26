@@ -103,22 +103,17 @@ export default function Page() {
               textAlign: "center",
             }}
           >
-            Services
+            Our Services
           </div>
           <div
             style={{
               display: "flex",
               flexDirection: "row",
+              justifyContent: "start",
             }}
           >
             <div style={{ maxWidth: "400px" }}>
               <div style={{ fontSize: "2rem" }}>Website Development</div>
-              <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-              </div>
             </div>
             <div style={{ display: "flex", flexDirection: "row" }}>
               <div>
@@ -143,23 +138,18 @@ export default function Page() {
             style={{
               display: "flex",
               flexDirection: "row",
+              justifyContent: "center",
             }}
           >
             <div style={{ maxWidth: "400px" }}>
               <div style={{ fontSize: "2rem" }}>App Development</div>
-              <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-              </div>
             </div>
             <div>
               <Image
-                src="/smart_phones.png"
+                src="/smart_phones_filled.png"
                 alt="laptop with website"
-                width={300}
-                height={300}
+                width={180}
+                height={180}
               ></Image>
             </div>
           </div>
@@ -167,7 +157,7 @@ export default function Page() {
             style={{
               display: "flex",
               flexDirection: "row",
-              justifyContent: "space-between",
+              justifyContent: "center",
             }}
           >
             <div style={{ maxWidth: "400px" }}>
@@ -182,18 +172,11 @@ export default function Page() {
             <div style={{ display: "flex", flexDirection: "row" }}>
               <div>
                 <Image
-                  src="/laptop.png"
+                  src="/security_lock.png"
                   alt="laptop with website"
-                  width={300}
-                  height={300}
-                ></Image>
-              </div>
-              <div>
-                <Image
-                  src="/mobile_phone.png"
-                  alt="smart phone with website"
-                  width={100}
-                  height={100}
+                  width={200}
+                  height={200}
+                  style={{ height: "180px", width: "auto" }}
                 ></Image>
               </div>
             </div>
@@ -202,7 +185,7 @@ export default function Page() {
             style={{
               display: "flex",
               flexDirection: "row",
-              justifyContent: "space-between",
+              justifyContent: "center",
             }}
           >
             <div style={{ maxWidth: "400px" }}>
@@ -217,18 +200,10 @@ export default function Page() {
             <div style={{ display: "flex", flexDirection: "row" }}>
               <div>
                 <Image
-                  src="/laptop.png"
+                  src="/artificial_intelligence.png"
                   alt="laptop with website"
-                  width={300}
-                  height={300}
-                ></Image>
-              </div>
-              <div>
-                <Image
-                  src="/mobile_phone.png"
-                  alt="smart phone with website"
-                  width={100}
-                  height={100}
+                  height={180}
+                  width={180}
                 ></Image>
               </div>
             </div>
@@ -244,7 +219,7 @@ export default function Page() {
       >
         <div className="section" style={{ paddingTop: "2rem" }}>
           <div style={{ fontSize: "3rem", fontWeight: "400" }}>
-            Previous Work
+            Our Past Work
           </div>
         </div>
       </div>
