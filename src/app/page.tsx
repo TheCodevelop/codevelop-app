@@ -2,6 +2,7 @@ import styles from "./homepage.module.scss";
 import Image from "next/image";
 import { variables } from "./variables";
 import Stepper from "@/components/stepper/stepper";
+import ButtonLink from "@/components/button-link";
 
 export default function Page() {
   return (
@@ -49,38 +50,6 @@ export default function Page() {
       </div>
 
       <div
-        style={
-          {
-            // backgroundColor: variables.secondaryColor,
-            // color: variables.primaryColor,
-          }
-        }
-      >
-        <div
-          className="section"
-          style={{
-            paddingTop: "2rem",
-            display: "flex",
-            flexDirection: "column",
-            gap: "1rem",
-          }}
-        >
-          <div
-            style={{ fontSize: "3rem", fontWeight: "400", alignSelf: "center" }}
-          >
-            How it Works
-          </div>
-          <div style={{ fontSize: "1.25rem" }}>
-            At Codevelop, we believe in developing{" "}
-            <span style={{ color: variables.tertiaryColor }}>with</span> you,
-            not just for you. Our collaborative process ensures that your vision
-            is at the heart of everything we do, from initial concept to final
-            execution.
-          </div>
-          <Stepper></Stepper>
-        </div>
-      </div>
-      <div
         style={{
           backgroundColor: variables.secondaryColor,
           color: variables.primaryColor,
@@ -109,47 +78,42 @@ export default function Page() {
             style={{
               display: "flex",
               flexDirection: "row",
-              justifyContent: "start",
+              justifyContent: "space-between",
+              gap: "2rem",
             }}
           >
-            <div style={{ maxWidth: "400px" }}>
+            <div
+              style={{
+                maxWidth: "600px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "1rem",
+              }}
+            >
               <div style={{ fontSize: "2rem" }}>Website Development</div>
-            </div>
-            <div style={{ display: "flex", flexDirection: "row" }}>
-              <div>
-                <Image
-                  src="/laptop.png"
-                  alt="laptop with website"
-                  width={300}
-                  height={300}
-                ></Image>
+              <div style={{ fontSize: "1.25rem" }}>
+                Craft the digital face of your business with our Website
+                Development service. We specialize in creating stunning,
+                user-friendly websites that are not only visually appealing but
+                also mobile-friendly, ensuring an optimal browsing experience on
+                any device. Let us help you make that first impression count
+                with a site that speaks volumes of your brand.
               </div>
-              <div>
-                <Image
-                  src="/mobile_phone.png"
-                  alt="smart phone with website"
-                  width={100}
-                  height={100}
-                ></Image>
-              </div>
+              <ButtonLink
+                href="/our-services/website-development"
+                text="Get Started"
+                color="black"
+                style={{ fontWeight: "300", maxWidth: "300px" }}
+              ></ButtonLink>
             </div>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "center",
-            }}
-          >
-            <div style={{ maxWidth: "400px" }}>
-              <div style={{ fontSize: "2rem" }}>App Development</div>
-            </div>
+
             <div>
               <Image
-                src="/smart_phones_filled.png"
-                alt="laptop with website"
-                width={180}
-                height={180}
+                src="/blank_desktop_mobile.png"
+                alt="smart phone with website"
+                width={3000}
+                height={3000}
+                style={{ height: "300px", width: "auto" }}
               ></Image>
             </div>
           </div>
@@ -157,26 +121,85 @@ export default function Page() {
             style={{
               display: "flex",
               flexDirection: "row",
-              justifyContent: "center",
+              justifyContent: "space-between",
+              gap: "2rem",
             }}
           >
-            <div style={{ maxWidth: "400px" }}>
-              <div style={{ fontSize: "2rem" }}>Security Consulting</div>
-              <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            <div
+              style={{
+                maxWidth: "600px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "1rem",
+              }}
+            >
+              <div style={{ fontSize: "2rem" }}>App Development</div>
+              <div style={{ fontSize: "1.25rem" }}>
+                Turn your app idea into a reality with our comprehensive App
+                Development service. From initial concept to final
+                implementation, our team works closely with you to develop
+                intuitive, high-performance mobile applications tailored to your
+                specific needs. Empower your business with an app that engages
+                your audience and drives results.
               </div>
+              <ButtonLink
+                href="/our-services/app-development"
+                text="Get Started"
+                color="black"
+                style={{ fontWeight: "300", maxWidth: "300px" }}
+              ></ButtonLink>
+            </div>
+            <div>
+              <Image
+                src="/dating_app.png"
+                alt="laptop with website"
+                width={3000}
+                height={3000}
+                style={{ height: "300px", width: "auto" }}
+              ></Image>
+            </div>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+              gap: "2rem",
+            }}
+          >
+            <div
+              style={{
+                maxWidth: "600px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "1rem",
+              }}
+            >
+              <div style={{ fontSize: "2rem" }}>Security Consulting</div>
+              <div style={{ fontSize: "1.25rem" }}>
+                Secure your digital assets and protect your company&apos;s
+                sensitive information with our expert Security Consulting
+                service. We provide thorough security assessments, implement
+                robust protection strategies, and help set up advanced user
+                authentication experiences to safeguard your business against
+                evolving cyber threats. Trust us to fortify your digital
+                presence.
+              </div>
+              <ButtonLink
+                href="/our-services/website-development"
+                text="Get Started"
+                color="black"
+                style={{ fontWeight: "300", maxWidth: "300px" }}
+              ></ButtonLink>
             </div>
             <div style={{ display: "flex", flexDirection: "row" }}>
               <div>
                 <Image
                   src="/security_lock.png"
                   alt="laptop with website"
-                  width={200}
-                  height={200}
-                  style={{ height: "180px", width: "auto" }}
+                  width={300}
+                  height={300}
+                  style={{ height: "300px", width: "auto" }}
                 ></Image>
               </div>
             </div>
@@ -185,31 +208,75 @@ export default function Page() {
             style={{
               display: "flex",
               flexDirection: "row",
-              justifyContent: "center",
+              justifyContent: "space-between",
+              gap: "2rem",
             }}
           >
-            <div style={{ maxWidth: "400px" }}>
+            <div
+              style={{
+                maxWidth: "600px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "1rem",
+              }}
+            >
               <div style={{ fontSize: "2rem" }}>AI Consulting</div>
-              <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+              <div style={{ fontSize: "1.25rem" }}>
+                Transform your business with the power of artificial
+                intelligence through our AI Consulting service. Our team of AI
+                specialists collaborates with you to develop and integrate
+                smart, AI-driven solutions that optimize operations, enhance
+                decision-making, and deliver personalized customer experiences.
+                Step into the future and unlock new potentials with AI.
               </div>
+              <ButtonLink
+                href="/our-services/ai-consulting"
+                text="Get Started"
+                color="black"
+                style={{ fontWeight: "300", maxWidth: "300px" }}
+              ></ButtonLink>
             </div>
             <div style={{ display: "flex", flexDirection: "row" }}>
               <div>
                 <Image
                   src="/artificial_intelligence.png"
                   alt="laptop with website"
-                  height={180}
-                  width={180}
+                  height={300}
+                  width={3000}
+                  style={{ height: "300px", width: "auto" }}
                 ></Image>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <div>
+        <div
+          className="section"
+          style={{
+            paddingTop: "2rem",
+            display: "flex",
+            flexDirection: "column",
+            gap: "1rem",
+          }}
+        >
+          <div
+            style={{ fontSize: "3rem", fontWeight: "400", alignSelf: "center" }}
+          >
+            How it Works
+          </div>
+          <div style={{ fontSize: "1.25rem" }}>
+            At Codevelop, we believe in developing{" "}
+            <span style={{ color: variables.tertiaryColor }}>with</span> you,
+            not just for you. Our collaborative process ensures that your vision
+            is at the heart of everything we do, from initial concept to final
+            execution.
+          </div>
+          <Stepper></Stepper>
+        </div>
+      </div>
+
       <div
         style={{
           height: "600px",

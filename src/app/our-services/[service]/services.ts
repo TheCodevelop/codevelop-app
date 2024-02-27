@@ -23,7 +23,7 @@ export const Services: ServicePage[] = [
       "Bring your app idea to life with our comprehensive app development services. From design to deployment, we create seamless, innovative mobile applications for all platforms.",
   },
   {
-    title: "Security",
+    title: "Security Consulting",
     subtitle:
       "Fortify your digital landscape with cutting-edge security measures.",
     id: "security",
