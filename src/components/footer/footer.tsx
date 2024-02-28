@@ -7,7 +7,13 @@ import { Services } from "@/app/our-services/[service]/services";
 
 const Footer: React.FC = () => {
   return (
-    <div style={{ paddingTop: "4rem", paddingBottom: "1rem" }}>
+    <div
+      style={{
+        paddingTop: "4rem",
+        paddingBottom: "1rem",
+        borderTop: "0.5px solid #e0e0e0",
+      }}
+    >
       <div
         className="section"
         style={{
@@ -165,7 +171,7 @@ const Footer: React.FC = () => {
 
         <div
           style={{
-            borderTop: "1px solid white",
+            borderTop: "0.5px solid white",
             paddingTop: "1rem",
             marginTop: "4rem",
           }}

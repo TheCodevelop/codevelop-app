@@ -14,8 +14,9 @@ export default function Page({ params }: { params: { jobId: string } }) {
   return (
     <div
       style={{
-        backgroundColor: variables.secondaryColor,
-        color: variables.primaryColor,
+        paddingTop: "5rem",
+        // backgroundColor: variables.secondaryColor,
+        // color: variables.primaryColor,
       }}
     >
       <div className="section">
@@ -66,6 +67,7 @@ export default function Page({ params }: { params: { jobId: string } }) {
           <ButtonLink
             text="Apply Now"
             href="#application-form"
+            color="white"
             style={{ padding: "0.75rem 2rem" }}
           ></ButtonLink>
         </div>
@@ -141,7 +143,10 @@ export default function Page({ params }: { params: { jobId: string } }) {
       </div>
       <div
         className="section"
-        style={{ paddingTop: "100px", paddingBottom: "200px" }}
+        style={{
+          paddingTop: "100px",
+          paddingBottom: "200px",
+        }}
       >
         <ApplicationForm
           style={{

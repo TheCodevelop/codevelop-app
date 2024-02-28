@@ -8,6 +8,19 @@
   padding-bottom: 4rem;
 }
 
+.step_title {
+  font-size: 2rem;
+}
+
+.step_description {
+  font-size: 1.25rem;
+  font-weight: 350;
+}
+
+.step_image {
+  filter: brightness(90%) saturate(10%);
+}
+
 .text_block {
   opacity: 0.2;
   transition: opacity 0.1s ease-in;
@@ -15,6 +28,12 @@
 
 .active {
   opacity: 1;
+  .step_title {
+    // color: $tertiary-color;
+  }
+  .step_image {
+    filter: none;
+  }
 }
 
 .container {

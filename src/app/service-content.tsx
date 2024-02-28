@@ -41,7 +41,7 @@ const ServiceContent: React.FC<ServiceContentProps> = ({ service }) => {
       </div>
       <ButtonLink
         href={`/our-services/${service.id}`}
-        text="Get Started"
+        text="Learn More"
         color="black"
         style={{
           fontWeight: "300",

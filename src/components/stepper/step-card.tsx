@@ -20,8 +20,8 @@ const StepCard: React.FC<StepCardProps> = ({
       }`}
     >
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <div style={{ fontSize: "2rem" }}>{title}</div>
-        <div>{description}</div>
+        <div className={styles.step_title}>{title}</div>
+        <div className={styles.step_description}>{description}</div>
       </div>
       <div>
         <Image
@@ -29,7 +29,7 @@ const StepCard: React.FC<StepCardProps> = ({
           alt="Stepper Image"
           width={100}
           height={100}
-          style={{ filter: "invert(100%)" }}
+          className={styles.step_image}
         ></Image>
       </div>
     </div>

@@ -5,6 +5,7 @@ import Stepper from "@/components/stepper/stepper";
 import ButtonLink from "@/components/button-link";
 import { Services } from "./our-services/[service]/services";
 import ServiceContent from "./service-content";
+import { ContactForm } from "./contact-us/contact-form";
 
 export default function Page() {
   return (
@@ -50,7 +51,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-
       <div
         style={{
           backgroundColor: variables.secondaryColor,
@@ -92,7 +92,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-
       <div>
         <div
           className="section"
@@ -110,20 +109,23 @@ export default function Page() {
           </div>
           <div style={{ fontSize: "1.25rem" }}>
             At Codevelop, we believe in developing{" "}
-            <span style={{ color: variables.tertiaryColor }}>with</span> you,
-            not just for you. Our collaborative process ensures that your vision
-            is at the heart of everything we do, from initial concept to final
-            execution.
+            <span
+              style={{ color: variables.tertiaryColor, fontSize: "1.25rem" }}
+            >
+              with
+            </span>{" "}
+            you, not just for you. Our collaborative process ensures that your
+            vision is at the heart of everything we do, from initial concept to
+            final execution.
           </div>
           <Stepper></Stepper>
         </div>
       </div>
-
       <div
         style={{
           height: "600px",
-          // backgroundColor: variables.secondaryColor,
-          // color: variables.primaryColor,
+          backgroundColor: variables.secondaryColor,
+          color: variables.primaryColor,
         }}
       >
         <div className="section" style={{ paddingTop: "2rem" }}>
@@ -134,13 +136,24 @@ export default function Page() {
       </div>
       <div
         style={{
-          height: "600px",
           // backgroundColor: variables.secondaryColor,
           // color: variables.primaryColor,
+          paddingBottom: "4rem",
         }}
       >
         <div className="section" style={{ paddingTop: "2rem" }}>
-          <div style={{ fontSize: "3rem", fontWeight: "400" }}>Contact Us</div>
+          <div
+            style={{
+              fontSize: "3rem",
+              fontWeight: "400",
+              marginBottom: "2rem",
+              paddingBottom: "0.5rem",
+              borderBottom: "0.5px solid #e0e0e0",
+            }}
+          >
+            Lets Codevelop
+          </div>
+          <ContactForm></ContactForm>
         </div>
       </div>
       <div className={styles.dim_overlay}></div>
