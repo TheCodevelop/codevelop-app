@@ -42,8 +42,10 @@ export default function Page({ params }: { params: { jobId: string } }) {
             >
               {jobData.name}
             </div>
-            <div style={{ display: "flex", gap: "20px", marginBottom: "1rem" }}>
-              <div style={{ display: "flex", gap: "10px" }}>
+            <div
+              style={{ display: "flex", gap: "1.25rem", marginBottom: "1rem" }}
+            >
+              <div style={{ display: "flex", gap: "0.75rem" }}>
                 <Image
                   src="/suitcase.svg"
                   alt="Suitcase Icon"
@@ -53,7 +55,7 @@ export default function Page({ params }: { params: { jobId: string } }) {
                 <div>{jobData.fullTime ? "Full-Time" : "Part-Time"}</div>
               </div>
               <div>|</div>
-              <div style={{ display: "flex", gap: "10px" }}>
+              <div style={{ display: "flex", gap: "0.75rem" }}>
                 <Image
                   src="/location.svg"
                   alt="Location Icon"
@@ -113,7 +115,7 @@ export default function Page({ params }: { params: { jobId: string } }) {
               style={{
                 fontSize: "1.5rem",
                 fontWeight: "500",
-                paddingBottom: "20px",
+                paddingBottom: "1.25rem",
               }}
             >
               Qualifications
@@ -144,8 +146,8 @@ export default function Page({ params }: { params: { jobId: string } }) {
       <div
         className="section"
         style={{
-          paddingTop: "100px",
-          paddingBottom: "200px",
+          paddingTop: "6.25rem",
+          paddingBottom: "12.5rem",
         }}
       >
         <ApplicationForm
@@ -153,7 +155,7 @@ export default function Page({ params }: { params: { jobId: string } }) {
             width: "100%",
             border: `1px solid ${variables.primaryColor}`,
             scrollMarginTop: "4rem",
-            maxWidth: "600px",
+            maxWidth: "37.5rem",
           }}
           id="application-form"
         ></ApplicationForm>

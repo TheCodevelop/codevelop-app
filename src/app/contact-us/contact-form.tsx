@@ -22,17 +22,17 @@ export const ContactForm: React.FC<ContactFormProps> = ({ style }) => {
       style={{
         backgroundColor: variables.secondaryColor,
         color: variables.primaryColor,
-        borderRadius: "36px",
-        padding: "36px",
+        borderRadius: "2.25rem",
+        padding: "2.25rem",
         display: "flex",
         flexDirection: "column",
-        gap: "20px",
+        gap: "1.25rem",
         ...style,
       }}
     >
       <h2
         style={{
-          fontSize: "36px",
+          fontSize: "2.25rem",
           fontWeight: "300",
         }}
       >
@@ -41,7 +41,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ style }) => {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fit, minmax(12.5rem, 1fr))",
         }}
       >
         <InputField
@@ -81,13 +81,13 @@ export const ContactForm: React.FC<ContactFormProps> = ({ style }) => {
             onChange={(e) => setCommunicationMethod(e.target.value)}
             checked={communicationMethod === "email"}
             style={{
-              marginTop: "20px",
-              marginRight: "10px",
+              marginTop: "1.25rem",
+              marginRight: "0.625rem",
               transform: "scale(1.25)",
               accentColor: variables.primaryColor,
             }}
           />
-          <label htmlFor="email" style={{ marginRight: "20px" }}>
+          <label htmlFor="email" style={{ marginRight: "1.25rem" }}>
             Email
           </label>
           <input
@@ -98,7 +98,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ style }) => {
             onChange={(e) => setCommunicationMethod(e.target.value)}
             checked={communicationMethod === "phone"}
             style={{
-              marginRight: "10px",
+              marginRight: "0.625rem",
               transform: "scale(1.25)",
               accentColor: variables.primaryColor,
             }}

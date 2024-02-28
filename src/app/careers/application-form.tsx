@@ -24,18 +24,18 @@ export const ApplicationForm: React.FC<ApplicationFormProps> = ({
       style={{
         backgroundColor: variables.secondaryColor,
         color: variables.primaryColor,
-        borderRadius: "36px",
-        padding: "36px",
+        borderRadius: "2.25rem",
+        padding: "2.25rem",
         display: "flex",
         flexDirection: "column",
-        gap: "20px",
+        gap: "1.25rem",
         ...style,
       }}
       id={id}
     >
       <h2
         style={{
-          fontSize: "36px",
+          fontSize: "2.25rem",
           fontWeight: "300",
         }}
       >
@@ -44,7 +44,7 @@ export const ApplicationForm: React.FC<ApplicationFormProps> = ({
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fit, minmax(13.75rem, 1fr))",
         }}
       >
         <InputField

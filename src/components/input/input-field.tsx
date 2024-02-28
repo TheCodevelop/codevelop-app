@@ -20,7 +20,7 @@ export const InputField: React.FC<InputFieldProps> = ({
 }) => {
   return (
     <div
-      style={{ ...style, height: "64px" }}
+      style={{ ...style, height: "4rem" }}
       className={styles.input_container}
     >
       <input

@@ -31,7 +31,7 @@ const ServiceContent: React.FC<ServiceContentProps> = ({ service }) => {
             alt="marketing image"
             width={3000}
             height={3000}
-            style={{ height: "300px", width: "auto" }}
+            style={{ height: "18.75rem", width: "auto" }}
           ></Image>
         </div>
         <div style={{ fontSize: "2rem", textAlign: "center" }}>

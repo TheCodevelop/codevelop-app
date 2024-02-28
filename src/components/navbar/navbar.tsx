@@ -274,7 +274,7 @@ const Navbar: React.FC = () => {
                   color={isDDHovered && !hidden ? "black" : "white"}
                   text="Contact Us"
                   href="/contact-us"
-                  style={{ padding: "12px", fontSize: "22px" }}
+                  style={{ padding: "0.75rem", fontSize: "1.375rem" }}
                   onClick={() => {
                     if (isOpen) toggleMenu();
                   }}

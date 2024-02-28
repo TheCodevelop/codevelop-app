@@ -18,7 +18,7 @@ export default function Page() {
       style={{
         display: "flex",
         flexDirection: "column",
-        gap: "50px",
+        gap: "3rem",
       }}
       className={styles.smooth}
     >
@@ -26,7 +26,7 @@ export default function Page() {
         style={{
           position: "relative",
           height: "50vh",
-          minHeight: "600px",
+          minHeight: "37.5rem",
           overflowX: "hidden",
           overflowY: "hidden",
           display: "flex",
@@ -45,8 +45,8 @@ export default function Page() {
             right: 0,
             top: 15,
             left: 0,
-            minWidth: "1000px",
-            minHeight: "600px",
+            minWidth: "62.5rem",
+            minHeight: "37.5rem",
           }}
         ></Image>
         <div
@@ -57,7 +57,7 @@ export default function Page() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: "20px",
+            gap: "1.25rem",
           }}
         >
           <span>
@@ -141,7 +141,11 @@ export default function Page() {
 
       <div
         id="open-positions"
-        style={{ width: "75%", scrollMarginTop: "100px" }}
+        style={{
+          width: "100%",
+          scrollMarginTop: "6.25rem",
+          maxWidth: "62.5rem",
+        }}
         className="section"
       >
         <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>

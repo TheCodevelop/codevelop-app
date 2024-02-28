@@ -24,6 +24,7 @@ export default function Page() {
           src="/creative-process.jpg"
           alt="Mobile App Development Process Picture"
           fill
+          priority={true}
           style={{
             position: "absolute",
             top: "0",

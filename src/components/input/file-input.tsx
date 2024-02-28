@@ -85,13 +85,13 @@ export const FileInput: React.FC<FileInputProps> = ({
         ...style,
         display: "flex",
         flexDirection: "column",
-        gap: "10px",
-        maxWidth: "500px",
+        gap: "0.625rem",
+        maxWidth: "31.25rem",
       }}
     >
       <label
         htmlFor={buttonId}
-        style={{ display: "flex", flexDirection: "column", gap: "10px" }}
+        style={{ display: "flex", flexDirection: "column", gap: "0.625rem" }}
       >
         <span>{label}</span>
         <span>{`Allowed formats are limited to ${getFileTypes(
@@ -102,7 +102,7 @@ export const FileInput: React.FC<FileInputProps> = ({
       <div id={buttonId}>
         {!selectedFileName ? (
           <Button
-            style={{ fontSize: "16px", padding: "10px 40px" }}
+            style={{ fontSize: "1rem", padding: "0.625rem 2.5rem" }}
             onClick={handleClick}
             text="Select File"
             color="grey"
@@ -112,7 +112,7 @@ export const FileInput: React.FC<FileInputProps> = ({
             style={{
               width: "100%",
               borderWidth: "1px",
-              padding: "15px",
+              padding: "1rem",
               borderColor: variables.primaryColor,
               display: "flex",
               justifyContent: "space-between",
@@ -125,7 +125,7 @@ export const FileInput: React.FC<FileInputProps> = ({
                 width={25}
                 height={25}
               ></Image>
-              <div style={{ marginLeft: "10px" }}>{selectedFileName}</div>
+              <div style={{ marginLeft: "0.625rem" }}>{selectedFileName}</div>
             </div>
 
             <Image

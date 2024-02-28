@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { variables } from "@/app/variables";
 import { Services, ServicePage } from "./services";
+import Stepper from "@/components/stepper/stepper";
 
 function getService(serviceName: string): ServicePage {
   return Services.find((service) => service.id === serviceName) as ServicePage;
@@ -30,7 +31,7 @@ export default function Page({ params }: { params: { service: string } }) {
             left: "0",
             right: "0",
             bottom: "0",
-            opacity: 0.1,
+            opacity: 0.2,
             zIndex: -1,
             objectFit: "cover",
           }}
@@ -101,45 +102,15 @@ export default function Page({ params }: { params: { service: string } }) {
             </div>
             <div
               style={{
-                paddingTop: "4rem",
-                paddingBottom: "4rem",
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
+                fontSize: "2.5rem",
+                fontWeight: "500",
+                marginTop: "3rem",
+                marginBottom: "1rem",
               }}
             >
-              <div>
-                <div
-                  style={{
-                    fontSize: "2.5rem",
-                    fontWeight: "500",
-                    marginBottom: "1.5rem",
-                  }}
-                >
-                  How We Do It
-                </div>
-                <div
-                  style={{
-                    fontSize: "1.25rem",
-                    fontWeight: "400",
-                    marginBottom: "1.25rem",
-                  }}
-                >
-                  In today&rsquo;s digital age, your website is the cornerstone
-                  of your online identity, serving as the virtual face of your
-                  business. At Codevelop, we understand the significance of a
-                  well-crafted website. Our website development services are
-                  designed to deliver not just a site, but a comprehensive
-                  online experience that is custom-tailored to meet your
-                  business needs.
-                </div>
-              </div>
-              {/* <Image
-                src="/website-development.svg"
-                alt="Website Development"
-                width={500}
-                height={500}
-              /> */}
+              How We Do It
             </div>
+            <Stepper></Stepper>
           </div>
         </div>
       </div>

@@ -12,7 +12,7 @@ const PositionCard: React.FC<PositionCardProps> = ({ name, id }) => {
         display: "flex",
         justifyContent: "space-between",
         borderTop: `1px solid ${variables.secondaryColor}`,
-        padding: "20px",
+        padding: "1.25rem",
         alignItems: "center",
       }}
     >
@@ -20,7 +20,7 @@ const PositionCard: React.FC<PositionCardProps> = ({ name, id }) => {
       <ButtonLink
         text="View Role"
         color="white"
-        style={{ paddingTop: "0px", paddingBottom: "0px", fontSize: "1rem" }}
+        style={{ paddingTop: "0rem", paddingBottom: "0rem", fontSize: "1rem" }}
         href={`/careers/job/${id}`}
       ></ButtonLink>
     </div>
