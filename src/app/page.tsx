@@ -3,6 +3,8 @@ import Image from "next/image";
 import { variables } from "./variables";
 import Stepper from "@/components/stepper/stepper";
 import ButtonLink from "@/components/button-link";
+import { Services } from "./our-services/[service]/services";
+import ServiceContent from "./service-content";
 
 export default function Page() {
   return (
@@ -70,183 +72,23 @@ export default function Page() {
               fontSize: "3rem",
               fontWeight: "400",
               textAlign: "center",
+              borderBottom: "1.5px solid #e0e0e0",
+              paddingBottom: "2rem",
             }}
           >
             Our Services
           </div>
           <div
             style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
-              gap: "2rem",
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(500px, 1fr))",
+              rowGap: "4rem",
+              columnGap: "2rem",
             }}
           >
-            <div
-              style={{
-                maxWidth: "600px",
-                display: "flex",
-                flexDirection: "column",
-                gap: "1rem",
-              }}
-            >
-              <div style={{ fontSize: "2rem" }}>Website Development</div>
-              <div style={{ fontSize: "1.25rem" }}>
-                Craft the digital face of your business with our Website
-                Development service. We specialize in creating stunning,
-                user-friendly websites that are not only visually appealing but
-                also mobile-friendly, ensuring an optimal browsing experience on
-                any device. Let us help you make that first impression count
-                with a site that speaks volumes of your brand.
-              </div>
-              <ButtonLink
-                href="/our-services/website-development"
-                text="Get Started"
-                color="black"
-                style={{ fontWeight: "300", maxWidth: "300px" }}
-              ></ButtonLink>
-            </div>
-
-            <div>
-              <Image
-                src="/blank_desktop_mobile.png"
-                alt="smart phone with website"
-                width={3000}
-                height={3000}
-                style={{ height: "300px", width: "auto" }}
-              ></Image>
-            </div>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
-              gap: "2rem",
-            }}
-          >
-            <div
-              style={{
-                maxWidth: "600px",
-                display: "flex",
-                flexDirection: "column",
-                gap: "1rem",
-              }}
-            >
-              <div style={{ fontSize: "2rem" }}>App Development</div>
-              <div style={{ fontSize: "1.25rem" }}>
-                Turn your app idea into a reality with our comprehensive App
-                Development service. From initial concept to final
-                implementation, our team works closely with you to develop
-                intuitive, high-performance mobile applications tailored to your
-                specific needs. Empower your business with an app that engages
-                your audience and drives results.
-              </div>
-              <ButtonLink
-                href="/our-services/app-development"
-                text="Get Started"
-                color="black"
-                style={{ fontWeight: "300", maxWidth: "300px" }}
-              ></ButtonLink>
-            </div>
-            <div>
-              <Image
-                src="/dating_app.png"
-                alt="laptop with website"
-                width={3000}
-                height={3000}
-                style={{ height: "300px", width: "auto" }}
-              ></Image>
-            </div>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
-              gap: "2rem",
-            }}
-          >
-            <div
-              style={{
-                maxWidth: "600px",
-                display: "flex",
-                flexDirection: "column",
-                gap: "1rem",
-              }}
-            >
-              <div style={{ fontSize: "2rem" }}>Security Consulting</div>
-              <div style={{ fontSize: "1.25rem" }}>
-                Secure your digital assets and protect your company&apos;s
-                sensitive information with our expert Security Consulting
-                service. We provide thorough security assessments, implement
-                robust protection strategies, and help set up advanced user
-                authentication experiences to safeguard your business against
-                evolving cyber threats. Trust us to fortify your digital
-                presence.
-              </div>
-              <ButtonLink
-                href="/our-services/website-development"
-                text="Get Started"
-                color="black"
-                style={{ fontWeight: "300", maxWidth: "300px" }}
-              ></ButtonLink>
-            </div>
-            <div style={{ display: "flex", flexDirection: "row" }}>
-              <div>
-                <Image
-                  src="/security_lock.png"
-                  alt="laptop with website"
-                  width={300}
-                  height={300}
-                  style={{ height: "300px", width: "auto" }}
-                ></Image>
-              </div>
-            </div>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
-              gap: "2rem",
-            }}
-          >
-            <div
-              style={{
-                maxWidth: "600px",
-                display: "flex",
-                flexDirection: "column",
-                gap: "1rem",
-              }}
-            >
-              <div style={{ fontSize: "2rem" }}>AI Consulting</div>
-              <div style={{ fontSize: "1.25rem" }}>
-                Transform your business with the power of artificial
-                intelligence through our AI Consulting service. Our team of AI
-                specialists collaborates with you to develop and integrate
-                smart, AI-driven solutions that optimize operations, enhance
-                decision-making, and deliver personalized customer experiences.
-                Step into the future and unlock new potentials with AI.
-              </div>
-              <ButtonLink
-                href="/our-services/ai-consulting"
-                text="Get Started"
-                color="black"
-                style={{ fontWeight: "300", maxWidth: "300px" }}
-              ></ButtonLink>
-            </div>
-            <div style={{ display: "flex", flexDirection: "row" }}>
-              <div>
-                <Image
-                  src="/artificial_intelligence.png"
-                  alt="laptop with website"
-                  height={300}
-                  width={3000}
-                  style={{ height: "300px", width: "auto" }}
-                ></Image>
-              </div>
-            </div>
+            {Services.map((service, key) => (
+              <ServiceContent key={key} service={service}></ServiceContent>
+            ))}
           </div>
         </div>
       </div>
