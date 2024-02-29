@@ -19,6 +19,9 @@
 
 .step_image {
   filter: brightness(90%) saturate(10%);
+  @media (max-width: $mobile-breakpoint) {
+    justify-self: center;
+  }
 }
 
 .text_block {
@@ -38,32 +41,40 @@
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8rem;
-  :nth-child(1) {
-    :first-child {
-      align-self: flex-end;
+  grid-template-columns: 1fr;
+
+  gap: 3rem;
+
+  @media (min-width: $mobile-breakpoint) {
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+    :nth-child(1) {
+      :first-child {
+        align-self: flex-end;
+      }
+      :nth-child(2) {
+        text-align: right;
+      }
     }
     :nth-child(2) {
-      text-align: right;
+      align-self: center;
     }
-  }
-  :nth-child(2) {
-    align-self: center;
   }
 }
 
 .alternate_container {
-  :nth-child(1) {
-    :first-child {
-      align-self: flex-start;
+  @media (min-width: $mobile-breakpoint) {
+    :nth-child(1) {
+      :first-child {
+        align-self: flex-start;
+      }
+      :nth-child(2) {
+        text-align: left;
+      }
     }
     :nth-child(2) {
-      text-align: left;
+      grid-row-start: 1;
+      justify-self: end;
     }
-  }
-  :nth-child(2) {
-    grid-row-start: 1;
-    justify-self: end;
   }
 }

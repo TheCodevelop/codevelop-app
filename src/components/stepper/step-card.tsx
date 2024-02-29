@@ -23,14 +23,8 @@ const StepCard: React.FC<StepCardProps> = ({
         <div className={styles.step_title}>{title}</div>
         <div className={styles.step_description}>{description}</div>
       </div>
-      <div>
-        <Image
-          src={image}
-          alt="Stepper Image"
-          width={100}
-          height={100}
-          className={styles.step_image}
-        ></Image>
+      <div className={styles.step_image}>
+        <Image src={image} alt="Stepper Image" width={100} height={100}></Image>
       </div>
     </div>
   );
