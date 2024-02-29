@@ -1,11 +1,11 @@
 import styles from "./navbar.module.scss";
 import Image from "next/image";
 
-type HeaderLogoProps = {
+type ResponsiveLogoProps = {
   isDDHovered: boolean;
 };
 
-export default function HeaderLogo({ isDDHovered }: HeaderLogoProps) {
+export default function ResponsiveLogo({ isDDHovered }: ResponsiveLogoProps) {
   return (
     <div>
       <Image

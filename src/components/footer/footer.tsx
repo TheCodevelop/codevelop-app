@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "./footer.module.scss";
 import { variables } from "@/app/variables";
 import { Services } from "@/app/our-services/[service]/services";
+import ResponsiveLogo from "../navbar/responsive-logo";
 
 const Footer: React.FC = () => {
   return (
@@ -11,7 +12,7 @@ const Footer: React.FC = () => {
       style={{
         paddingTop: "4rem",
         paddingBottom: "1rem",
-        borderTop: "0.5px solid #e0e0e0",
+        borderTop: "1px solid #e0e0e0",
       }}
     >
       <div
@@ -28,6 +29,8 @@ const Footer: React.FC = () => {
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-between",
+            flexWrap: "wrap",
+
             gap: "4rem",
           }}
         >
@@ -39,13 +42,7 @@ const Footer: React.FC = () => {
               maxWidth: "21rem",
             }}
           >
-            <Image
-              src="/Logo_Word_alt.svg"
-              alt="Codevelop Icon Logo"
-              width={200}
-              height={200}
-              style={{ filter: "invert(100%)" }}
-            ></Image>
+            <ResponsiveLogo isDDHovered={false}></ResponsiveLogo>
             <div
               style={{
                 fontSize: "1rem",
@@ -59,125 +56,116 @@ const Footer: React.FC = () => {
               <span style={{ color: variables.tertiaryColor }}>with</span> you.
             </div>
           </div>
+
           <div
             style={{
               display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
-              flexWrap: "wrap",
-              gap: "4rem",
+              flexDirection: "column",
+              gap: "0.5rem",
+              alignItems: "flex-start",
             }}
           >
+            <div className={styles.column_heading}>Browse</div>
+            <Link className={styles.footer_link} href="/our-work">
+              Our Work
+            </Link>
+            <Link className={styles.footer_link} href="/careers">
+              Careers
+            </Link>
+            <Link className={styles.footer_link} href="/contact-us">
+              Contact Us
+            </Link>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "0.5rem",
+              alignItems: "flex-start",
+            }}
+          >
+            <div className={styles.column_heading}>Services</div>
+            {Services.map((service, key) => (
+              <Link
+                key={key}
+                className={styles.footer_link}
+                href={`/our-services/${service.id}`}
+              >
+                {service.title}
+              </Link>
+            ))}
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "1rem",
+              alignItems: "flex-start",
+            }}
+          >
+            <div className={styles.column_heading}>Contact</div>
             <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "0.5rem",
-                alignItems: "flex-start",
-              }}
+              style={{ display: "flex", flexDirection: "row", gap: "0.5rem" }}
             >
-              <div className={styles.column_heading}>Browse</div>
-              <Link className={styles.footer_link} href="/our-work">
-                Our Work
-              </Link>
-              <Link className={styles.footer_link} href="/careers">
-                Careers
-              </Link>
-              <Link className={styles.footer_link} href="/contact-us">
-                Contact Us
-              </Link>
+              <Image
+                src="/email.svg"
+                alt="Email Icon"
+                width={25}
+                height={25}
+                style={{ filter: "invert(100%)" }}
+              ></Image>
+              <a
+                className={styles.footer_link}
+                href="mailto:contact@thecodevelop.com"
+              >
+                contact@thecodevelop.com
+              </a>
+            </div>
+            <div
+              style={{ display: "flex", flexDirection: "row", gap: "0.5rem" }}
+            >
+              <Image
+                src="/telephone.svg"
+                alt="Phone Icon"
+                width={25}
+                height={25}
+                style={{ filter: "invert(100%)" }}
+              ></Image>
+              <a className={styles.footer_link} href="tel:+14072057254">
+                407-205-7254
+              </a>
             </div>
             <div
               style={{
                 display: "flex",
-                flexDirection: "column",
+                flexDirection: "row",
                 gap: "0.5rem",
-                alignItems: "flex-start",
               }}
             >
-              <div className={styles.column_heading}>Services</div>
-              {Services.map((service, key) => (
-                <Link
-                  key={key}
-                  className={styles.footer_link}
-                  href={`/our-services/${service.id}`}
-                >
-                  {service.title}
-                </Link>
-              ))}
-            </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "1rem",
-                alignItems: "flex-start",
-              }}
-            >
-              <div className={styles.column_heading}>Contact</div>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "0.5rem" }}
-              >
-                <Image
-                  src="/email.svg"
-                  alt="Email Icon"
-                  width={25}
-                  height={25}
-                  style={{ filter: "invert(100%)" }}
-                ></Image>
-                <a
-                  className={styles.footer_link}
-                  href="mailto:contact@thecodevelop.com"
-                >
-                  contact@thecodevelop.com
-                </a>
-              </div>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "0.5rem" }}
-              >
-                <Image
-                  src="/telephone.svg"
-                  alt="Phone Icon"
-                  width={25}
-                  height={25}
-                  style={{ filter: "invert(100%)" }}
-                ></Image>
-                <a className={styles.footer_link} href="tel:+14072057254">
-                  407-205-7254
-                </a>
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  gap: "0.5rem",
-                }}
-              >
-                <Image
-                  src="/location.svg"
-                  alt="Location Icon"
-                  width={25}
-                  height={25}
-                  style={{ filter: "invert(100%)" }}
-                ></Image>
-                <div>
-                  255 S Orange Avenue<br></br>Suite 104 #1055<br></br>Orlando,
-                  FL 32801
-                </div>
+              <Image
+                src="/location.svg"
+                alt="Location Icon"
+                width={25}
+                height={25}
+                style={{ filter: "invert(100%)" }}
+              ></Image>
+              <div>
+                255 S Orange Avenue<br></br>Suite 104 #1055<br></br>Orlando, FL
+                32801
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div
-          style={{
-            borderTop: "0.5px solid white",
-            paddingTop: "1rem",
-            marginTop: "4rem",
-          }}
-        >
-          © 2024 Codevelop LLC. All Rights Reserved
-        </div>
+      <div
+        style={{
+          borderTop: "0.5px solid white",
+          paddingTop: "1rem",
+          marginTop: "4rem",
+        }}
+      >
+        © 2024 Codevelop LLC. All Rights Reserved
       </div>
     </div>
   );

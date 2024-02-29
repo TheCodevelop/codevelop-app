@@ -5,7 +5,7 @@ import styles from "./navbar.module.scss";
 import { useEffect, useState, useRef } from "react";
 import throttle from "lodash/throttle";
 import DropdownMenu from "./dropdown-menu";
-import HeaderLogo from "./header-logo";
+import ResponsiveLogo from "./responsive-logo";
 import ButtonLink from "../button-link";
 import { variables } from "@/app/variables";
 import { Services } from "@/app/our-services/[service]/services";
@@ -114,7 +114,9 @@ const Navbar: React.FC = () => {
               if (isOpen) toggleMenu();
             }}
           >
-            <HeaderLogo isDDHovered={isDDHovered && !hidden}></HeaderLogo>
+            <ResponsiveLogo
+              isDDHovered={isDDHovered && !hidden}
+            ></ResponsiveLogo>
           </Link>
 
           <button
