@@ -23,17 +23,16 @@ const ServiceContent: React.FC<ServiceContentProps> = ({ service }) => {
           display: "flex",
           flexDirection: "column",
           gap: "1rem",
+          alignItems: "center",
         }}
       >
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <Image
-            src={service.homepageImage}
-            alt="marketing image"
-            width={3000}
-            height={3000}
-            style={{ height: "18.75rem", width: "auto" }}
-          ></Image>
-        </div>
+        <Image
+          src={service.homepageImage}
+          alt="marketing image"
+          width={3000}
+          height={3000}
+          style={{ maxHeight: "18.75rem", width: "auto" }}
+        ></Image>
         <div style={{ fontSize: "2rem", textAlign: "center" }}>
           {service.title}
         </div>

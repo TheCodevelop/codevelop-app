@@ -82,7 +82,7 @@ export default function Page() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(500px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(23rem, 1fr))",
               rowGap: "4rem",
               columnGap: "2rem",
             }}

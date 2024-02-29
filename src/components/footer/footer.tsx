@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
             }}
           >
             <Image
-              src="/Logo_word_alt.svg"
+              src="/Logo_Word_alt.svg"
               alt="Codevelop Icon Logo"
               width={200}
               height={200}
