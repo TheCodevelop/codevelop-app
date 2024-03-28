@@ -26,12 +26,13 @@ const Footer: React.FC = () => {
       >
         <div
           style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-            flexWrap: "wrap",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(15rem, 1fr))",
+            // flexDirection: "row",
+            // justifyContent: "space-between",
+            // flexWrap: "wrap",
 
-            gap: "4rem",
+            gap: "3rem",
           }}
         >
           <div
@@ -39,7 +40,7 @@ const Footer: React.FC = () => {
               display: "flex",
               flexDirection: "column",
               gap: "1rem",
-              maxWidth: "21rem",
+              // gridColumn: "span 1.5",
             }}
           >
             <ResponsiveLogo isDDHovered={false}></ResponsiveLogo>
@@ -116,9 +117,9 @@ const Footer: React.FC = () => {
               ></Image>
               <a
                 className={styles.footer_link}
-                href="mailto:contact@thecodevelop.com"
+                href="mailto:sebastiansalazarp27@gmail.com"
               >
-                contact@thecodevelop.com
+                sebastiansalazarp27@gmail.com
               </a>
             </div>
             <div
@@ -132,7 +133,7 @@ const Footer: React.FC = () => {
                 style={{ filter: "invert(100%)" }}
               ></Image>
               <a className={styles.footer_link} href="tel:+14072057254">
-                407-205-7254
+                407-394-0658
               </a>
             </div>
             <div
@@ -150,8 +151,7 @@ const Footer: React.FC = () => {
                 style={{ filter: "invert(100%)" }}
               ></Image>
               <div>
-                255 S Orange Avenue<br></br>Suite 104 #1055<br></br>Orlando, FL
-                32801
+                11221 Taeda Dr<br></br>Orlando, FL 32801
               </div>
             </div>
           </div>

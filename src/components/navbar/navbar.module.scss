@@ -62,6 +62,9 @@
   &.see_thru {
     background-color: transparent;
     box-shadow: none;
+    &.menu_open {
+      background-color: $primary-color;
+    }
   }
   &.hidden {
     box-shadow: none;

@@ -145,6 +145,7 @@ export default function Page() {
           width: "100%",
           scrollMarginTop: "6.25rem",
           maxWidth: "62.5rem",
+          marginBottom: "3rem",
         }}
         className="section"
       >

@@ -51,6 +51,7 @@ export default function Page({ params }: { params: { jobId: string } }) {
                   alt="Suitcase Icon"
                   width={20}
                   height={20}
+                  style={{ filter: "invert(100%)" }}
                 ></Image>
                 <div>{jobData.fullTime ? "Full-Time" : "Part-Time"}</div>
               </div>
@@ -61,6 +62,7 @@ export default function Page({ params }: { params: { jobId: string } }) {
                   alt="Location Icon"
                   width={20}
                   height={20}
+                  style={{ filter: "invert(100%)" }}
                 ></Image>
                 <div>{jobData.location}</div>
               </div>

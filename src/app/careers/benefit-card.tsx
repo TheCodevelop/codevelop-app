@@ -13,10 +13,9 @@ const BenefitCard: React.FC<BenefitCardProps> = ({
   return (
     <div className={styles.container}>
       {image}
-      <div>
-        <p style={{ fontSize: "2rem", fontWeight: "600" }}>{title}</p>
-        <p style={{ fontSize: "1.5rem", fontWeight: "300" }}>{description}</p>
-      </div>
+
+      <p style={{ fontSize: "2rem", fontWeight: "600" }}>{title}</p>
+      <p style={{ fontSize: "1.25rem", fontWeight: "300" }}>{description}</p>
     </div>
   );
 };

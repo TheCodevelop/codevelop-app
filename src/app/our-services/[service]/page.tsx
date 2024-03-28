@@ -59,59 +59,41 @@ export default function Page({ params }: { params: { service: string } }) {
       >
         <div className="section">
           <div style={{ paddingTop: "4rem", paddingBottom: "4rem" }}>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(2, 1fr)",
-                gap: "2rem",
-              }}
-            >
-              <div>
-                <div
-                  style={{
-                    fontSize: "2.5rem",
-                    fontWeight: "500",
-                    marginBottom: "1.5rem",
-                  }}
-                >
-                  Quality Matters
-                </div>
-                <div
-                  style={{
-                    fontSize: "1.25rem",
-                    fontWeight: "400",
-                    marginBottom: "1.25rem",
-                  }}
-                >
-                  In today&rsquo;s digital age, your website is the cornerstone
-                  of your online identity, serving as the virtual face of your
-                  business. At Codevelop, we understand the significance of a
-                  well-crafted website. Our website development services are
-                  designed to deliver not just a site, but a comprehensive
-                  online experience that is custom-tailored to meet your
-                  business needs.
-                </div>
+            <div>
+              <div
+                style={{
+                  fontSize: "2.5rem",
+                  fontWeight: "500",
+                  marginBottom: "1.5rem",
+                }}
+              >
+                Beyond the Limits of Website Builders
               </div>
-
-              <Image
-                src="/website-review.svg"
-                alt="Website Review"
-                width={500}
-                height={500}
-              ></Image>
+              <div
+                style={{
+                  fontSize: "1.25rem",
+                  fontWeight: "400",
+                  marginBottom: "1.25rem",
+                }}
+              >
+                In the world of digital development, choosing between custom
+                coding and website builders like WordPress is an important
+                decision. At Codevelop, we advocate for manual coding due to
+                several key advantages:
+              </div>
             </div>
-            <div
-              style={{
-                fontSize: "2.5rem",
-                fontWeight: "500",
-                marginTop: "3rem",
-                marginBottom: "1rem",
-              }}
-            >
-              How We Do It
-            </div>
-            <Stepper></Stepper>
           </div>
+          <div
+            style={{
+              fontSize: "2.5rem",
+              fontWeight: "500",
+              marginTop: "3rem",
+              marginBottom: "1rem",
+            }}
+          >
+            How We Do It
+          </div>
+          <Stepper></Stepper>
         </div>
       </div>
     </div>

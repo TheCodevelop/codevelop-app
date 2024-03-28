@@ -104,8 +104,8 @@ const Navbar: React.FC = () => {
       <header
         className={`${styles.navbar} ${hidden ? styles.hidden : ""}
     ${isDDHovered && !hidden ? styles.white_bg : ""} ${
-      isNearTop ? styles.see_thru : ""
-    }`}
+      isOpen ? styles.menu_open : ""
+    }${isNearTop ? styles.see_thru : ""}`}
       >
         <div className={styles.navbar_section}>
           <Link
