@@ -1,8 +1,8 @@
 "use client";
 import { variables } from "@/app/variables";
 import styles from "./navbar.module.scss";
-import ServiceCard from "./service-card";
-import { Services } from "@/app/our-services/[service]/services";
+import SubjectCard from "./subject-card";
+import { GradeLevels } from "@/app/subjects/[subject]/subjects";
 
 interface SubjectMenuProps {
   closeMenu: () => void;
@@ -12,40 +12,27 @@ const SubjectMenu: React.FC<SubjectMenuProps> = ({ closeMenu }) => {
   return (
     <div
       style={{
-        color: variables.primaryColor,
-        cursor: "default",
+        display: "flex",
+        justifyContent: "space-around",
+        padding: "20px",
+        color: "black",
       }}
     >
-      <p
-        style={{
-          paddingTop: "1rem",
-          paddingBottom: "1rem",
-          fontSize: "2rem",
-          fontWeight: "500",
-        }}
-        className="section"
-      >
-        Subjects
-      </p>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: `repeat(${Services.length}, 1fr)`,
-        }}
-        className={`${styles.dropdown_content}`}
-      >
-        {Services.map((service, key) => (
-          <div key={key}>
-            <ServiceCard
-              title={service.title}
-              subtitle={service.description}
-              link={`/sujects/${service.id}`}
-              // style={{ flex: 1 }}
-              onClick={closeMenu}
-            />
-          </div>
-        ))}
-      </div>
+      {GradeLevels.map((level) => (
+        <div key={level.name} style={{ flex: 1 }}>
+          <div>{level.name}</div>
+          {level.subjectGroups.map((group) => (
+            <div key={group.name}>
+              <h3>{group.name}</h3>
+              <ul>
+                {group.subjects.map((subject) => (
+                  <li key={subject.id}>{subject.name}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      ))}
     </div>
   );
 };

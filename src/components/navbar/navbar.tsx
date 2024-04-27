@@ -16,10 +16,13 @@ const Navbar: React.FC = () => {
   const [isDDHovered, setisDDHovered] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
-  const [closed, setClosed] = useState(true);
+  const [servicesClosed, setServicesClosed] = useState(true);
+  const [subjectsClosed, setSubjectsClosed] = useState(true);
   const [isMobileDDOpen, setIsMobileDDOpen] = useState(false);
   const [isMobileDDDisplay, setIsMobileDDDisplay] = useState(false);
   const [isNearTop, setIsNearTop] = useState(true);
+  const [isSubjectsHovered, setIsSubjectsHovered] = useState(false);
+  const [isServicesHovered, setIsServicesHovered] = useState(false);
 
   const lastScrollY = useRef(0);
   const isHidden = useRef(false);
@@ -74,7 +77,7 @@ const Navbar: React.FC = () => {
         setHidden(status);
         isHidden.current = status;
         if (isHidden.current === true) {
-          setClosed(true);
+          setServicesClosed(true);
           setisDDHovered(false);
         }
       },
@@ -155,14 +158,16 @@ const Navbar: React.FC = () => {
                 key={"our-services"}
                 onMouseEnter={() => {
                   if (!isOpen || window.innerWidth > variables.breakpoint) {
-                    setClosed(false);
+                    setServicesClosed(false);
                     setisDDHovered(true);
+                    setIsServicesHovered(true);
                   }
                 }}
                 onMouseLeave={() => {
                   if (!isOpen || window.innerWidth > variables.breakpoint) {
-                    setClosed(true);
+                    setServicesClosed(true);
                     setisDDHovered(false);
+                    setIsServicesHovered(false);
                   }
                 }}
                 className={styles.pointer_hover}
@@ -225,16 +230,17 @@ const Navbar: React.FC = () => {
                   ))}
                 </div>
                 <div
-                  data-hovered={isDDHovered}
+                  data-hovered={isServicesHovered}
                   style={{
-                    display: closed ? "none" : "block",
+                    display: servicesClosed ? "none" : "block",
                   }}
                   className={`${styles.dropdown_menu}`}
                 >
                   <DropdownMenu
                     closeMenu={() => {
                       setisDDHovered(false);
-                      setClosed(true);
+                      setIsServicesHovered(false);
+                      setServicesClosed(true);
                     }}
                   />
                 </div>
@@ -243,14 +249,16 @@ const Navbar: React.FC = () => {
                 key={"subjects"}
                 onMouseEnter={() => {
                   if (!isOpen || window.innerWidth > variables.breakpoint) {
-                    setClosed(false);
+                    setSubjectsClosed(false);
                     setisDDHovered(true);
+                    setIsSubjectsHovered(true);
                   }
                 }}
                 onMouseLeave={() => {
                   if (!isOpen || window.innerWidth > variables.breakpoint) {
-                    setClosed(true);
+                    setSubjectsClosed(true);
                     setisDDHovered(false);
+                    setIsSubjectsHovered(false);
                   }
                 }}
                 className={styles.pointer_hover}
@@ -280,7 +288,7 @@ const Navbar: React.FC = () => {
                     }
                   }}
                 >
-                  <p className={styles.nav_link}>Our Services</p>
+                  <p className={styles.nav_link}>Subjects</p>
                   <Image
                     src="/down_arrow.svg"
                     alt="dropdown_arrow"
@@ -313,16 +321,16 @@ const Navbar: React.FC = () => {
                   ))}
                 </div>
                 <div
-                  data-hovered={isDDHovered}
+                  data-hovered={isSubjectsHovered}
                   style={{
-                    display: closed ? "none" : "block",
+                    display: subjectsClosed ? "none" : "block",
                   }}
                   className={`${styles.dropdown_menu}`}
                 >
                   <SubjectMenu
                     closeMenu={() => {
-                      setisDDHovered(false);
-                      setClosed(true);
+                      setIsSubjectsHovered(false);
+                      setSubjectsClosed(true);
                     }}
                   />
                 </div>
