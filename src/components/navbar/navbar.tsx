@@ -9,6 +9,7 @@ import ResponsiveLogo from "./responsive-logo";
 import ButtonLink from "../button-link";
 import { variables } from "@/app/variables";
 import { Services } from "@/app/our-services/[service]/services";
+import SubjectMenu from "./subject-menu";
 
 const Navbar: React.FC = () => {
   const [resizing, setResizing] = useState(false);
@@ -150,20 +151,6 @@ const Navbar: React.FC = () => {
             data-resizing={resizing}
           >
             <ul className={styles.navigation_items}>
-              <li key={"our-work"}>
-                <Link
-                  className={`${styles.nav_link}`}
-                  href="/our-work"
-                  onClick={() => {
-                    if (isOpen) toggleMenu();
-                  }}
-                  style={{
-                    color: isDDHovered && !hidden ? "black" : "",
-                  }}
-                >
-                  Our Work
-                </Link>
-              </li>
               <li
                 key={"our-services"}
                 onMouseEnter={() => {
@@ -252,10 +239,98 @@ const Navbar: React.FC = () => {
                   />
                 </div>
               </li>
-              <li key={"careers"}>
+              <li
+                key={"subjects"}
+                onMouseEnter={() => {
+                  if (!isOpen || window.innerWidth > variables.breakpoint) {
+                    setClosed(false);
+                    setisDDHovered(true);
+                  }
+                }}
+                onMouseLeave={() => {
+                  if (!isOpen || window.innerWidth > variables.breakpoint) {
+                    setClosed(true);
+                    setisDDHovered(false);
+                  }
+                }}
+                className={styles.pointer_hover}
+              >
+                <div
+                  style={{ position: "relative" }}
+                  className={`flex ${
+                    isDDHovered && !hidden ? styles.dropdown_open : ""
+                  }`}
+                  onClick={() => {
+                    if (
+                      isOpen &&
+                      window.innerWidth <= variables.breakpoint &&
+                      isMobileDDDisplay
+                    ) {
+                      setIsMobileDDOpen(false);
+                      setTimeout(() => {
+                        setIsMobileDDDisplay(false);
+                      }, 300);
+                    } else if (
+                      isOpen &&
+                      window.innerWidth <= variables.breakpoint &&
+                      !isMobileDDDisplay
+                    ) {
+                      setIsMobileDDOpen(true);
+                      setIsMobileDDDisplay(true);
+                    }
+                  }}
+                >
+                  <p className={styles.nav_link}>Our Services</p>
+                  <Image
+                    src="/down_arrow.svg"
+                    alt="dropdown_arrow"
+                    width="25"
+                    height="25"
+                    style={{
+                      filter: isDDHovered && !hidden ? "" : "invert(100%)",
+                    }}
+                    className={styles.nav_arrow}
+                  />
+                </div>
+                <div
+                  style={{
+                    display: isMobileDDDisplay ? "flex" : "none",
+                  }}
+                  data-clicked={isMobileDDOpen}
+                  className={styles.mobile_menu}
+                >
+                  {Services.map((service, key) => (
+                    <Link
+                      key={key}
+                      href={`/subjects/${service.id}`}
+                      className={styles.mobile_menu_item}
+                      onClick={() => {
+                        if (isOpen) toggleMenu();
+                      }}
+                    >
+                      {service.title}
+                    </Link>
+                  ))}
+                </div>
+                <div
+                  data-hovered={isDDHovered}
+                  style={{
+                    display: closed ? "none" : "block",
+                  }}
+                  className={`${styles.dropdown_menu}`}
+                >
+                  <SubjectMenu
+                    closeMenu={() => {
+                      setisDDHovered(false);
+                      setClosed(true);
+                    }}
+                  />
+                </div>
+              </li>
+              <li key={"faq"}>
                 <Link
                   className={`${styles.nav_link}`}
-                  href="/careers"
+                  href="/faq"
                   onClick={() => {
                     if (isOpen) toggleMenu();
                   }}
@@ -263,7 +338,21 @@ const Navbar: React.FC = () => {
                     color: isDDHovered && !hidden ? "black" : "",
                   }}
                 >
-                  Careers
+                  FAQ
+                </Link>
+              </li>
+              <li key={"about-us"}>
+                <Link
+                  className={`${styles.nav_link}`}
+                  href="/about-us"
+                  onClick={() => {
+                    if (isOpen) toggleMenu();
+                  }}
+                  style={{
+                    color: isDDHovered && !hidden ? "black" : "",
+                  }}
+                >
+                  About Us
                 </Link>
               </li>
               <li

@@ -44,11 +44,12 @@ export default function Page() {
               marginBottom: "2rem",
             }}
           >
-            Developing Your Digital Future, <br></br>{" "}
-            <span style={{ color: variables.tertiaryColor }}>Together</span>
+            Empowering the Next Generation of Learners with Cutting-Edge
+            Tutoring
           </div>
           <div style={{ fontSize: "2rem", fontWeight: "300" }}>
-            Comprehensive Web Services Tailored to Elevate Your Business Online
+            From foundational K-8 education to advanced courses in college,
+            experience personalized tutoring that goes beyond the classroom.{" "}
           </div>
         </div>
       </div>
@@ -77,7 +78,8 @@ export default function Page() {
               paddingBottom: "2rem",
             }}
           >
-            Our Services
+            Transforming the way students learn with tailored resources and
+            expert guidance
           </div>
           <div
             style={{
@@ -109,15 +111,7 @@ export default function Page() {
             How it Works
           </div>
           <div style={{ fontSize: "1.25rem" }}>
-            At Codevelop, we believe in developing{" "}
-            <span
-              style={{ color: variables.tertiaryColor, fontSize: "1.25rem" }}
-            >
-              with
-            </span>{" "}
-            you, not just for you. Our collaborative process ensures that your
-            vision is at the heart of everything we do, from initial concept to
-            final execution.
+            Your Journey with InsightU in 4 Easy Steps
           </div>
           <Stepper></Stepper>
         </div>

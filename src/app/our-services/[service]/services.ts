@@ -9,47 +9,45 @@ export interface ServicePage {
 
 export const Services: ServicePage[] = [
   {
-    title: "Website Development",
-    subtitle:
-      "Shape your online identity with unique, engaging, and impactful website designs.",
-    id: "website-development",
+    title: "In Person Tutoring",
+    subtitle: "Discover In-Person Learning",
+    id: "in-person-tutoring",
     description:
-      "Craft custom, responsive, and user-friendly websites tailored to your business needs. Elevate your online presence with our end-to-end web development services.",
+      "Welcome to a world where learning is personal, engaging, chieve more by studying less. Step into our sessions, and step into a world where learning is not a chore, but a journey of discovery.",
     homepageDescription:
-      "Craft the digital face of your business with our Website Development service. We specialize in creating stunning, user-friendly websites that are not only visually appealing but also mobile-friendly, ensuring an optimal browsing experience on any device. Let us help you make that first impression count with a site that speaks volumes of your brand.",
+      "Welcome to a world where learning is personal, engaging, and tailored just for you. Our in-person tutoring sessions offer a warm, professional environment where complex subjects become approachable. Our tutors don’t just teach; they redefine how you approach studying, helping you achieve more by studying less. Step into our sessions, and step into a world where learning is not a chore, but a journey of discovery.",
     homepageImage: "/blank_desktop_mobile.png",
   },
   {
-    title: "App Development",
-    subtitle:
-      "Crafting your next-generation mobile experience with tailored app solutions.",
-    id: "app-development",
+    title: "Online Tutoring",
+    subtitle: "Your Gateway to Online Mastery",
+    id: "online-tutoring",
     description:
       "Bring your app idea to life with our comprehensive app development services. From design to deployment, we create seamless, innovative mobile applications for all platforms.",
     homepageDescription:
-      "Turn your app idea into a reality with our comprehensive App Development service. From initial concept to final implementation, our team works closely with you to develop intuitive, high-performance mobile applications tailored to your specific needs. Empower your business with an app that engages your audience and drives results.",
+      "Embrace the future of learning from wherever you are. Our online tutoring sessions blend professional expertise with the warmth of personal engagement. Imagine a learning experience where technology meets human insight, creating a platform where every lesson is not just taught, but experienced. Dive into our interactive sessions and find yourself mastering subjects with newfound confidence and ease.",
     homepageImage: "/dating_app.png",
   },
   {
-    title: "Security Consulting",
+    title: "Group Tutoring",
     subtitle:
       "Fortify your digital landscape with cutting-edge security measures.",
-    id: "security",
+    id: "group-tutoring",
     description:
       "Protect your digital assets with our advanced security solutions. Offering risk assessments, compliance, and cyber defense strategies to safeguard your business information.",
     homepageDescription:
-      "Secure your digital assets and protect your company's sensitive information with our expert Security Consulting service. We provide thorough security assessments, implement robust protection strategies, and help set up advanced user authentication experiences to safeguard your business against evolving cyber threats. Trust us to fortify your digital presence.",
+      "Join a vibrant learning community where every voice matters. Our group tutoring sessions offer a unique blend of professional guidance and collaborative learning. It's a place where ideas intersect, and complex topics are unraveled through shared insights. Be part of a group that learns together, grows together, and paves the way for academic success through mutual support and understanding.",
     homepageImage: "/security_lock.png",
   },
   {
-    title: "AI Consulting",
+    title: "Special Programs",
     subtitle:
       "Unlock the potential of AI to revolutionize your business strategies and operations.",
-    id: "ai-consulting",
+    id: "special-programs",
     description:
       "Empower your business with AI. Get expert advice on implementing artificial intelligence to optimize operations, drive innovation, and create smarter, data-driven decisions.",
     homepageDescription:
-      "Transform your business with the power of artificial intelligence through our AI Consulting service. Our team of AI specialists collaborates with you to develop and integrate smart, AI-driven solutions that optimize operations, enhance decision-making, and deliver personalized customer experiences. Step into the future and unlock new potentials with AI.",
+      "Prepare for Academic Excellence: Dive into our two-month summer success program, meticulously designed to ensure your child is ahead of the curve for the upcoming school year. Phase 1: Review and Reinforce - Engage in a structured review using tailored flashcards to master foundational concepts through effective rote memorization. Phase 2: Practice and Perfect - Tackle comprehensive practice questions that bridge knowledge gaps and connect concepts, setting the stage for a year of academic success. Enroll now to transform learning into achievement.",
     homepageImage: "/artificial_intelligence.png",
   },
 ];

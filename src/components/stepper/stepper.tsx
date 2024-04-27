@@ -67,33 +67,27 @@ interface Step {
 
 export const Steps: Step[] = [
   {
-    title: "Discovering Your Vision",
+    title: "Discover & Select",
     description:
-      "We start with a deep dive into your business objectives, target audience, and digital goals. In this initial consultation, we align our strategies with your vision, ensuring a personalized roadmap that meets your specific needs.",
+      "Start by exploring our tutoring services. Choose between in-person, online, or group tutoring. Select the option that best fits your educational needs.",
     image: "/magnifying_glass.svg",
   },
   {
-    title: "Crafting Your Blueprint",
+    title: "Personalize Your Experience",
     description:
-      "Leveraging the insights from our discovery phase, we begin to shape your digital future. Our team collaborates with you to draft detailed plans, design mockups, and strategic frameworks that reflect your unique brand and goals.",
+      "Tell us about your academic goals and preferred schedule through a simple form. This helps us tailor a learning experience just for you.",
     image: "/blueprint.svg",
   },
   {
-    title: "Bringing Ideas to Life",
+    title: "Match with Your Tutor",
     description:
-      "With a solid plan in place, our developers and designers work hand-in-hand with you to create your digital solutions. From seamless websites to functional apps, we ensure every pixel and line of code aligns with your expectations.",
+      "We pair you with the perfect tutor from our team of experienced educators, ensuring a match that’s right for your learning style and subject requirements.",
     image: "/programmer.svg",
   },
   {
-    title: "Perfecting Your Product",
+    title: "Engage and Achieve",
     description:
-      "Quality is our top priority. We conduct rigorous testing and gather your feedback to refine and optimize every aspect of your project. This iterative process ensures that your digital solution is not only functional but flawless.",
+      "Dive into your personalized tutoring sessions, equipped with innovative tools and resources. Track your progress and achieve your academic goals!",
     image: "/code_refinement.svg",
-  },
-  {
-    title: "Launching Your Success",
-    description:
-      "The moment of truth: unveiling your digital solution to the world. But our journey doesn’t end here. We continue to support and grow your project, ensuring it evolves with your business and stays ahead in the digital landscape.",
-    image: "/goal.svg",
   },
 ];
